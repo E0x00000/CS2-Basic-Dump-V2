@@ -3321,6 +3321,7 @@
         "m_hOwner": "0x20"
     },
     "client_dll": {
+        "dwCSGOInput": "0x1A3C870",
         "dwEntityList": "0x19D0A38",
         "dwGameEntitySystem": "0x1AEAC28",
         "dwGameEntitySystem_highestEntityIndex": "0x1520",
@@ -3333,6 +3334,7 @@
         "dwPrediction": "0x1835A50",
         "dwSensitivity": "0x1A2F408",
         "dwSensitivity_sensitivity": "0x40",
+        "dwViewAngles": "0x1A3CC40",
         "dwViewMatrix": "0x1A32DB0",
         "dwViewRender": "0x1A335C0",
         "dwWeaponC4": "0x19D3E20"
