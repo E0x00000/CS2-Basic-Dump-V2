@@ -3367,6 +3367,7 @@
         "AnimGraph": "0x14f6f0",
         "Aspect_Ratio": "0x7f2680",
         "Fov_Changer": "0x513ea0",
+        "Fov_Offset": "0x513ea0",
         "LightSceneObject": "0x67a40",
         "ScenSystem": "0x30410",
         "hkDrawSceneObject": "0x55520"
