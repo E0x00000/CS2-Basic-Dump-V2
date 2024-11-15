@@ -3382,8 +3382,8 @@
         "dwNetworkGameClient_maxClients": "0x238",
         "dwNetworkGameClient_serverTickCount": "0x36C",
         "dwNetworkGameClient_signOnState": "0x228",
-        "dwWindowHeight": "0x612074",
-        "dwWindowWidth": "0x612070"
+        "dwWindowHeight": "0x61206C",
+        "dwWindowWidth": "0x612068"
     },
     "inputsystem_dll": {
         "dwInputSystem": "0x387E0"
@@ -3398,9 +3398,9 @@
     },
     "Trash": {
         "AnimGraph": "0x14f680",
-        "Aspect_Ratio": "0x7fb0c0",
-        "Fov_Changer": "0x51c500",
-        "Fov_Offset": "0x557690",
+        "Aspect_Ratio": "0x7fb0d0",
+        "Fov_Changer": "0x51c510",
+        "Fov_Offset": "0x5576a0",
         "LightSceneObject": "0x67c00",
         "ScenSystem": "0x30490",
         "hkDrawSceneObject": "0x556e0"
