@@ -3398,9 +3398,9 @@
     },
     "Trash": {
         "AnimGraph": "0x14f680",
-        "Aspect_Ratio": "0x7fb520",
+        "Aspect_Ratio": "0x7fb5d0",
         "Fov_Changer": "0x51c710",
-        "Fov_Offset": "0x5579b0",
+        "Fov_Offset": "0x557a60",
         "LightSceneObject": "0x67c00",
         "ScenSystem": "0x30490",
         "hkDrawSceneObject": "0x556e0"
