@@ -1,21 +1,21 @@
 {
     "buttons": {
-        "attack": "0x184E8F0",
-        "attack2": "0x184E980",
-        "back": "0x184EBC0",
-        "duck": "0x184EE90",
-        "forward": "0x184EB30",
-        "jump": "0x184EE00",
-        "left": "0x184EC50",
-        "lookatweapon": "0x1A75170",
-        "reload": "0x184E860",
-        "right": "0x184ECE0",
-        "showscores": "0x1A75050",
-        "sprint": "0x184E7D0",
-        "turnleft": "0x184EA10",
-        "turnright": "0x184EAA0",
-        "use": "0x184ED70",
-        "zoom": "0x1A750E0"
+        "attack": "0x18518E0",
+        "attack2": "0x1851970",
+        "back": "0x1851BB0",
+        "duck": "0x1851E80",
+        "forward": "0x1851B20",
+        "jump": "0x1851DF0",
+        "left": "0x1851C40",
+        "lookatweapon": "0x1A781A0",
+        "reload": "0x1851850",
+        "right": "0x1851CD0",
+        "showscores": "0x1A78080",
+        "sprint": "0x18517C0",
+        "turnleft": "0x1851A00",
+        "turnright": "0x1851A90",
+        "use": "0x1851D60",
+        "zoom": "0x1A78110"
     },
     "CCSPlayer_MovementServices": {
         "m_vecLadderNormal": "0x218",
@@ -138,7 +138,6 @@
         "m_vMinimapMins": "0xC1C",
         "m_vMinimapMaxs": "0xC28",
         "m_MinimapVerticalSectionHeights": "0xC34",
-        "m_bSpawnedTerrorHuntHeavy": "0xC54",
         "m_ullLocalMatchID": "0xC58",
         "m_nEndMatchMapGroupVoteTypes": "0xC60",
         "m_nEndMatchMapGroupVoteOptions": "0xC88",
@@ -1484,8 +1483,7 @@
     },
     "CCSPlayer_ItemServices": {
         "m_bHasDefuser": "0x40",
-        "m_bHasHelmet": "0x41",
-        "m_bHasHeavyArmor": "0x42"
+        "m_bHasHelmet": "0x41"
     },
     "C_BarnLight": {
         "m_bEnabled": "0xD28",
@@ -1845,8 +1843,8 @@
         "m_iRarityOverride": "0x1F0",
         "m_iQualityOverride": "0x1F4",
         "m_iOriginOverride": "0x1F8",
-        "m_unClientFlags": "0x1FC",
-        "m_unOverrideStyle": "0x1FD",
+        "m_ubStyleOverride": "0x1FC",
+        "m_unClientFlags": "0x1FD",
         "m_AttributeList": "0x210",
         "m_NetworkedDynamicAttributes": "0x270",
         "m_szCustomName": "0x2D0",
@@ -3350,23 +3348,23 @@
         "m_hOwner": "0x20"
     },
     "client_dll": {
-        "dwCSGOInput": "0x1A75250",
-        "dwEntityList": "0x1A020A8",
-        "dwGameEntitySystem": "0x1B25BD8",
+        "dwCSGOInput": "0x1A78280",
+        "dwEntityList": "0x1A05670",
+        "dwGameEntitySystem": "0x1B28D78",
         "dwGameEntitySystem_highestEntityIndex": "0x20F0",
-        "dwGameRules": "0x1A66B38",
-        "dwGlobalVars": "0x1849EB0",
-        "dwGlowManager": "0x1A66270",
-        "dwLocalPlayerController": "0x1A50AD0",
-        "dwLocalPlayerPawn": "0x18560D0",
-        "dwPlantedC4": "0x1A702F8",
-        "dwPrediction": "0x1855F50",
-        "dwSensitivity": "0x1A67858",
+        "dwGameRules": "0x1A69CB8",
+        "dwGlobalVars": "0x184CEB0",
+        "dwGlowManager": "0x1A69408",
+        "dwLocalPlayerController": "0x1A53C38",
+        "dwLocalPlayerPawn": "0x18590D0",
+        "dwPlantedC4": "0x1A72ED0",
+        "dwPrediction": "0x1858F50",
+        "dwSensitivity": "0x1A6A9D8",
         "dwSensitivity_sensitivity": "0x40",
-        "dwViewAngles": "0x1A75620",
-        "dwViewMatrix": "0x1A6B230",
-        "dwViewRender": "0x1A6BB80",
-        "dwWeaponC4": "0x1A04590"
+        "dwViewAngles": "0x1A78650",
+        "dwViewMatrix": "0x1A6E3F0",
+        "dwViewRender": "0x1A6ED00",
+        "dwWeaponC4": "0x1A07700"
     },
     "engine2_dll": {
         "dwBuildNumber": "0x540BE4",
@@ -3378,8 +3376,8 @@
         "dwNetworkGameClient_maxClients": "0x238",
         "dwNetworkGameClient_serverTickCount": "0x36C",
         "dwNetworkGameClient_signOnState": "0x228",
-        "dwWindowHeight": "0x623564",
-        "dwWindowWidth": "0x623560"
+        "dwWindowHeight": "0x62359C",
+        "dwWindowWidth": "0x623598"
     },
     "inputsystem_dll": {
         "dwInputSystem": "0x387E0"
