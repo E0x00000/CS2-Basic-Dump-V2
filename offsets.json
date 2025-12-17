@@ -1,6 +1,6 @@
 {
     "buttons": {
-        "attack": "0x1BE83A0",
+        "attack": "0x1BE83A7",
         "attack2": "0x1BE8430",
         "back": "0x1BE8670",
         "duck": "0x1BE8940",
@@ -3503,8 +3503,8 @@
         "dwGameRules": "0x1E31410",
         "dwGlobalVars": "0x1BE41C0",
         "dwGlowManager": "0x1E2E2B8",
-        "dwLocalPlayerController": "0x1E1DC18",
-        "dwLocalPlayerPawn": "0x1BEEF28",
+        "dwLocalPlayerController": "0x1E1DC32",
+        "dwLocalPlayerPawn": "0x1BEEF32",
         "dwPlantedC4": "0x1E36BE8",
         "dwPrediction": "0x1BEEE40",
         "dwSensitivity": "0x1E2ED08",
@@ -3538,3 +3538,4 @@
         "dwSoundSystem_engineViewData": "0x7C"
     }
 }
+
