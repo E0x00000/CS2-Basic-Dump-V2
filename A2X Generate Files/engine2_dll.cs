@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-23 07:46:23.662570500 UTC
+// 2026-04-15 01:06:49.726318 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: engine2.dll
-    // Class count: 48
+    // Class count: 55
     // Enum count: 2
     public static class Engine2Dll {
         // Alignment: 4
@@ -20,6 +20,45 @@ namespace CS2Dumper.Schemas {
             ENTITY_IO_TARGET_ENTITYNAME = 0x2,
             ENTITY_IO_TARGET_EHANDLE = 0x6,
             ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
+        }
+        // Parent: None
+        // Field count: 3
+        //
+        // Metadata:
+        // NetworkVarNames: m_pEntity (CEntityIdentity*)
+        // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
+        public static class CEntityInstance {
+            public const nint m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
+            public const nint m_pEntity = 0x10; // CEntityIdentity*
+            public const nint m_CScriptComponent = 0x30; // CScriptComponent*
+        }
+        // Parent: None
+        // Field count: 0
+        public static class CEntityComponent {
+        }
+        // Parent: CEntityComponent
+        // Field count: 1
+        public static class CScriptComponent {
+            public const nint m_scriptClassName = 0x30; // CUtlSymbolLarge
+        }
+        // Parent: None
+        // Field count: 12
+        //
+        // Metadata:
+        // NetworkVarNames: m_nameStringableIndex (int32)
+        public static class CEntityIdentity {
+            public const nint m_nameStringableIndex = 0x14; // int32
+            public const nint m_name = 0x18; // CUtlSymbolLarge
+            public const nint m_designerName = 0x20; // CUtlSymbolLarge
+            public const nint m_flags = 0x30; // uint32
+            public const nint m_worldGroupId = 0x38; // WorldGroupId_t
+            public const nint m_fDataObjectTypes = 0x3C; // uint32
+            public const nint m_PathIndex = 0x40; // ChangeAccessorFieldPathIndex_t
+            public const nint m_pAttributes = 0x48; // CEntityAttributeTable*
+            public const nint m_pPrev = 0x50; // CEntityIdentity*
+            public const nint m_pNext = 0x58; // CEntityIdentity*
+            public const nint m_pPrevByClass = 0x60; // CEntityIdentity*
+            public const nint m_pNextByClass = 0x68; // CEntityIdentity*
         }
         // Parent: None
         // Field count: 0
@@ -40,10 +79,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nTotalTicksThisFrame = 0x38; // int32
             public const nint m_nTotalTicks = 0x3C; // int32
         }
-        // Parent: 
-        // Field count: 1
+        // Parent: None
+        // Field count: 0
         public static class CEntityIOOutput {
-            public const nint m_Value = 0x18; // CVariantBase<CVariantDefaultAllocator>
         }
         // Parent: None
         // Field count: 1
@@ -60,8 +98,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_bRenderOnly = 0x34; // bool
         }
         // Parent: None
-        // Field count: 0
+        // Field count: 1
         public static class EventServerPostSimulate_t {
+            public const nint m_bLastTickBeforeClientUpdate = 0x30; // bool
         }
         // Parent: None
         // Field count: 4
@@ -75,6 +114,10 @@ namespace CS2Dumper.Schemas {
         // Field count: 1
         public static class GameTime_t {
             public const nint m_Value = 0x0; // float32
+        }
+        // Parent: None
+        // Field count: 0
+        public static class EventServerBeginSimulate_t {
         }
         // Parent: None
         // Field count: 0
@@ -140,12 +183,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDummy0 = 0x0; // int32
         }
         // Parent: None
-        // Field count: 0
-        public static class EventServerSimulate_t {
-        }
-        // Parent: None
-        // Field count: 0
+        // Field count: 1
         public static class EventServerPostAdvanceTick_t {
+            public const nint m_bLastTickBeforeClientUpdate = 0x40; // bool
         }
         // Parent: None
         // Field count: 1
@@ -169,6 +209,16 @@ namespace CS2Dumper.Schemas {
         // Field count: 1
         public static class EventClientProcessNetworking_t {
             public const nint m_nTickCount = 0x0; // int32
+        }
+        // Parent: None
+        // Field count: 2
+        public static class CEntityAttributeTable {
+            public const nint m_Attributes = 0x0; // CUtlOrderedMap<CUtlStringToken,Attribute_t>
+            public const nint m_Names = 0x28; // CUtlOrderedMap<CUtlStringToken,CUtlString>
+        }
+        // Parent: None
+        // Field count: 0
+        public static class EventClientPreOutputParallelWithServer_t {
         }
         // Parent: None
         // Field count: 4
@@ -276,8 +326,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nTickCount = 0x0; // int32
         }
         // Parent: None
-        // Field count: 0
+        // Field count: 1
         public static class EventServerBeginAsyncPostTickWork_t {
+            public const nint m_bIsOncePerFrameAsyncWorkPhase = 0x0; // bool
         }
         // Parent: None
         // Field count: 4
@@ -286,6 +337,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRealTime = 0x28; // float32
             public const nint m_flTickInterval = 0x2C; // float32
             public const nint m_flTickStartTime = 0x30; // float64
+        }
+        // Parent: None
+        // Field count: 1
+        public static class EventServerEndSimulate_t {
+            public const nint m_bLastTick = 0x0; // bool
         }
         // Parent: None
         // Field count: 0

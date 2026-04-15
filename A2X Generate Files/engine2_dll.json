@@ -6,6 +6,19 @@
         "metadata": [],
         "parent": null
       },
+      "CEntityAttributeTable": {
+        "fields": {
+          "m_Attributes": 0,
+          "m_Names": 40
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CEntityComponent": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "CEntityComponentHelper": {
         "fields": {
           "m_flags": 8,
@@ -17,11 +30,53 @@
         "parent": null
       },
       "CEntityIOOutput": {
-        "fields": {
-          "m_Value": 24
-        },
+        "fields": {},
         "metadata": [],
-        "parent": ""
+        "parent": null
+      },
+      "CEntityIdentity": {
+        "fields": {
+          "m_PathIndex": 64,
+          "m_designerName": 32,
+          "m_fDataObjectTypes": 60,
+          "m_flags": 48,
+          "m_name": 24,
+          "m_nameStringableIndex": 20,
+          "m_pAttributes": 72,
+          "m_pNext": 88,
+          "m_pNextByClass": 104,
+          "m_pPrev": 80,
+          "m_pPrevByClass": 96,
+          "m_worldGroupId": 56
+        },
+        "metadata": [
+          {
+            "name": "m_nameStringableIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          }
+        ],
+        "parent": null
+      },
+      "CEntityInstance": {
+        "fields": {
+          "m_CScriptComponent": 48,
+          "m_iszPrivateVScripts": 8,
+          "m_pEntity": 16
+        },
+        "metadata": [
+          {
+            "name": "m_pEntity",
+            "type": "NetworkVarNames",
+            "type_name": "CEntityIdentity*"
+          },
+          {
+            "name": "m_CScriptComponent",
+            "type": "NetworkVarNames",
+            "type_name": "CScriptComponent::Storage_t"
+          }
+        ],
+        "parent": null
       },
       "CNetworkVarChainer": {
         "fields": {
@@ -29,6 +84,13 @@
         },
         "metadata": [],
         "parent": null
+      },
+      "CScriptComponent": {
+        "fields": {
+          "m_scriptClassName": 48
+        },
+        "metadata": [],
+        "parent": "CEntityComponent"
       },
       "CVariantDefaultAllocator": {
         "fields": {},
@@ -157,6 +219,11 @@
         "metadata": [],
         "parent": null
       },
+      "EventClientPreOutputParallelWithServer_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "EventClientPreOutput_t": {
         "fields": {
           "m_LoopState": 0,
@@ -261,6 +328,13 @@
         "parent": null
       },
       "EventServerBeginAsyncPostTickWork_t": {
+        "fields": {
+          "m_bIsOncePerFrameAsyncWorkPhase": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "EventServerBeginSimulate_t": {
         "fields": {},
         "metadata": [],
         "parent": null
@@ -270,27 +344,33 @@
         "metadata": [],
         "parent": null
       },
+      "EventServerEndSimulate_t": {
+        "fields": {
+          "m_bLastTick": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "EventServerPollNetworking_t": {
         "fields": {},
         "metadata": [],
         "parent": null
       },
       "EventServerPostAdvanceTick_t": {
-        "fields": {},
+        "fields": {
+          "m_bLastTickBeforeClientUpdate": 64
+        },
         "metadata": [],
         "parent": null
       },
       "EventServerPostSimulate_t": {
-        "fields": {},
+        "fields": {
+          "m_bLastTickBeforeClientUpdate": 48
+        },
         "metadata": [],
         "parent": null
       },
       "EventServerProcessNetworking_t": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
-      "EventServerSimulate_t": {
         "fields": {},
         "metadata": [],
         "parent": null

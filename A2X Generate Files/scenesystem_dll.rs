@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-23 07:46:23.662570500 UTC
+// 2026-04-15 01:06:49.726318 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,17 +7,16 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: scenesystem.dll
         // Class count: 9
-        // Enum count: 3
+        // Enum count: 4
         pub mod scenesystem_dll {
-            // Alignment: 1
-            // Member count: 6
-            #[repr(u8)]
-            pub enum DecalMode_t {
-                kDecalInvalid = 0xFF,
-                kDecalBlood = 0x0,
-                kDecalCloak = 0x1,
-                kDecalCloakDamage = 0x2,
-                kDecalMax = 0x3
+            // Alignment: 4
+            // Member count: 4
+            #[repr(u32)]
+            pub enum ESilhouetteType_t {
+                SILHOUETTE_NONE = 0x0,
+                SILHOUETTE_LIGHT = 0x1,
+                SILHOUETTE_ENVMAP = 0x2,
+                SILHOUETTE_LPV = 0x4
             }
             // Alignment: 1
             // Member count: 4
@@ -27,6 +26,15 @@ pub mod cs2_dumper {
                 kDisableShadows_All = 0x1,
                 kDisableShadows_Baked = 0x2,
                 kDisableShadows_Realtime = 0x3
+            }
+            // Alignment: 1
+            // Member count: 6
+            #[repr(u8)]
+            pub enum DecalRtEncoding_t {
+                kDecalInvalid = 0xFF,
+                kDecalMin = 0x0,
+                kDecalCloak = 0x1,
+                kDecalMax = 0x2
             }
             // Alignment: 4
             // Member count: 6

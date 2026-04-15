@@ -125,15 +125,15 @@
       }
     },
     "enums": {
-      "DecalMode_t": {
+      "DecalRtEncoding_t": {
         "alignment": 1,
         "members": {
           "kDecalBlood": 0,
           "kDecalCloak": 1,
-          "kDecalCloakDamage": 2,
           "kDecalDefault": 0,
           "kDecalInvalid": 255,
-          "kDecalMax": 3
+          "kDecalMax": 2,
+          "kDecalMin": 0
         },
         "type": "uint8"
       },
@@ -156,6 +156,16 @@
           "SCENEOBJECT_VIS_NONE": 0,
           "SCENEOBJECT_VIS_OBJECT": 1,
           "SCENEOBJECT_VIS_TEXTURE_SIZE": 3
+        },
+        "type": "uint32"
+      },
+      "ESilhouetteType_t": {
+        "alignment": 4,
+        "members": {
+          "SILHOUETTE_ENVMAP": 2,
+          "SILHOUETTE_LIGHT": 1,
+          "SILHOUETTE_LPV": 4,
+          "SILHOUETTE_NONE": 0
         },
         "type": "uint32"
       }

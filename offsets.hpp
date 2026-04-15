@@ -1,3 +1,265 @@
+inline struct CPulseCell_WaitForCursorsWithTagOffsets {
+	DWORD m_bTagSelfWhenComplete;
+	DWORD m_nDesiredKillPriority;
+} CPulseCell_WaitForCursorsWithTag;
+
+inline struct CPulseCell_BaseOffsets {
+	DWORD m_nEditorNodeID;
+} CPulseCell_Base;
+
+inline struct CPulseCell_PickBestOutflowSelectorOffsets {
+	DWORD m_nCheckType;
+	DWORD m_OutflowList;
+} CPulseCell_PickBestOutflowSelector;
+
+inline struct CPulseCell_WaitForObservableOffsets {
+	DWORD m_Condition;
+	DWORD m_OnTrue;
+} CPulseCell_WaitForObservable;
+
+inline struct CPulse_OutflowConnectionOffsets {
+	DWORD m_SourceOutflowName;
+	DWORD m_nDestChunk;
+	DWORD m_nInstruction;
+	DWORD m_OutflowRegisterMap;
+} CPulse_OutflowConnection;
+
+inline struct CPulseGraphDefOffsets {
+	DWORD m_DomainIdentifier;
+	DWORD m_DomainSubType;
+	DWORD m_ParentMapName;
+	DWORD m_ParentXmlName;
+	DWORD m_Chunks;
+	DWORD m_Cells;
+	DWORD m_Vars;
+	DWORD m_PublicOutputs;
+	DWORD m_InvokeBindings;
+	DWORD m_CallInfos;
+	DWORD m_Constants;
+	DWORD m_DomainValues;
+	DWORD m_BlackboardReferences;
+	DWORD m_OutputConnections;
+} CPulseGraphDef;
+
+inline struct CPulseCell_FireCursorsOffsets {
+	DWORD m_Outflows;
+	DWORD m_bWaitForChildOutflows;
+	DWORD m_OnFinished;
+	DWORD m_OnCanceled;
+} CPulseCell_FireCursors;
+
+inline struct CPulseCell_Timeline__TimelineEvent_tOffsets {
+	DWORD m_flTimeFromPrevious;
+	DWORD m_EventOutflow;
+} CPulseCell_Timeline__TimelineEvent_t;
+
+inline struct CPulseCell_IntervalTimer__CursorState_tOffsets {
+	DWORD m_StartTime;
+	DWORD m_EndTime;
+	DWORD m_flWaitInterval;
+	DWORD m_flWaitIntervalHigh;
+	DWORD m_bCompleteOnNextWake;
+} CPulseCell_IntervalTimer__CursorState_t;
+
+inline struct OutflowWithRequirements_tOffsets {
+	DWORD m_Connection;
+	DWORD m_DestinationFlowNodeID;
+	DWORD m_RequirementNodeIDs;
+	DWORD m_nCursorStateBlockIndex;
+} OutflowWithRequirements_t;
+
+inline struct CPulseCell_Value_GradientOffsets {
+	DWORD m_Gradient;
+} CPulseCell_Value_Gradient;
+
+inline struct PulseNodeDynamicOutflows_t__DynamicOutflow_tOffsets {
+	DWORD m_OutflowID;
+	DWORD m_Connection;
+} PulseNodeDynamicOutflows_t__DynamicOutflow_t;
+
+inline struct CPulseCell_Inflow_GraphHookOffsets {
+	DWORD m_HookName;
+} CPulseCell_Inflow_GraphHook;
+
+inline struct CPulseCell_Inflow_BaseEntrypointOffsets {
+	DWORD m_EntryChunk;
+	DWORD m_RegisterMap;
+} CPulseCell_Inflow_BaseEntrypoint;
+
+inline struct CPulseCell_WaitForCursorsWithTagBaseOffsets {
+	DWORD m_nCursorsAllowedToWait;
+	DWORD m_WaitComplete;
+} CPulseCell_WaitForCursorsWithTagBase;
+
+inline struct CPulse_InvokeBindingOffsets {
+	DWORD m_RegisterMap;
+	DWORD m_FuncName;
+	DWORD m_nCellIndex;
+	DWORD m_nSrcChunk;
+	DWORD m_nSrcInstruction;
+} CPulse_InvokeBinding;
+
+inline struct CPulseCell_IntervalTimerOffsets {
+	DWORD m_Completed;
+	DWORD m_OnInterval;
+} CPulseCell_IntervalTimer;
+
+inline struct CPulseCell_BaseLerpOffsets {
+	DWORD m_WakeResume;
+} CPulseCell_BaseLerp;
+
+inline struct CPulseCell_Value_CurveOffsets {
+	DWORD m_Curve;
+} CPulseCell_Value_Curve;
+
+inline struct CPulseCell_Inflow_EventHandlerOffsets {
+	DWORD m_EventName;
+} CPulseCell_Inflow_EventHandler;
+
+inline struct CPulseCell_Outflow_CycleShuffled__InstanceState_tOffsets {
+	DWORD m_Shuffle;
+	DWORD m_nNextShuffle;
+} CPulseCell_Outflow_CycleShuffled__InstanceState_t;
+
+inline struct CPulseCell_BaseLerp__CursorState_tOffsets {
+	DWORD m_StartTime;
+	DWORD m_EndTime;
+} CPulseCell_BaseLerp__CursorState_t;
+
+inline struct CPulseCell_WaitForCursorsWithTagBase__CursorState_tOffsets {
+	DWORD m_TagName;
+} CPulseCell_WaitForCursorsWithTagBase__CursorState_t;
+
+inline struct CPulseCell_TimelineOffsets {
+	DWORD m_TimelineEvents;
+	DWORD m_bWaitForChildOutflows;
+	DWORD m_OnFinished;
+	DWORD m_OnCanceled;
+} CPulseCell_Timeline;
+
+inline struct CPulseCell_Inflow_EntOutputHandlerOffsets {
+	DWORD m_SourceEntity;
+	DWORD m_SourceOutput;
+	DWORD m_ExpectedParamType;
+} CPulseCell_Inflow_EntOutputHandler;
+
+inline struct CPulseCell_Outflow_CycleOrdered__InstanceState_tOffsets {
+	DWORD m_nNextIndex;
+} CPulseCell_Outflow_CycleOrdered__InstanceState_t;
+
+inline struct CPulseCell_LimitCount__InstanceState_tOffsets {
+	DWORD m_nCurrentCount;
+} CPulseCell_LimitCount__InstanceState_t;
+
+inline struct PulseNodeDynamicOutflows_tOffsets {
+	DWORD m_Outflows;
+} PulseNodeDynamicOutflows_t;
+
+inline struct CPulseCell_IsRequirementValid__Criteria_tOffsets {
+	DWORD m_bIsValid;
+} CPulseCell_IsRequirementValid__Criteria_t;
+
+inline struct CPulseCell_Inflow_ObservableVariableListenerOffsets {
+	DWORD m_nBlackboardReference;
+	DWORD m_bSelfReference;
+} CPulseCell_Inflow_ObservableVariableListener;
+
+inline struct CPulseCell_Outflow_CycleOrderedOffsets {
+	DWORD m_Outputs;
+} CPulseCell_Outflow_CycleOrdered;
+
+inline struct PulseSelectorOutflowList_tOffsets {
+	DWORD m_Outflows;
+} PulseSelectorOutflowList_t;
+
+inline struct CPulseCell_Inflow_WaitOffsets {
+	DWORD m_WakeResume;
+} CPulseCell_Inflow_Wait;
+
+inline struct CPulseCell_Outflow_CycleShuffledOffsets {
+	DWORD m_Outputs;
+} CPulseCell_Outflow_CycleShuffled;
+
+inline struct CPulseCell_Inflow_MethodOffsets {
+	DWORD m_MethodName;
+	DWORD m_Description;
+	DWORD m_bIsPublic;
+	DWORD m_ReturnType;
+	DWORD m_Args;
+} CPulseCell_Inflow_Method;
+
+inline struct CPulseCell_BooleanSwitchStateOffsets {
+	DWORD m_Condition;
+	DWORD m_SubGraph;
+	DWORD m_WhenTrue;
+	DWORD m_WhenFalse;
+} CPulseCell_BooleanSwitchState;
+
+inline struct CPulseCell_Inflow_YieldOffsets {
+	DWORD m_UnyieldResume;
+} CPulseCell_Inflow_Yield;
+
+inline struct CPulseCell_UnknownOffsets {
+	DWORD m_UnknownKeys;
+} CPulseCell_Unknown;
+
+inline struct CPulseCell_Outflow_CycleRandomOffsets {
+	DWORD m_Outputs;
+} CPulseCell_Outflow_CycleRandom;
+
+inline struct CPulseCell_Step_PublicOutputOffsets {
+	DWORD m_OutputIndex;
+} CPulseCell_Step_PublicOutput;
+
+inline struct CPulse_BlackboardReferenceOffsets {
+	DWORD m_hBlackboardResource;
+	DWORD m_BlackboardResource;
+	DWORD m_nNodeID;
+	DWORD m_NodeName;
+} CPulse_BlackboardReference;
+
+inline struct CPulse_CallInfoOffsets {
+	DWORD m_PortName;
+	DWORD m_nEditorNodeID;
+	DWORD m_RegisterMap;
+	DWORD m_CallMethodID;
+	DWORD m_nSrcChunk;
+	DWORD m_nSrcInstruction;
+} CPulse_CallInfo;
+
+inline struct CPulseCell_InlineNodeSkipSelectorOffsets {
+	DWORD m_nFlowNodeID;
+	DWORD m_bAnd;
+	DWORD m_PassOutflow;
+	DWORD m_FailOutflow;
+} CPulseCell_InlineNodeSkipSelector;
+
+inline struct CPulseCell_LimitCountOffsets {
+	DWORD m_nLimitCount;
+} CPulseCell_LimitCount;
+
+inline struct CPulseCell_Step_CallExternalMethodOffsets {
+	DWORD m_MethodName;
+	DWORD m_GameBlackboard;
+	DWORD m_ExpectedArgs;
+	DWORD m_nAsyncCallMode;
+	DWORD m_OnFinished;
+} CPulseCell_Step_CallExternalMethod;
+
+inline struct PulseObservableBoolExpression_tOffsets {
+	DWORD m_EvaluateConnection;
+	DWORD m_DependentObservableVars;
+	DWORD m_DependentObservableBlackboardReferences;
+} PulseObservableBoolExpression_t;
+
+inline struct CPulseCell_LimitCount__Criteria_tOffsets {
+	DWORD m_bLimitCountPasses;
+} CPulseCell_LimitCount__Criteria_t;
+
+inline struct CPulseCell_CursorQueueOffsets {
+	DWORD m_nCursorsAllowedToRunParallel;
+} CPulseCell_CursorQueue;
+
 inline struct CAnimFrameBlockAnimOffsets {
 	DWORD m_nStartFrame;
 	DWORD m_nEndFrame;
@@ -44,6 +306,7 @@ inline struct CSceneObjectDataOffsets {
 	DWORD m_drawCalls;
 	DWORD m_drawBounds;
 	DWORD m_meshlets;
+	DWORD m_rtProxyDrawCalls;
 	DWORD m_vTintColor;
 } CSceneObjectData;
 
@@ -167,14 +430,17 @@ inline struct ConfigIndexOffsets {
 } ConfigIndex;
 
 inline struct VPhysXCollisionAttributes_tOffsets {
+	DWORD m_nIncludeDetailLayerCount;
 	DWORD m_CollisionGroup;
 	DWORD m_InteractAs;
 	DWORD m_InteractWith;
 	DWORD m_InteractExclude;
+	DWORD m_DetailLayers;
 	DWORD m_CollisionGroupString;
 	DWORD m_InteractAsStrings;
 	DWORD m_InteractWithStrings;
 	DWORD m_InteractExcludeStrings;
+	DWORD m_DetailLayerStrings;
 } VPhysXCollisionAttributes_t;
 
 inline struct CSequenceUpdateNodeOffsets {
@@ -200,9 +466,7 @@ inline struct PulseRuntimeEntrypointIndex_tOffsets {
 inline struct CAimCameraUpdateNodeOffsets {
 	DWORD m_hParameterPosition;
 	DWORD m_hParameterOrientation;
-	DWORD m_hParameterSpineRotationWeight;
 	DWORD m_hParameterPelvisOffset;
-	DWORD m_hParameterUseIK;
 	DWORD m_hParameterCameraOnly;
 	DWORD m_hParameterWeaponDepenetrationDistance;
 	DWORD m_hParameterWeaponDepenetrationDelta;
@@ -253,7 +517,7 @@ inline struct IKBoneNameAndIndex_tOffsets {
 inline struct CPulse_ChunkOffsets {
 	DWORD m_Instructions;
 	DWORD m_Registers;
-	DWORD m_InstructionEditorIDs;
+	DWORD m_InstructionDebugInfos;
 } CPulse_Chunk;
 
 inline struct CStanceScaleUpdateNodeOffsets {
@@ -359,6 +623,11 @@ inline struct CStanceOverrideUpdateNodeOffsets {
 	DWORD m_hParameter;
 	DWORD m_eMode;
 } CStanceOverrideUpdateNode;
+
+inline struct CNmGraphDefinition__ExternalPoseSlot_tOffsets {
+	DWORD m_nNodeIdx;
+	DWORD m_slotID;
+} CNmGraphDefinition__ExternalPoseSlot_t;
 
 inline struct PhysShapeMarkup_tOffsets {
 	DWORD m_nBodyInAggregate;
@@ -475,6 +744,10 @@ inline struct CLookComponentUpdaterOffsets {
 	DWORD m_hLookTargetWorldSpace;
 	DWORD m_bNetworkLookTarget;
 } CLookComponentUpdater;
+
+inline struct CNmIsExternalPoseSetNode__CDefinitionOffsets {
+	DWORD m_nExternalPoseNodeIdx;
+} CNmIsExternalPoseSetNode__CDefinition;
 
 inline struct CAnimGraphNetworkSettingsOffsets {
 	DWORD m_bNetworkingEnabled;
@@ -663,6 +936,14 @@ inline struct FootFixedSettingsOffsets {
 	DWORD m_nFootIndex;
 } FootFixedSettings;
 
+inline struct CNmBoneMaskSwitchNode__CDefinitionOffsets {
+	DWORD m_nSwitchValueNodeIdx;
+	DWORD m_nTrueValueNodeIdx;
+	DWORD m_nFalseValueNodeIdx;
+	DWORD m_flBlendTimeSeconds;
+	DWORD m_bSwitchDynamically;
+} CNmBoneMaskSwitchNode__CDefinition;
+
 inline struct CModelConfigOffsets {
 	DWORD m_ConfigName;
 	DWORD m_Elements;
@@ -697,6 +978,7 @@ inline struct VPhysXAggregateData_tOffsets {
 inline struct CNmGraphDefinitionOffsets {
 	DWORD m_variationID;
 	DWORD m_skeleton;
+	DWORD m_pUserData;
 	DWORD m_persistentNodeIndices;
 	DWORD m_nRootNodeIdx;
 	DWORD m_controlParameterIDs;
@@ -704,6 +986,7 @@ inline struct CNmGraphDefinitionOffsets {
 	DWORD m_virtualParameterNodeIndices;
 	DWORD m_referencedGraphSlots;
 	DWORD m_externalGraphSlots;
+	DWORD m_externalPoseSlots;
 	DWORD m_nodePaths;
 	DWORD m_resources;
 } CNmGraphDefinition;
@@ -986,7 +1269,7 @@ inline struct CNmStateNode__CDefinitionOffsets {
 inline struct CNmBoneMaskSelectorNode__CDefinitionOffsets {
 	DWORD m_defaultMaskNodeIdx;
 	DWORD m_parameterValueNodeIdx;
-	DWORD m_switchDynamically;
+	DWORD m_bSwitchDynamically;
 	DWORD m_maskNodeIndices;
 	DWORD m_parameterValues;
 	DWORD m_flBlendTimeSeconds;
@@ -1039,8 +1322,8 @@ inline struct ModelSkeletonData_tOffsets {
 } ModelSkeletonData_t;
 
 inline struct CNmEventOffsets {
-	DWORD m_flStartTimeSeconds;
-	DWORD m_flDurationSeconds;
+	DWORD m_flStartTime;
+	DWORD m_flDuration;
 	DWORD m_syncID;
 	DWORD m_bClientOnly;
 } CNmEvent;
@@ -1156,6 +1439,10 @@ inline struct BlendItem_tOffsets {
 	DWORD m_bUseCustomDuration;
 } BlendItem_t;
 
+inline struct CNmIsExternalGraphSlotFilledNode__CDefinitionOffsets {
+	DWORD m_nExternalGraphNodeIdx;
+} CNmIsExternalGraphSlotFilledNode__CDefinition;
+
 inline struct CNewParticleEffectOffsets {
 	DWORD m_pNext;
 	DWORD m_pPrev;
@@ -1195,11 +1482,12 @@ inline struct CNewParticleEffectOffsets {
 inline struct CNmClipNode__CDefinitionOffsets {
 	DWORD m_nPlayInReverseValueNodeIdx;
 	DWORD m_nResetTimeValueNodeIdx;
-	DWORD m_flSpeedMultiplier;
-	DWORD m_nStartSyncEventOffset;
 	DWORD m_bSampleRootMotion;
 	DWORD m_bAllowLooping;
 	DWORD m_nDataSlotIdx;
+	DWORD m_graphEvents;
+	DWORD m_flSpeedMultiplier;
+	DWORD m_nStartSyncEventOffset;
 } CNmClipNode__CDefinition;
 
 inline struct CNmMaterialAttributeEventOffsets {
@@ -1547,6 +1835,7 @@ inline struct DynamicMeshDeformParams_tOffsets {
 	DWORD m_bRecomputeSmoothNormalsAfterAnimation;
 	DWORD m_bComputeDynamicMeshTensionAfterAnimation;
 	DWORD m_bSmoothNormalsAcrossUvSeams;
+	DWORD m_bEnableEyeBulgeDeformation;
 } DynamicMeshDeformParams_t;
 
 inline struct CNmTimeConditionNode__CDefinitionOffsets {
@@ -1956,6 +2245,8 @@ inline struct PermModelData_tOffsets {
 	DWORD m_BodyGroupsHiddenInTools;
 	DWORD m_refAnimIncludeModels;
 	DWORD m_AnimatedMaterialAttributes;
+	DWORD m_animGraph2Refs;
+	DWORD m_vecNmSkeletonRefs;
 } PermModelData_t;
 
 inline struct PulseCursorYieldToken_tOffsets {
@@ -1973,6 +2264,7 @@ inline struct ModelMeshBufferData_tOffsets {
 	DWORD m_bCreateBufferUAV;
 	DWORD m_bCreateRawBuffer;
 	DWORD m_bCreatePooledBuffer;
+	DWORD m_nBufferUsage;
 	DWORD m_inputLayoutFields;
 } ModelMeshBufferData_t;
 
@@ -2327,6 +2619,15 @@ inline struct CFootStrideOffsets {
 	DWORD m_trajectories;
 } CFootStride;
 
+inline struct CSceneObjectData__RTProxyDrawDescriptor_tOffsets {
+	DWORD m_drawDesc;
+	DWORD m_mWorldFromLocal;
+	DWORD m_nVertexAlbedoFormat;
+	DWORD m_nVertexAlbedoVB;
+	DWORD m_nVertexAlbedoOffset;
+	DWORD m_nVertexAlbedoStride;
+} CSceneObjectData__RTProxyDrawDescriptor_t;
+
 inline struct CNmLegacyEventOffsets {
 	DWORD m_animEventClassName;
 	DWORD m_KV;
@@ -2343,6 +2644,7 @@ inline struct CFootstepLandedAnimTagOffsets {
 	DWORD m_OverrideSoundName;
 	DWORD m_DebugAnimSourceString;
 	DWORD m_BoneName;
+	DWORD m_footstepJumpPhase;
 } CFootstepLandedAnimTag;
 
 inline struct CEnumAnimParameterOffsets {
@@ -2801,6 +3103,7 @@ inline struct CNmTwoBoneIKNode__CDefinitionOffsets {
 	DWORD m_flBlendTimeSeconds;
 	DWORD m_blendMode;
 	DWORD m_bIsTargetInWorldSpace;
+	DWORD m_flReferencePoseTwistWeight;
 } CNmTwoBoneIKNode__CDefinition;
 
 inline struct CFlexDescOffsets {
@@ -3005,6 +3308,15 @@ inline struct CNmTargetPointNode__CDefinitionOffsets {
 	DWORD m_bIsWorldSpaceTarget;
 } CNmTargetPointNode__CDefinition;
 
+inline struct CNmTargetSelectorNode__CDefinitionOffsets {
+	DWORD m_optionNodeIndices;
+	DWORD m_flOrientationScoreWeight;
+	DWORD m_flPositionScoreWeight;
+	DWORD m_parameterNodeIdx;
+	DWORD m_bIgnoreInvalidOptions;
+	DWORD m_bIsWorldSpaceTarget;
+} CNmTargetSelectorNode__CDefinition;
+
 inline struct CPulse_RegisterInfoOffsets {
 	DWORD m_nReg;
 	DWORD m_Type;
@@ -3045,6 +3357,19 @@ inline struct CAnimGraphModelBindingOffsets {
 inline struct CBoneConstraintPoseSpaceBoneOffsets {
 	DWORD m_inputList;
 } CBoneConstraintPoseSpaceBone;
+
+inline struct CNmTwoBoneIKTaskOffsets {
+	DWORD m_nEffectorBoneIdx;
+	DWORD m_nEffectorTargetBoneIdx;
+	DWORD m_targetTransform;
+	DWORD m_effectorTarget;
+	DWORD m_blendMode;
+	DWORD m_flBlendWeight;
+	DWORD m_bIsTargetInWorldSpace;
+	DWORD m_bIsRunningFromDeserializedData;
+	DWORD m_flReferencePoseTwistWeight;
+	DWORD m_debugEffectorBoneID;
+} CNmTwoBoneIKTask;
 
 inline struct MotionBlendItemOffsets {
 	DWORD m_pChild;
@@ -3106,6 +3431,10 @@ inline struct PulseRuntimeCellIndex_tOffsets {
 	DWORD m_Value;
 } PulseRuntimeCellIndex_t;
 
+inline struct CNmExternalPoseNode__CDefinitionOffsets {
+	DWORD m_bShouldSampleRootMotion;
+} CNmExternalPoseNode__CDefinition;
+
 inline struct CAnimDescOffsets {
 	DWORD m_name;
 	DWORD m_flags;
@@ -3139,6 +3468,7 @@ inline struct CNmTargetWarpNode__CDefinitionOffsets {
 	DWORD m_nTargetValueNodeIdx;
 	DWORD m_samplingMode;
 	DWORD m_bAllowTargetUpdate;
+	DWORD m_bAlignWithTargetAtLastWarpEvent;
 	DWORD m_flSamplingPositionErrorThresholdSq;
 	DWORD m_flMaxTangentLength;
 	DWORD m_flLerpFallbackDistanceThreshold;
@@ -3513,6 +3843,7 @@ inline struct CNmOrientationWarpNode__CDefinitionOffsets {
 	DWORD m_nTargetValueNodeIdx;
 	DWORD m_bIsOffsetNode;
 	DWORD m_bIsOffsetRelativeToCharacter;
+	DWORD m_bWarpTranslation;
 	DWORD m_samplingMode;
 } CNmOrientationWarpNode__CDefinition;
 
@@ -3523,6 +3854,11 @@ inline struct AnimParamIDOffsets {
 inline struct CNmBoneMaskNode__CDefinitionOffsets {
 	DWORD m_boneMaskID;
 } CNmBoneMaskNode__CDefinition;
+
+inline struct ModelAnimGraph2Ref_tOffsets {
+	DWORD m_sIdentifier;
+	DWORD m_hGraph;
+} ModelAnimGraph2Ref_t;
 
 inline struct AnimationDecodeDebugDump_tOffsets {
 	DWORD m_processingType;
@@ -3852,6 +4188,12 @@ inline struct CMotionGraphGroupOffsets {
 	DWORD m_hIsActiveScript;
 } CMotionGraphGroup;
 
+inline struct CPulse_InstructionDebugOffsets {
+	DWORD m_nFlowNodeID;
+	DWORD m_nValueNodeID;
+	DWORD m_SequencePointName;
+} CPulse_InstructionDebug;
+
 inline struct CNmVectorNegateNode__CDefinitionOffsets {
 	DWORD m_nInputValueNodeIdx;
 } CNmVectorNegateNode__CDefinition;
@@ -3873,6 +4215,7 @@ inline struct CNmTargetOffsets {
 
 inline struct CNmBodyGroupEventOffsets {
 	DWORD m_groupName;
+	DWORD m_nGroupValue;
 } CNmBodyGroupEvent;
 
 inline struct CWayPointHelperUpdateNodeOffsets {
@@ -3901,7 +4244,6 @@ inline struct CModelConfigElement_AttachedModelOffsets {
 	DWORD m_bBoneMergeFlex;
 	DWORD m_bUserSpecifiedColor;
 	DWORD m_bUserSpecifiedMaterialGroup;
-	DWORD m_bAcceptParentMaterialDrivenDecals;
 	DWORD m_BodygroupOnOtherModels;
 	DWORD m_MaterialGroupOnOtherModels;
 } CModelConfigElement_AttachedModel;
@@ -3928,11 +4270,6 @@ inline struct buttonsOffsets {
 	DWORD use;
 	DWORD zoom;
 } buttons;
-
-inline struct CPulseCell_WaitForCursorsWithTagOffsets {
-	DWORD m_bTagSelfWhenComplete;
-	DWORD m_nDesiredKillPriority;
-} CPulseCell_WaitForCursorsWithTag;
 
 inline struct C_SceneEntity__QueuedEvents_tOffsets {
 	DWORD starttime;
@@ -3983,16 +4320,13 @@ inline struct C_SkyCameraOffsets {
 	DWORD m_pNext;
 } C_SkyCamera;
 
-inline struct CPulseCell_BaseOffsets {
-	DWORD m_nEditorNodeID;
-} CPulseCell_Base;
-
 inline struct C_SoundOpvarSetPointBaseOffsets {
 	DWORD m_iszStackName;
 	DWORD m_iszOperatorName;
 	DWORD m_iszOpvarName;
 	DWORD m_iOpvarIndex;
 	DWORD m_bUseAutoCompare;
+	DWORD m_bFastRefresh;
 } C_SoundOpvarSetPointBase;
 
 inline struct C_EnvCubemapFogOffsets {
@@ -4045,6 +4379,18 @@ inline struct CCSPlayerController_InventoryServicesOffsets {
 	DWORD m_unEquippedPlayerSprayIDs;
 	DWORD m_unCurrentLoadoutHash;
 } CCSPlayerController_InventoryServices;
+
+inline struct CCSPlayerModernJumpOffsets {
+	DWORD m_nLastActualJumpPressTick;
+	DWORD m_flLastActualJumpPressFrac;
+	DWORD m_nLastUsableJumpPressTick;
+	DWORD m_flLastUsableJumpPressFrac;
+	DWORD m_nLastLandedTick;
+	DWORD m_flLastLandedFrac;
+	DWORD m_flLastLandedVelocityX;
+	DWORD m_flLastLandedVelocityY;
+	DWORD m_flLastLandedVelocityZ;
+} CCSPlayerModernJump;
 
 inline struct C_EconEntity__AttachedModelData_tOffsets {
 	DWORD m_iModelDisplayFlags;
@@ -4179,6 +4525,7 @@ inline struct C_BarnLightOffsets {
 	DWORD m_bForceShadowsEnabled;
 	DWORD m_nBounceLight;
 	DWORD m_flBounceScale;
+	DWORD m_bDynamicBounce;
 	DWORD m_flMinRoughness;
 	DWORD m_vAlternateColor;
 	DWORD m_fAlternateColorBrightness;
@@ -4247,11 +4594,6 @@ inline struct C_PostProcessingVolumeOffsets {
 	DWORD m_bMaster;
 	DWORD m_bExposureControl;
 } C_PostProcessingVolume;
-
-inline struct CPulseCell_PickBestOutflowSelectorOffsets {
-	DWORD m_nCheckType;
-	DWORD m_OutflowList;
-} CPulseCell_PickBestOutflowSelector;
 
 inline struct CInfoFanOffsets {
 	DWORD m_fFanForceMaxRadius;
@@ -4332,6 +4674,7 @@ inline struct C_BreakablePropOffsets {
 	DWORD m_bHasBreakPiecesOrCommands;
 	DWORD m_explodeDamage;
 	DWORD m_explodeRadius;
+	DWORD m_nExplosionType;
 	DWORD m_explosionDelay;
 	DWORD m_explosionBuildupSound;
 	DWORD m_explosionCustomEffect;
@@ -4362,11 +4705,6 @@ inline struct C_RetakeGameRulesOffsets {
 	DWORD m_hBombPlanter;
 } C_RetakeGameRules;
 
-inline struct CPulseCell_WaitForObservableOffsets {
-	DWORD m_Condition;
-	DWORD m_OnTrue;
-} CPulseCell_WaitForObservable;
-
 inline struct C_SoundAreaEntitySphereOffsets {
 	DWORD m_flRadius;
 } C_SoundAreaEntitySphere;
@@ -4388,6 +4726,12 @@ inline struct CCSObserver_ObserverServicesOffsets {
 inline struct CHitboxComponentOffsets {
 	DWORD m_flBoundsExpandRadius;
 } CHitboxComponent;
+
+inline struct ServerAuthoritativeWeaponSlot_tOffsets {
+	DWORD unClass;
+	DWORD unSlot;
+	DWORD unItemDefIdx;
+} ServerAuthoritativeWeaponSlot_t;
 
 inline struct C_PrecipitationOffsets {
 	DWORD m_flDensity;
@@ -4416,13 +4760,6 @@ inline struct SequenceHistory_tOffsets {
 	DWORD m_flPlaybackRate;
 	DWORD m_flCyclesPerSecond;
 } SequenceHistory_t;
-
-inline struct CPulse_OutflowConnectionOffsets {
-	DWORD m_SourceOutflowName;
-	DWORD m_nDestChunk;
-	DWORD m_nInstruction;
-	DWORD m_OutflowRegisterMap;
-} CPulse_OutflowConnection;
 
 inline struct C_SpotlightEndOffsets {
 	DWORD m_flLightScale;
@@ -4494,23 +4831,6 @@ inline struct C_EnvVolumetricFogControllerOffsets {
 	DWORD m_bFirstTime;
 } C_EnvVolumetricFogController;
 
-inline struct CPulseGraphDefOffsets {
-	DWORD m_DomainIdentifier;
-	DWORD m_DomainSubType;
-	DWORD m_ParentMapName;
-	DWORD m_ParentXmlName;
-	DWORD m_Chunks;
-	DWORD m_Cells;
-	DWORD m_Vars;
-	DWORD m_PublicOutputs;
-	DWORD m_InvokeBindings;
-	DWORD m_CallInfos;
-	DWORD m_Constants;
-	DWORD m_DomainValues;
-	DWORD m_BlackboardReferences;
-	DWORD m_OutputConnections;
-} CPulseGraphDef;
-
 inline struct C_EnvDetailControllerOffsets {
 	DWORD m_flFadeStartDist;
 	DWORD m_flFadeEndDist;
@@ -4552,6 +4872,11 @@ inline struct CPointChildModifierOffsets {
 	DWORD m_bOrphanInsteadOfDeletingChildrenOnRemove;
 } CPointChildModifier;
 
+inline struct CCSPlayerLegacyJumpOffsets {
+	DWORD m_bOldJumpPressed;
+	DWORD m_flJumpPressedTime;
+} CCSPlayerLegacyJump;
+
 inline struct C_CSGO_TeamPreviewCameraOffsets {
 	DWORD m_nVariant;
 } C_CSGO_TeamPreviewCamera;
@@ -4592,8 +4917,13 @@ inline struct CInfoDynamicShadowHintBoxOffsets {
 } CInfoDynamicShadowHintBox;
 
 inline struct CBaseAnimGraphControllerOffsets {
+	DWORD m_nAnimationAlgorithm;
 	DWORD m_animGraphNetworkedVars;
-	DWORD m_bSequenceFinished;
+	DWORD m_pAnimGraphInstance;
+	DWORD m_nNextExternalGraphHandle;
+	DWORD m_vecSecondarySkeletonNames;
+	DWORD m_vecSecondarySkeletons;
+	DWORD m_nSecondarySkeletonMasterCount;
 	DWORD m_flSoundSyncTime;
 	DWORD m_nActiveIKChainMask;
 	DWORD m_hSequence;
@@ -4605,15 +4935,20 @@ inline struct CBaseAnimGraphControllerOffsets {
 	DWORD m_bNetworkedAnimationInputsChanged;
 	DWORD m_bNetworkedSequenceChanged;
 	DWORD m_bLastUpdateSkipped;
-	DWORD m_flPrevAnimUpdateTime;
+	DWORD m_bSequenceFinished;
+	DWORD m_nPrevAnimUpdateTick;
 	DWORD m_hGraphDefinitionAG2;
-	DWORD m_bIsUsingAG2;
 	DWORD m_serializedPoseRecipeAG2;
 	DWORD m_nSerializePoseRecipeSizeAG2;
 	DWORD m_nSerializePoseRecipeVersionAG2;
-	DWORD m_nGraphCreationFlagsAG2;
-	DWORD m_nServerGraphDefReloadCountAG2;
+	DWORD m_nServerGraphInstanceIteration;
 	DWORD m_nServerSerializationContextIteration;
+	DWORD m_primaryGraphId;
+	DWORD m_vecExternalGraphIds;
+	DWORD m_vecExternalClipIds;
+	DWORD m_sAnimGraph2Identifier;
+	DWORD m_vecExternalGraphs;
+	DWORD m_nPrevAnimationAlgorithm;
 } CBaseAnimGraphController;
 
 inline struct C_ColorCorrectionOffsets {
@@ -4660,13 +4995,6 @@ inline struct CFilterMultipleOffsets {
 	DWORD m_iFilterName;
 	DWORD m_hFilter;
 } CFilterMultiple;
-
-inline struct CPulseCell_FireCursorsOffsets {
-	DWORD m_Outflows;
-	DWORD m_bWaitForChildOutflows;
-	DWORD m_OnFinished;
-	DWORD m_OnCanceled;
-} CPulseCell_FireCursors;
 
 inline struct CEnvSoundscapeOffsets {
 	DWORD m_OnPlay;
@@ -4724,26 +5052,6 @@ inline struct C_EconItemViewOffsets {
 	DWORD m_bInitializedTags;
 } C_EconItemView;
 
-inline struct CPulseCell_Timeline__TimelineEvent_tOffsets {
-	DWORD m_flTimeFromPrevious;
-	DWORD m_EventOutflow;
-} CPulseCell_Timeline__TimelineEvent_t;
-
-inline struct CPulseCell_IntervalTimer__CursorState_tOffsets {
-	DWORD m_StartTime;
-	DWORD m_EndTime;
-	DWORD m_flWaitInterval;
-	DWORD m_flWaitIntervalHigh;
-	DWORD m_bCompleteOnNextWake;
-} CPulseCell_IntervalTimer__CursorState_t;
-
-inline struct OutflowWithRequirements_tOffsets {
-	DWORD m_Connection;
-	DWORD m_DestinationFlowNodeID;
-	DWORD m_RequirementNodeIDs;
-	DWORD m_nCursorStateBlockIndex;
-} OutflowWithRequirements_t;
-
 inline struct C_SoundEventPathCornerEntityOffsets {
 	DWORD m_vecCornerPairsNetworked;
 } C_SoundEventPathCornerEntity;
@@ -4758,10 +5066,6 @@ inline struct CCSPlayer_ItemServicesOffsets {
 	DWORD m_bHasDefuser;
 	DWORD m_bHasHelmet;
 } CCSPlayer_ItemServices;
-
-inline struct CPulseCell_Value_GradientOffsets {
-	DWORD m_Gradient;
-} CPulseCell_Value_Gradient;
 
 inline struct IntervalTimerOffsets {
 	DWORD m_timestamp;
@@ -4836,6 +5140,7 @@ inline struct C_CSWeaponBaseOffsets {
 	DWORD m_bIsHauledBack;
 	DWORD m_bSilencerOn;
 	DWORD m_flTimeSilencerSwitchComplete;
+	DWORD m_flWeaponActionPlaybackRate;
 	DWORD m_iOriginalTeamNumber;
 	DWORD m_iMostRecentTeamNumber;
 	DWORD m_bDroppedNearBuyZone;
@@ -4886,11 +5191,6 @@ inline struct CountdownTimerOffsets {
 	DWORD m_nWorldGroupId;
 } CountdownTimer;
 
-inline struct PulseNodeDynamicOutflows_t__DynamicOutflow_tOffsets {
-	DWORD m_OutflowID;
-	DWORD m_Connection;
-} PulseNodeDynamicOutflows_t__DynamicOutflow_t;
-
 inline struct WeaponPurchaseCount_tOffsets {
 	DWORD m_nItemDefIndex;
 	DWORD m_nCount;
@@ -4918,10 +5218,6 @@ inline struct C_PointClientUIHUDOffsets {
 	DWORD m_vecCSSClasses;
 } C_PointClientUIHUD;
 
-inline struct CPulseCell_Inflow_GraphHookOffsets {
-	DWORD m_HookName;
-} CPulseCell_Inflow_GraphHook;
-
 inline struct C_PointCommentaryNodeOffsets {
 	DWORD m_bActive;
 	DWORD m_bWasActive;
@@ -4934,6 +5230,7 @@ inline struct C_PointCommentaryNodeOffsets {
 	DWORD m_iNodeNumber;
 	DWORD m_iNodeNumberMax;
 	DWORD m_bListenedTo;
+	DWORD m_sndCommentary;
 	DWORD m_hViewPosition;
 	DWORD m_bRestartAfterRestore;
 } C_PointCommentaryNode;
@@ -5013,11 +5310,6 @@ inline struct CCSPlayerBase_CameraServicesOffsets {
 	DWORD m_hLastFogTrigger;
 } CCSPlayerBase_CameraServices;
 
-inline struct CPulseCell_Inflow_BaseEntrypointOffsets {
-	DWORD m_EntryChunk;
-	DWORD m_RegisterMap;
-} CPulseCell_Inflow_BaseEntrypoint;
-
 inline struct C_CSPlayerPawnOffsets {
 	DWORD m_pBulletServices;
 	DWORD m_pHostageServices;
@@ -5043,7 +5335,6 @@ inline struct C_CSPlayerPawnOffsets {
 	DWORD m_aimPunchAngleVel;
 	DWORD m_aimPunchTickBase;
 	DWORD m_aimPunchTickFraction;
-	DWORD m_aimPunchCache;
 	DWORD m_bInLanding;
 	DWORD m_flLandingStartTime;
 	DWORD m_bInHostageRescueZone;
@@ -5147,11 +5438,6 @@ inline struct C_CSPlayerPawnOffsets {
 	DWORD m_iOldIDEntIndex;
 	DWORD m_holdTargetIDTimer;
 } C_CSPlayerPawn;
-
-inline struct CPulseCell_WaitForCursorsWithTagBaseOffsets {
-	DWORD m_nCursorsAllowedToWait;
-	DWORD m_WaitComplete;
-} CPulseCell_WaitForCursorsWithTagBase;
 
 inline struct C_HostageOffsets {
 	DWORD m_entitySpottedState;
@@ -5298,14 +5584,6 @@ inline struct C_EnvSkyOffsets {
 	DWORD m_bEnabled;
 } C_EnvSky;
 
-inline struct CPulse_InvokeBindingOffsets {
-	DWORD m_RegisterMap;
-	DWORD m_FuncName;
-	DWORD m_nCellIndex;
-	DWORD m_nSrcChunk;
-	DWORD m_nSrcInstruction;
-} CPulse_InvokeBinding;
-
 inline struct C_EnvWindControllerOffsets {
 	DWORD m_EnvWindShared;
 	DWORD m_fDirectionVariation;
@@ -5346,6 +5624,8 @@ inline struct C_CSGO_MapPreviewCameraPathOffsets {
 
 inline struct C_PointWorldTextOffsets {
 	DWORD m_bForceRecreateNextUpdate;
+	DWORD m_nTextWidthPx;
+	DWORD m_nTextHeightPx;
 	DWORD m_messageText;
 	DWORD m_FontName;
 	DWORD m_BackgroundMaterialName;
@@ -5419,19 +5699,19 @@ inline struct CInfoDynamicShadowHintOffsets {
 	DWORD m_hLight;
 } CInfoDynamicShadowHint;
 
-inline struct CPulseCell_IntervalTimerOffsets {
-	DWORD m_Completed;
-	DWORD m_OnInterval;
-} CPulseCell_IntervalTimer;
+inline struct CPathNodeOffsets {
+	DWORD m_vInTangentLocal;
+	DWORD m_vOutTangentLocal;
+	DWORD m_strParentPathUniqueID;
+	DWORD m_strPathNodeParameter;
+	DWORD m_xWSPrevParent;
+	DWORD m_hPath;
+} CPathNode;
 
 inline struct C_SoundEventOBBEntityOffsets {
 	DWORD m_vMins;
 	DWORD m_vMaxs;
 } C_SoundEventOBBEntity;
-
-inline struct CPulseCell_BaseLerpOffsets {
-	DWORD m_WakeResume;
-} CPulseCell_BaseLerp;
 
 inline struct C_BasePropDoorOffsets {
 	DWORD m_eDoorState;
@@ -5464,14 +5744,20 @@ inline struct CEntityInstanceOffsets {
 inline struct C_BaseModelEntityOffsets {
 	DWORD m_CRenderComponent;
 	DWORD m_CHitboxComponent;
+	DWORD m_nDestructiblePartInitialStateDestructed0;
+	DWORD m_nDestructiblePartInitialStateDestructed1;
+	DWORD m_nDestructiblePartInitialStateDestructed2;
+	DWORD m_nDestructiblePartInitialStateDestructed3;
+	DWORD m_nDestructiblePartInitialStateDestructed4;
+	DWORD m_nDestructiblePartInitialStateDestructed0_PartIndex;
+	DWORD m_nDestructiblePartInitialStateDestructed1_PartIndex;
+	DWORD m_nDestructiblePartInitialStateDestructed2_PartIndex;
+	DWORD m_nDestructiblePartInitialStateDestructed3_PartIndex;
+	DWORD m_nDestructiblePartInitialStateDestructed4_PartIndex;
 	DWORD m_pDestructiblePartsSystemComponent;
-	DWORD m_LastHitGroup;
-	DWORD m_sLastDamageSourceName;
-	DWORD m_vLastDamagePosition;
 	DWORD m_bInitModelEffects;
+	DWORD m_bDoingModelEffects;
 	DWORD m_bIsStaticProp;
-	DWORD m_nLastAddDecal;
-	DWORD m_nDecalsAdded;
 	DWORD m_iOldHealth;
 	DWORD m_nRenderMode;
 	DWORD m_nRenderFX;
@@ -5488,12 +5774,7 @@ inline struct C_BaseModelEntityOffsets {
 	DWORD m_flFadeScale;
 	DWORD m_flShadowStrength;
 	DWORD m_nObjectCulling;
-	DWORD m_nAddDecal;
-	DWORD m_vDecalPosition;
-	DWORD m_vDecalForwardAxis;
-	DWORD m_nDecalMode;
-	DWORD m_nRequiredDecalMode;
-	DWORD m_ConfigEntitiesToPropagateMaterialDecalsTo;
+	DWORD m_nRequiredDecalRtEncoding;
 	DWORD m_vecViewOffset;
 	DWORD m_pClientAlphaProperty;
 	DWORD m_ClientOverrideTint;
@@ -5630,10 +5911,6 @@ inline struct ActiveModelConfig_tOffsets {
 	DWORD m_AssociatedEntityNames;
 } ActiveModelConfig_t;
 
-inline struct CPulseCell_Value_CurveOffsets {
-	DWORD m_Curve;
-} CPulseCell_Value_Curve;
-
 inline struct C_BasePlayerPawnOffsets {
 	DWORD m_pWeaponServices;
 	DWORD m_pItemServices;
@@ -5701,10 +5978,6 @@ inline struct C_SoundEventEntityOffsets {
 	DWORD m_bClientSideOnly;
 } C_SoundEventEntity;
 
-inline struct CPulseCell_Inflow_EventHandlerOffsets {
-	DWORD m_EventName;
-} CPulseCell_Inflow_EventHandler;
-
 inline struct CBombTargetOffsets {
 	DWORD m_bBombPlantedHere;
 	DWORD m_OnBombExplode;
@@ -5730,6 +6003,7 @@ inline struct CSkeletonInstanceOffsets {
 	DWORD m_bIsGeneratingLatchedParentSpaceState;
 	DWORD m_materialGroup;
 	DWORD m_nHitboxSet;
+	DWORD m_bForceServerConstraintsEnabled;
 } CSkeletonInstance;
 
 inline struct C_ItemDogtagsOffsets {
@@ -5737,26 +6011,12 @@ inline struct C_ItemDogtagsOffsets {
 	DWORD m_KillingPlayer;
 } C_ItemDogtags;
 
-inline struct CPulseCell_Outflow_CycleShuffled__InstanceState_tOffsets {
-	DWORD m_Shuffle;
-	DWORD m_nNextShuffle;
-} CPulseCell_Outflow_CycleShuffled__InstanceState_t;
-
-inline struct CPulseCell_BaseLerp__CursorState_tOffsets {
-	DWORD m_StartTime;
-	DWORD m_EndTime;
-} CPulseCell_BaseLerp__CursorState_t;
-
 inline struct C_BaseClientUIEntityOffsets {
 	DWORD m_bEnabled;
 	DWORD m_DialogXMLName;
 	DWORD m_PanelClassName;
 	DWORD m_PanelID;
 } C_BaseClientUIEntity;
-
-inline struct CPulseCell_WaitForCursorsWithTagBase__CursorState_tOffsets {
-	DWORD m_TagName;
-} CPulseCell_WaitForCursorsWithTagBase__CursorState_t;
 
 inline struct C_MolotovProjectileOffsets {
 	DWORD m_bIsIncGrenade;
@@ -5773,20 +6033,20 @@ inline struct CInfoOffscreenPanoramaTextureOffsets {
 	DWORD m_bDisabled;
 	DWORD m_nResolutionX;
 	DWORD m_nResolutionY;
+	DWORD m_szPanelType;
 	DWORD m_szLayoutFileName;
 	DWORD m_RenderAttrName;
 	DWORD m_TargetEntities;
 	DWORD m_nTargetChangeCount;
 	DWORD m_vecCSSClasses;
-	DWORD m_bCheckCSSClasses;
 	DWORD m_szTargetsName;
 	DWORD m_AdditionalTargetEntities;
+	DWORD m_bCheckCSSClasses;
 } CInfoOffscreenPanoramaTexture;
 
 inline struct CCSWeaponBaseVDataOffsets {
 	DWORD m_WeaponType;
 	DWORD m_WeaponCategory;
-	DWORD m_szModel_AG2;
 	DWORD m_szAnimSkeleton;
 	DWORD m_vecMuzzlePos0;
 	DWORD m_vecMuzzlePos1;
@@ -5901,19 +6161,6 @@ inline struct CPlayer_CameraServicesOffsets {
 	DWORD m_angDemoViewAngles;
 	DWORD m_hTriggerSoundscapeList;
 } CPlayer_CameraServices;
-
-inline struct CPulseCell_TimelineOffsets {
-	DWORD m_TimelineEvents;
-	DWORD m_bWaitForChildOutflows;
-	DWORD m_OnFinished;
-	DWORD m_OnCanceled;
-} CPulseCell_Timeline;
-
-inline struct CPulseCell_Inflow_EntOutputHandlerOffsets {
-	DWORD m_SourceEntity;
-	DWORD m_SourceOutput;
-	DWORD m_ExpectedParamType;
-} CPulseCell_Inflow_EntOutputHandler;
 
 inline struct C_BaseCSGrenadeOffsets {
 	DWORD m_bClientPredictDelete;
@@ -6055,10 +6302,6 @@ inline struct C_CSGO_PreviewModelOffsets {
 	DWORD m_sInitialWeaponState;
 } C_CSGO_PreviewModel;
 
-inline struct CPulseCell_Outflow_CycleOrdered__InstanceState_tOffsets {
-	DWORD m_nNextIndex;
-} CPulseCell_Outflow_CycleOrdered__InstanceState_t;
-
 inline struct C_SoundEventAABBEntityOffsets {
 	DWORD m_vMins;
 	DWORD m_vMaxs;
@@ -6067,10 +6310,12 @@ inline struct C_SoundEventAABBEntityOffsets {
 inline struct CCSPlayer_MovementServicesOffsets {
 	DWORD m_vecLadderNormal;
 	DWORD m_nLadderSurfacePropIndex;
+	DWORD m_bDucked;
 	DWORD m_flDuckAmount;
 	DWORD m_flDuckSpeed;
 	DWORD m_bDuckOverride;
 	DWORD m_bDesiresDuck;
+	DWORD m_bDucking;
 	DWORD m_flDuckOffset;
 	DWORD m_nDuckTimeMsecs;
 	DWORD m_nDuckJumpTimeMsecs;
@@ -6089,8 +6334,6 @@ inline struct CCSPlayer_MovementServicesOffsets {
 	DWORD m_vecLeft;
 	DWORD m_vecUp;
 	DWORD m_nGameCodeHasMovedPlayerAfterCommand;
-	DWORD m_bOldJumpPressed;
-	DWORD m_flJumpPressedTime;
 	DWORD m_fStashGrenadeParameterWhen;
 	DWORD m_nButtonDownMaskPrev;
 	DWORD m_flOffsetTickCompleteTime;
@@ -6100,11 +6343,17 @@ inline struct CCSPlayer_MovementServicesOffsets {
 	DWORD m_flMaxJumpHeightThisJump;
 	DWORD m_flMaxJumpHeightLastJump;
 	DWORD m_flStaminaAtJumpStart;
+	DWORD m_flVelMulAtJumpStart;
 	DWORD m_flAccumulatedJumpError;
+	DWORD m_LegacyJump;
+	DWORD m_ModernJump;
+	DWORD m_nLastJumpTick;
+	DWORD m_flLastJumpFrac;
+	DWORD m_flLastJumpVelocityZ;
+	DWORD m_bJumpApexPending;
 	DWORD m_flTicksSinceLastSurfingDetected;
 	DWORD m_bWasSurfing;
 	DWORD m_vecInputRotated;
-	DWORD m_bJumpApexPending;
 	DWORD m_bMadeFootstepNoise;
 	DWORD m_iFootsteps;
 } CCSPlayer_MovementServices;
@@ -6140,10 +6389,6 @@ inline struct CPropDataComponentOffsets {
 	DWORD m_nDisableTakePhysicsDamageSpawnFlag;
 	DWORD m_nMotionDisabledSpawnFlag;
 } CPropDataComponent;
-
-inline struct CPulseCell_LimitCount__InstanceState_tOffsets {
-	DWORD m_nCurrentCount;
-} CPulseCell_LimitCount__InstanceState_t;
 
 inline struct C_WeaponCZ75aOffsets {
 	DWORD m_bMagazineRemoved;
@@ -6228,11 +6473,18 @@ inline struct sky3dparams_tOffsets {
 	DWORD m_nWorldGroupID;
 } sky3dparams_t;
 
+inline struct C_SoundEventConeEntityOffsets {
+	DWORD m_flEmitterAngle;
+	DWORD m_flSweetSpotAngle;
+	DWORD m_flAttenMin;
+	DWORD m_flAttenMax;
+	DWORD m_iszParameterName;
+} C_SoundEventConeEntity;
+
 inline struct CDestructiblePartsComponentOffsets {
 	DWORD __m_pChainEntity;
 	DWORD m_vecDamageTakenByHitGroup;
 	DWORD m_hOwner;
-	DWORD m_nLastHitDamageLevel;
 } CDestructiblePartsComponent;
 
 inline struct C_EnvWindOffsets {
@@ -6251,10 +6503,6 @@ inline struct CBodyComponentBaseAnimGraphOffsets {
 	DWORD m_animationController;
 } CBodyComponentBaseAnimGraph;
 
-inline struct PulseNodeDynamicOutflows_tOffsets {
-	DWORD m_Outflows;
-} PulseNodeDynamicOutflows_t;
-
 inline struct C_TriggerBuoyancyOffsets {
 	DWORD m_BuoyancyHelper;
 	DWORD m_flFluidDensity;
@@ -6263,22 +6511,12 @@ inline struct C_TriggerBuoyancyOffsets {
 inline struct CPlayer_MovementServices_HumanoidOffsets {
 	DWORD m_flStepSoundTime;
 	DWORD m_flFallVelocity;
-	DWORD m_bInCrouch;
-	DWORD m_nCrouchState;
-	DWORD m_flCrouchTransitionStartTime;
-	DWORD m_bDucked;
-	DWORD m_bDucking;
-	DWORD m_bInDuckJump;
 	DWORD m_groundNormal;
 	DWORD m_flSurfaceFriction;
 	DWORD m_surfaceProps;
 	DWORD m_nStepside;
 	DWORD m_vecSmoothedVelocity;
 } CPlayer_MovementServices_Humanoid;
-
-inline struct CPulseCell_IsRequirementValid__Criteria_tOffsets {
-	DWORD m_bIsValid;
-} CPulseCell_IsRequirementValid__Criteria_t;
 
 inline struct C_PhysPropClientsideOffsets {
 	DWORD m_flTouchDelta;
@@ -6321,11 +6559,6 @@ inline struct EntityRenderAttribute_tOffsets {
 	DWORD m_Values;
 } EntityRenderAttribute_t;
 
-inline struct CPulseCell_Inflow_ObservableVariableListenerOffsets {
-	DWORD m_nBlackboardReference;
-	DWORD m_bSelfReference;
-} CPulseCell_Inflow_ObservableVariableListener;
-
 inline struct CModelStateOffsets {
 	DWORD m_hModel;
 	DWORD m_ModelName;
@@ -6342,10 +6575,6 @@ inline struct CPulseCell_LerpCameraSettings__CursorState_tOffsets {
 	DWORD m_OverlaidStart;
 	DWORD m_OverlaidEnd;
 } CPulseCell_LerpCameraSettings__CursorState_t;
-
-inline struct CPulseCell_Outflow_CycleOrderedOffsets {
-	DWORD m_Outputs;
-} CPulseCell_Outflow_CycleOrdered;
 
 inline struct C_CSWeaponBaseGunOffsets {
 	DWORD m_zoomLevel;
@@ -6436,10 +6665,6 @@ inline struct C_ClientRagdollOffsets {
 	DWORD m_flScaleTimeStart;
 	DWORD m_flScaleTimeEnd;
 } C_ClientRagdoll;
-
-inline struct PulseSelectorOutflowList_tOffsets {
-	DWORD m_Outflows;
-} PulseSelectorOutflowList_t;
 
 inline struct CPulseCell_PlaySequence__CursorState_tOffsets {
 	DWORD m_hTarget;
@@ -6590,13 +6815,32 @@ inline struct CAttributeListOffsets {
 	DWORD m_pManager;
 } CAttributeList;
 
-inline struct CPulseCell_Inflow_WaitOffsets {
-	DWORD m_WakeResume;
-} CPulseCell_Inflow_Wait;
-
 inline struct CFilterProximityOffsets {
 	DWORD m_flRadius;
 } CFilterProximity;
+
+inline struct CCS2WeaponGraphControllerOffsets {
+	DWORD m_action;
+	DWORD m_bActionReset;
+	DWORD m_flWeaponActionSpeedScale;
+	DWORD m_weaponCategory;
+	DWORD m_weaponType;
+	DWORD m_weaponExtraInfo;
+	DWORD m_flWeaponAmmo;
+	DWORD m_flWeaponAmmoMax;
+	DWORD m_flWeaponAmmoReserve;
+	DWORD m_bWeaponIsSilenced;
+	DWORD m_flWeaponIronsightAmount;
+	DWORD m_bIsUsingLegacyModel;
+	DWORD m_idleVariation;
+	DWORD m_deployVariation;
+	DWORD m_attackType;
+	DWORD m_attackThrowStrength;
+	DWORD m_flAttackVariation;
+	DWORD m_inspectVariation;
+	DWORD m_inspectExtraInfo;
+	DWORD m_reloadStage;
+} CCS2WeaponGraphController;
 
 inline struct CEffectDataOffsets {
 	DWORD m_vOrigin;
@@ -6649,23 +6893,12 @@ inline struct C_ParticleSystemOffsets {
 	DWORD m_bOldFrozen;
 } C_ParticleSystem;
 
-inline struct CPulseCell_Outflow_CycleShuffledOffsets {
-	DWORD m_Outputs;
-} CPulseCell_Outflow_CycleShuffled;
-
 inline struct C_BaseFlexOffsets {
 	DWORD m_flexWeight;
 	DWORD m_vLookTargetPosition;
-	DWORD m_blinktoggle;
 	DWORD m_nLastFlexUpdateFrameCount;
 	DWORD m_CachedViewTarget;
 	DWORD m_nNextSceneEventId;
-	DWORD m_iBlink;
-	DWORD m_blinktime;
-	DWORD m_prevblinktoggle;
-	DWORD m_iJawOpen;
-	DWORD m_flJawOpenAmount;
-	DWORD m_flBlinkAmount;
 	DWORD m_iMouthAttachment;
 	DWORD m_iEyeAttachment;
 	DWORD m_bResetFlexWeightsOnModelChange;
@@ -6727,6 +6960,7 @@ inline struct CLightComponentOffsets {
 	DWORD m_bAllowSSTGeneration;
 	DWORD m_nDirectLight;
 	DWORD m_nIndirectLight;
+	DWORD m_bDynamicBounce;
 	DWORD m_flFadeMinDist;
 	DWORD m_flFadeMaxDist;
 	DWORD m_flShadowFadeMinDist;
@@ -6787,14 +7021,6 @@ inline struct CBodyComponentOffsets {
 	DWORD __m_pChainEntity;
 } CBodyComponent;
 
-inline struct CPulseCell_Inflow_MethodOffsets {
-	DWORD m_MethodName;
-	DWORD m_Description;
-	DWORD m_bIsPublic;
-	DWORD m_ReturnType;
-	DWORD m_Args;
-} CPulseCell_Inflow_Method;
-
 inline struct C_BaseCombatCharacterOffsets {
 	DWORD m_hMyWearables;
 	DWORD m_leftFootAttachment;
@@ -6839,13 +7065,6 @@ inline struct CCitadelSoundOpvarSetOBBOffsets {
 	DWORD m_nAABBDirection;
 } CCitadelSoundOpvarSetOBB;
 
-inline struct CPulseCell_BooleanSwitchStateOffsets {
-	DWORD m_Condition;
-	DWORD m_SubGraph;
-	DWORD m_WhenTrue;
-	DWORD m_WhenFalse;
-} CPulseCell_BooleanSwitchState;
-
 inline struct CDamageRecordOffsets {
 	DWORD m_PlayerDamager;
 	DWORD m_PlayerRecipient;
@@ -6871,6 +7090,9 @@ inline struct VPhysicsCollisionAttribute_tOffsets {
 	DWORD m_nEntityId;
 	DWORD m_nOwnerId;
 	DWORD m_nHierarchyId;
+	DWORD m_nDetailLayerMask;
+	DWORD m_nDetailLayerMaskType;
+	DWORD m_nTargetDetailLayer;
 	DWORD m_nCollisionGroup;
 	DWORD m_nCollisionFunctionMask;
 } VPhysicsCollisionAttribute_t;
@@ -6895,10 +7117,6 @@ inline struct C_SceneEntityOffsets {
 	DWORD m_QueuedEvents;
 	DWORD m_flCurrentTime;
 } C_SceneEntity;
-
-inline struct CPulseCell_Inflow_YieldOffsets {
-	DWORD m_UnyieldResume;
-} CPulseCell_Inflow_Yield;
 
 inline struct C_NametagModuleOffsets {
 	DWORD m_strNametagString;
@@ -6960,10 +7178,6 @@ inline struct CGameSceneNodeHandleOffsets {
 	DWORD m_name;
 } CGameSceneNodeHandle;
 
-inline struct CPulseCell_UnknownOffsets {
-	DWORD m_UnknownKeys;
-} CPulseCell_Unknown;
-
 inline struct CSPerRoundStats_tOffsets {
 	DWORD m_iKills;
 	DWORD m_iDeaths;
@@ -6979,14 +7193,6 @@ inline struct CSPerRoundStats_tOffsets {
 	DWORD m_iUtilityDamage;
 	DWORD m_iEnemiesFlashed;
 } CSPerRoundStats_t;
-
-inline struct CPulseCell_Outflow_CycleRandomOffsets {
-	DWORD m_Outputs;
-} CPulseCell_Outflow_CycleRandom;
-
-inline struct CPulseCell_Step_PublicOutputOffsets {
-	DWORD m_OutputIndex;
-} CPulseCell_Step_PublicOutput;
 
 inline struct C_CSGameRulesOffsets {
 	DWORD m_bFreezePeriod;
@@ -7037,12 +7243,12 @@ inline struct C_CSGameRulesOffsets {
 	DWORD m_bIsDroppingItems;
 	DWORD m_bIsQuestEligible;
 	DWORD m_bIsHltvActive;
+	DWORD m_bBombPlanted;
 	DWORD m_arrProhibitedItemIndices;
 	DWORD m_arrTournamentActiveCasterAccounts;
 	DWORD m_numBestOfMaps;
 	DWORD m_nHalloweenMaskListSeed;
 	DWORD m_bBombDropped;
-	DWORD m_bBombPlanted;
 	DWORD m_iRoundWinStatus;
 	DWORD m_eRoundWinReason;
 	DWORD m_bTCantBuy;
@@ -7093,13 +7299,6 @@ inline struct CGrenadeTracerOffsets {
 	DWORD m_flTracerDuration;
 	DWORD m_nType;
 } CGrenadeTracer;
-
-inline struct CPulse_BlackboardReferenceOffsets {
-	DWORD m_hBlackboardResource;
-	DWORD m_BlackboardResource;
-	DWORD m_nNodeID;
-	DWORD m_NodeName;
-} CPulse_BlackboardReference;
 
 inline struct C_BaseCSGrenadeProjectileOffsets {
 	DWORD m_vInitialPosition;
@@ -7410,21 +7609,15 @@ inline struct C_RagdollPropOffsets {
 	DWORD m_worldSpaceBoneComputationOrder;
 } C_RagdollProp;
 
-inline struct CPulse_CallInfoOffsets {
-	DWORD m_PortName;
-	DWORD m_nEditorNodeID;
-	DWORD m_RegisterMap;
-	DWORD m_CallMethodID;
-	DWORD m_nSrcChunk;
-	DWORD m_nSrcInstruction;
-} CPulse_CallInfo;
-
 inline struct CBaseAnimGraphOffsets {
+	DWORD m_graphControllerManager;
+	DWORD m_pMainGraphController;
 	DWORD m_bInitiallyPopulateInterpHistory;
 	DWORD m_bSuppressAnimEventSounds;
 	DWORD m_bAnimGraphUpdateEnabled;
 	DWORD m_flMaxSlopeDistance;
 	DWORD m_vLastSlopeCheckPos;
+	DWORD m_nAnimGraphUpdateId;
 	DWORD m_bAnimationUpdateScheduled;
 	DWORD m_vecForce;
 	DWORD m_nForceBone;
@@ -7437,13 +7630,6 @@ inline struct CBaseAnimGraphOffsets {
 	DWORD m_pChoreoServices;
 	DWORD m_xParentedRagdollRootInEntitySpace;
 } CBaseAnimGraph;
-
-inline struct CPulseCell_InlineNodeSkipSelectorOffsets {
-	DWORD m_nFlowNodeID;
-	DWORD m_bAnd;
-	DWORD m_PassOutflow;
-	DWORD m_FailOutflow;
-} CPulseCell_InlineNodeSkipSelector;
 
 inline struct C_LightEntityOffsets {
 	DWORD m_CLightComponent;
@@ -7489,18 +7675,6 @@ inline struct CPlayer_WeaponServicesOffsets {
 	DWORD m_iAmmo;
 	DWORD m_bPreventWeaponPickup;
 } CPlayer_WeaponServices;
-
-inline struct CPulseCell_LimitCountOffsets {
-	DWORD m_nLimitCount;
-} CPulseCell_LimitCount;
-
-inline struct CPulseCell_Step_CallExternalMethodOffsets {
-	DWORD m_MethodName;
-	DWORD m_GameBlackboard;
-	DWORD m_ExpectedArgs;
-	DWORD m_nAsyncCallMode;
-	DWORD m_OnFinished;
-} CPulseCell_Step_CallExternalMethod;
 
 inline struct C_PlayerPingOffsets {
 	DWORD m_hPlayer;
@@ -7578,6 +7752,11 @@ inline struct C_PointCameraOffsets {
 	DWORD m_pNext;
 } C_PointCamera;
 
+inline struct CPathWithDynamicNodesOffsets {
+	DWORD m_vecPathNodes;
+	DWORD m_xInitialPathWorldToLocal;
+} CPathWithDynamicNodes;
+
 inline struct CBaseFilterOffsets {
 	DWORD m_bNegated;
 	DWORD m_OnPass;
@@ -7587,12 +7766,6 @@ inline struct CBaseFilterOffsets {
 inline struct WeaponPurchaseTracker_tOffsets {
 	DWORD m_weaponPurchases;
 } WeaponPurchaseTracker_t;
-
-inline struct PulseObservableBoolExpression_tOffsets {
-	DWORD m_EvaluateConnection;
-	DWORD m_DependentObservableVars;
-	DWORD m_DependentObservableBlackboardReferences;
-} PulseObservableBoolExpression_t;
 
 inline struct CMapInfoOffsets {
 	DWORD m_iBuyingStatus;
@@ -7653,15 +7826,12 @@ inline struct CEntityIdentityOffsets {
 	DWORD m_worldGroupId;
 	DWORD m_fDataObjectTypes;
 	DWORD m_PathIndex;
+	DWORD m_pAttributes;
 	DWORD m_pPrev;
 	DWORD m_pNext;
 	DWORD m_pPrevByClass;
 	DWORD m_pNextByClass;
 } CEntityIdentity;
-
-inline struct CPulseCell_LimitCount__Criteria_tOffsets {
-	DWORD m_bLimitCountPasses;
-} CPulseCell_LimitCount__Criteria_t;
 
 inline struct CBasePlayerVDataOffsets {
 	DWORD m_sModelName;
@@ -7685,10 +7855,6 @@ inline struct CCSGameModeRules_DeathmatchOffsets {
 	DWORD m_flDMBonusTimeLength;
 	DWORD m_sDMBonusWeapon;
 } CCSGameModeRules_Deathmatch;
-
-inline struct CPulseCell_CursorQueueOffsets {
-	DWORD m_nCursorsAllowedToRunParallel;
-} CPulseCell_CursorQueue;
 
 inline struct C_SpriteOffsets {
 	DWORD m_hSpriteMaterial;
@@ -7729,6 +7895,12 @@ inline struct CFilterTeamOffsets {
 	DWORD m_iFilterTeam;
 } CFilterTeam;
 
+inline struct CInfoInteractionOffsets {
+	DWORD m_strSlotEntityName;
+	DWORD m_strInteractVData;
+	DWORD m_flInteractRadius;
+} CInfoInteraction;
+
 inline struct CBasePlayerWeaponVDataOffsets {
 	DWORD m_szWorldModel;
 	DWORD m_sToolsOnlyOwnerModelName;
@@ -7741,8 +7913,12 @@ inline struct CBasePlayerWeaponVDataOffsets {
 	DWORD m_nMuzzleSmokeShotThreshold;
 	DWORD m_flMuzzleSmokeTimeout;
 	DWORD m_flMuzzleSmokeDecrementRate;
+	DWORD m_bGenerateMuzzleLight;
 	DWORD m_bLinkedCooldowns;
 	DWORD m_iFlags;
+	DWORD m_iWeight;
+	DWORD m_bAutoSwitchTo;
+	DWORD m_bAutoSwitchFrom;
 	DWORD m_nPrimaryAmmoType;
 	DWORD m_nSecondaryAmmoType;
 	DWORD m_iMaxClip1;
@@ -7752,9 +7928,6 @@ inline struct CBasePlayerWeaponVDataOffsets {
 	DWORD m_bReserveAmmoAsClips;
 	DWORD m_bTreatAsSingleClip;
 	DWORD m_bKeepLoadedAmmo;
-	DWORD m_iWeight;
-	DWORD m_bAutoSwitchTo;
-	DWORD m_bAutoSwitchFrom;
 	DWORD m_iRumbleEffect;
 	DWORD m_flDropSpeed;
 	DWORD m_iSlot;
@@ -7830,6 +8003,321 @@ inline struct CBasePlayerControllerOffsets {
 	DWORD m_bHasAnySteadyStateEnts;
 } CBasePlayerController;
 
+inline struct GeneratedTextureHandle_tOffsets {
+	DWORD m_strBitmapName;
+} GeneratedTextureHandle_t;
+
+inline struct CompositeMaterialInputContainer_tOffsets {
+	DWORD m_bEnabled;
+	DWORD m_nCompositeMaterialInputContainerSourceType;
+	DWORD m_strSpecificContainerMaterial;
+	DWORD m_strAttrName;
+	DWORD m_strAlias;
+	DWORD m_vecLooseVariables;
+	DWORD m_strAttrNameForVar;
+	DWORD m_bExposeExternally;
+} CompositeMaterialInputContainer_t;
+
+inline struct CompositeMaterialAssemblyProcedure_tOffsets {
+	DWORD m_vecCompMatIncludes;
+	DWORD m_vecMatchFilters;
+	DWORD m_vecCompositeInputContainers;
+	DWORD m_vecPropertyMutators;
+} CompositeMaterialAssemblyProcedure_t;
+
+inline struct CompositeMaterialInputLooseVariable_tOffsets {
+	DWORD m_strName;
+	DWORD m_bExposeExternally;
+	DWORD m_strExposedFriendlyName;
+	DWORD m_strExposedFriendlyGroupName;
+	DWORD m_bExposedVariableIsFixedRange;
+	DWORD m_strExposedVisibleWhenTrue;
+	DWORD m_strExposedHiddenWhenTrue;
+	DWORD m_strExposedValueList;
+	DWORD m_nVariableType;
+	DWORD m_bValueBoolean;
+	DWORD m_nValueIntX;
+	DWORD m_nValueIntY;
+	DWORD m_nValueIntZ;
+	DWORD m_nValueIntW;
+	DWORD m_bHasFloatBounds;
+	DWORD m_flValueFloatX;
+	DWORD m_flValueFloatX_Min;
+	DWORD m_flValueFloatX_Max;
+	DWORD m_flValueFloatY;
+	DWORD m_flValueFloatY_Min;
+	DWORD m_flValueFloatY_Max;
+	DWORD m_flValueFloatZ;
+	DWORD m_flValueFloatZ_Min;
+	DWORD m_flValueFloatZ_Max;
+	DWORD m_flValueFloatW;
+	DWORD m_flValueFloatW_Min;
+	DWORD m_flValueFloatW_Max;
+	DWORD m_cValueColor4;
+	DWORD m_nValueSystemVar;
+	DWORD m_strResourceMaterial;
+	DWORD m_strTextureContentAssetPath;
+	DWORD m_strTextureRuntimeResourcePath;
+	DWORD m_strTextureCompilationVtexTemplate;
+	DWORD m_nTextureType;
+	DWORD m_strString;
+	DWORD m_strPanoramaPanelPath;
+	DWORD m_nPanoramaRenderRes;
+} CompositeMaterialInputLooseVariable_t;
+
+inline struct inv_image_light_barn_tOffsets {
+	DWORD color;
+	DWORD angle;
+	DWORD brightness;
+	DWORD orbit_distance;
+} inv_image_light_barn_t;
+
+inline struct inv_image_map_tOffsets {
+	DWORD map_name;
+	DWORD map_rotation;
+} inv_image_map_t;
+
+inline struct inv_image_light_fill_tOffsets {
+	DWORD color;
+	DWORD angle;
+	DWORD brightness;
+} inv_image_light_fill_t;
+
+inline struct CInterpolatedValueOffsets {
+	DWORD m_flStartTime;
+	DWORD m_flEndTime;
+	DWORD m_flStartValue;
+	DWORD m_flEndValue;
+	DWORD m_nInterpType;
+} CInterpolatedValue;
+
+inline struct inv_image_item_tOffsets {
+	DWORD position;
+	DWORD angle;
+	DWORD pose_sequence;
+} inv_image_item_t;
+
+inline struct TimedEventOffsets {
+	DWORD m_TimeBetweenEvents;
+	DWORD m_fNextEvent;
+} TimedEvent;
+
+inline struct CFlashlightEffectOffsets {
+	DWORD m_bIsOn;
+	DWORD m_bMuzzleFlashEnabled;
+	DWORD m_flMuzzleFlashBrightness;
+	DWORD m_quatMuzzleFlashOrientation;
+	DWORD m_vecMuzzleFlashOrigin;
+	DWORD m_flFov;
+	DWORD m_flFarZ;
+	DWORD m_flLinearAtten;
+	DWORD m_bCastsShadows;
+	DWORD m_flCurrentPullBackDist;
+	DWORD m_FlashlightTexture;
+	DWORD m_MuzzleFlashTexture;
+	DWORD m_textureName;
+} CFlashlightEffect;
+
+inline struct inv_image_camera_tOffsets {
+	DWORD angle;
+	DWORD fov;
+	DWORD znear;
+	DWORD zfar;
+	DWORD target;
+	DWORD target_nudge;
+	DWORD orbit_distance;
+} inv_image_camera_t;
+
+inline struct CInventoryImageDataOffsets {
+	DWORD m_nNodeType;
+	DWORD name;
+	DWORD inventory_image_data;
+} CInventoryImageData;
+
+inline struct C_CSGO_PreviewPlayer_GraphControllerOffsets {
+	DWORD m_pszCharacterMode;
+	DWORD m_pszTeamPreviewVariant;
+	DWORD m_pszTeamPreviewPosition;
+	DWORD m_pszEndOfMatchCelebration;
+	DWORD m_nTeamPreviewRandom;
+	DWORD m_pszWeaponState;
+	DWORD m_pszWeaponType;
+	DWORD m_bCT;
+} C_CSGO_PreviewPlayer_GraphController;
+
+inline struct inv_image_clearcolor_tOffsets {
+	DWORD color;
+} inv_image_clearcolor_t;
+
+inline struct C_CommandContextOffsets {
+	DWORD needsprocessing;
+	DWORD command_number;
+} C_CommandContext;
+
+inline struct CompositeMaterialEditorPoint_tOffsets {
+	DWORD m_ModelName;
+	DWORD m_nSequenceIndex;
+	DWORD m_flCycle;
+	DWORD m_KVModelStateChoices;
+	DWORD m_bEnableChildModel;
+	DWORD m_ChildModelName;
+	DWORD m_vecCompositeMaterialAssemblyProcedures;
+	DWORD m_vecCompositeMaterials;
+} CompositeMaterialEditorPoint_t;
+
+inline struct C_IronSightControllerOffsets {
+	DWORD m_bIronSightAvailable;
+	DWORD m_flIronSightAmount;
+	DWORD m_flIronSightAmountGained;
+	DWORD m_flIronSightAmountBiased;
+	DWORD m_flIronSightAmount_Interpolated;
+	DWORD m_flIronSightAmountGained_Interpolated;
+	DWORD m_flIronSightAmountBiased_Interpolated;
+	DWORD m_flInterpolationLastUpdated;
+	DWORD m_angDeltaAverage;
+	DWORD m_angViewLast;
+	DWORD m_vecDotCoords;
+	DWORD m_flFiringInaccuracyExtraWidthMultiplier;
+	DWORD m_flSpeedRatio;
+} C_IronSightController;
+
+inline struct CompMatMutatorCondition_tOffsets {
+	DWORD m_nMutatorCondition;
+	DWORD m_strMutatorConditionContainerName;
+	DWORD m_strMutatorConditionContainerVarName;
+	DWORD m_strMutatorConditionContainerVarValue;
+	DWORD m_bPassWhenTrue;
+} CompMatMutatorCondition_t;
+
+inline struct inv_image_data_tOffsets {
+	DWORD map;
+	DWORD item;
+	DWORD camera;
+	DWORD lightsun;
+	DWORD lightfill;
+	DWORD light0;
+	DWORD light1;
+	DWORD clearcolor;
+} inv_image_data_t;
+
+inline struct CompMatPropertyMutator_tOffsets {
+	DWORD m_bEnabled;
+	DWORD m_nMutatorCommandType;
+	DWORD m_strInitWith_Container;
+	DWORD m_strCopyProperty_InputContainerSrc;
+	DWORD m_strCopyProperty_InputContainerProperty;
+	DWORD m_strCopyProperty_TargetProperty;
+	DWORD m_strRandomRollInputVars_SeedInputVar;
+	DWORD m_vecRandomRollInputVars_InputVarsToRoll;
+	DWORD m_strCopyMatchingKeys_InputContainerSrc;
+	DWORD m_strCopyKeysWithSuffix_InputContainerSrc;
+	DWORD m_strCopyKeysWithSuffix_FindSuffix;
+	DWORD m_strCopyKeysWithSuffix_ReplaceSuffix;
+	DWORD m_nSetValue_Value;
+	DWORD m_strGenerateTexture_TargetParam;
+	DWORD m_strGenerateTexture_InitialContainer;
+	DWORD m_nResolution;
+	DWORD m_bIsScratchTarget;
+	DWORD m_strCompressionFormat;
+	DWORD m_bSplatDebugInfo;
+	DWORD m_bCaptureInRenderDoc;
+	DWORD m_vecTexGenInstructions;
+	DWORD m_vecConditionalMutators;
+	DWORD m_strPopInputQueue_Container;
+	DWORD m_strDrawText_InputContainerSrc;
+	DWORD m_strDrawText_InputContainerProperty;
+	DWORD m_vecDrawText_Position;
+	DWORD m_colDrawText_Color;
+	DWORD m_strDrawText_Font;
+	DWORD m_vecConditions;
+} CompMatPropertyMutator_t;
+
+inline struct CCompositeMaterialEditorDocOffsets {
+	DWORD m_nVersion;
+	DWORD m_Points;
+	DWORD m_KVthumbnail;
+} CCompositeMaterialEditorDoc;
+
+inline struct CClientAlphaPropertyOffsets {
+	DWORD m_nDistFadeStart;
+	DWORD m_nDistFadeEnd;
+	DWORD m_nDesyncOffset;
+	DWORD m_bAlphaOverride;
+	DWORD m_bShadowAlphaOverride;
+	DWORD m_nRenderMode;
+	DWORD m_nRenderFX;
+	DWORD m_nAlpha;
+	DWORD m_flFadeScale;
+	DWORD m_flRenderFxStartTime;
+	DWORD m_flRenderFxDuration;
+} CClientAlphaProperty;
+
+inline struct CGlobalLightBaseOffsets {
+	DWORD m_bSpotLight;
+	DWORD m_SpotLightOrigin;
+	DWORD m_SpotLightAngles;
+	DWORD m_ShadowDirection;
+	DWORD m_AmbientDirection;
+	DWORD m_SpecularDirection;
+	DWORD m_InspectorSpecularDirection;
+	DWORD m_flSpecularPower;
+	DWORD m_flSpecularIndependence;
+	DWORD m_SpecularColor;
+	DWORD m_bStartDisabled;
+	DWORD m_bEnabled;
+	DWORD m_LightColor;
+	DWORD m_AmbientColor1;
+	DWORD m_AmbientColor2;
+	DWORD m_AmbientColor3;
+	DWORD m_flSunDistance;
+	DWORD m_flFOV;
+	DWORD m_flNearZ;
+	DWORD m_flFarZ;
+	DWORD m_bEnableShadows;
+	DWORD m_bOldEnableShadows;
+	DWORD m_bBackgroundClearNotRequired;
+	DWORD m_flCloudScale;
+	DWORD m_flCloud1Speed;
+	DWORD m_flCloud1Direction;
+	DWORD m_flCloud2Speed;
+	DWORD m_flCloud2Direction;
+	DWORD m_flAmbientScale1;
+	DWORD m_flAmbientScale2;
+	DWORD m_flGroundScale;
+	DWORD m_flLightScale;
+	DWORD m_flFoWDarkness;
+	DWORD m_bEnableSeparateSkyboxFog;
+	DWORD m_vFowColor;
+	DWORD m_ViewOrigin;
+	DWORD m_ViewAngles;
+	DWORD m_flViewFoV;
+	DWORD m_WorldPoints;
+	DWORD m_vFogOffsetLayer0;
+	DWORD m_vFogOffsetLayer1;
+	DWORD m_hEnvWind;
+	DWORD m_hEnvSky;
+} CGlobalLightBase;
+
+inline struct inv_image_light_sun_tOffsets {
+	DWORD color;
+	DWORD angle;
+	DWORD brightness;
+} inv_image_light_sun_t;
+
+inline struct CompositeMaterialMatchFilter_tOffsets {
+	DWORD m_nCompositeMaterialMatchFilterType;
+	DWORD m_strMatchFilter;
+	DWORD m_strMatchValue;
+	DWORD m_bPassWhenTrue;
+} CompositeMaterialMatchFilter_t;
+
+inline struct CompositeMaterial_tOffsets {
+	DWORD m_TargetKVs;
+	DWORD m_PreGenerationKVs;
+	DWORD m_FinalKVs;
+	DWORD m_vecGeneratedTextures;
+} CompositeMaterial_t;
+
 inline struct EventSimpleLoopFrameUpdate_tOffsets {
 	DWORD m_LoopState;
 	DWORD m_flRealTime;
@@ -7843,10 +8331,6 @@ inline struct EventPostAdvanceTick_tOffsets {
 	DWORD m_nTotalTicks;
 } EventPostAdvanceTick_t;
 
-inline struct CEntityIOOutputOffsets {
-	DWORD m_Value;
-} CEntityIOOutput;
-
 inline struct EventClientSceneSystemThreadStateChange_tOffsets {
 	DWORD m_bThreadsActive;
 } EventClientSceneSystemThreadStateChange_t;
@@ -7858,6 +8342,10 @@ inline struct EventClientOutput_tOffsets {
 	DWORD m_flRenderFrameTimeUnbounded;
 	DWORD m_bRenderOnly;
 } EventClientOutput_t;
+
+inline struct EventServerPostSimulate_tOffsets {
+	DWORD m_bLastTickBeforeClientUpdate;
+} EventServerPostSimulate_t;
 
 inline struct CEntityComponentHelperOffsets {
 	DWORD m_flags;
@@ -7909,6 +8397,10 @@ inline struct EventAppShutdown_tOffsets {
 	DWORD m_nDummy0;
 } EventAppShutdown_t;
 
+inline struct EventServerPostAdvanceTick_tOffsets {
+	DWORD m_bLastTickBeforeClientUpdate;
+} EventServerPostAdvanceTick_t;
+
 inline struct EventProfileStorageAvailable_tOffsets {
 	DWORD m_nSplitScreenSlot;
 } EventProfileStorageAvailable_t;
@@ -7920,6 +8412,11 @@ inline struct EventPostDataUpdate_tOffsets {
 inline struct EventClientProcessNetworking_tOffsets {
 	DWORD m_nTickCount;
 } EventClientProcessNetworking_t;
+
+inline struct CEntityAttributeTableOffsets {
+	DWORD m_Attributes;
+	DWORD m_Names;
+} CEntityAttributeTable;
 
 inline struct EventAdvanceTick_tOffsets {
 	DWORD m_nCurrentTick;
@@ -7982,12 +8479,20 @@ inline struct EventClientPollNetworking_tOffsets {
 	DWORD m_nTickCount;
 } EventClientPollNetworking_t;
 
+inline struct EventServerBeginAsyncPostTickWork_tOffsets {
+	DWORD m_bIsOncePerFrameAsyncWorkPhase;
+} EventServerBeginAsyncPostTickWork_t;
+
 inline struct EventClientProcessInput_tOffsets {
 	DWORD m_LoopState;
 	DWORD m_flRealTime;
 	DWORD m_flTickInterval;
 	DWORD m_flTickStartTime;
 } EventClientProcessInput_t;
+
+inline struct EventServerEndSimulate_tOffsets {
+	DWORD m_bLastTick;
+} EventServerEndSimulate_t;
 
 inline struct EmptyTestScriptOffsets {
 	DWORD m_hTest;
@@ -8207,7 +8712,6 @@ inline struct steamaudio_dllOffsets {
 } steamaudio_dll;
 
 inline struct steamclient64_dllOffsets {
-	DWORD CLIENTENGINE_INTERFACE_VERSION005;
 	DWORD IVALIDATE001;
 	DWORD SteamClient006;
 	DWORD SteamClient007;
@@ -8750,7 +9254,6 @@ inline struct CBaseRendererSource2Offsets {
 	DWORD m_flDiffuseAmount;
 	DWORD m_flDiffuseClamp;
 	DWORD m_nLightingControlPoint;
-	DWORD m_nSelfIllumPerParticle;
 	DWORD m_nOutputBlendMode;
 	DWORD m_bGammaCorrectVertexColors;
 	DWORD m_bSaturateColorPreAlphaBlend;
@@ -9265,6 +9768,7 @@ inline struct C_OP_SetControlPointFieldToScalarExpressionOffsets {
 	DWORD m_flOutputRemap;
 	DWORD m_nOutputCP;
 	DWORD m_nOutVectorField;
+	DWORD m_flInterpolation;
 } C_OP_SetControlPointFieldToScalarExpression;
 
 inline struct C_OP_CreateParticleSystemRendererOffsets {
@@ -9606,6 +10110,7 @@ inline struct C_OP_SetControlPointToPlayerOffsets {
 	DWORD m_nCP1;
 	DWORD m_vecCP1Pos;
 	DWORD m_bOrientToEyes;
+	DWORD m_nPosition;
 } C_OP_SetControlPointToPlayer;
 
 inline struct C_OP_EndCapTimedFreezeOffsets {
@@ -10362,6 +10867,19 @@ inline struct C_INIT_CreateOnModelAtHeightOffsets {
 	DWORD m_flHitboxVelocityScale;
 	DWORD m_flMaxBoneVelocity;
 } C_INIT_CreateOnModelAtHeight;
+
+inline struct C_OP_ModelSurfaceSnapshotGeneratorOffsets {
+	DWORD m_nCPSnapshot;
+	DWORD m_modelInput;
+	DWORD m_flRecalcRate;
+	DWORD m_flUSpacing;
+	DWORD m_flVSpacing;
+	DWORD m_flSurfaceOffset;
+	DWORD m_bSetNormal;
+	DWORD m_bSetUp;
+	DWORD m_bSetGravity;
+	DWORD m_bSetUV;
+} C_OP_ModelSurfaceSnapshotGenerator;
 
 inline struct C_OP_RestartAfterDurationOffsets {
 	DWORD m_flDurationMin;
@@ -12843,7 +13361,6 @@ inline struct CGameTextOffsets {
 inline struct CBaseFlexOffsets {
 	DWORD m_flexWeight;
 	DWORD m_vLookTargetPosition;
-	DWORD m_blinktoggle;
 	DWORD m_flAllowResponsesEndTime;
 	DWORD m_flLastFlexAnimationTime;
 	DWORD m_nNextSceneEventId;
@@ -12949,6 +13466,8 @@ inline struct CGameRulesOffsets {
 	DWORD __m_pChainEntity;
 	DWORD m_szQuestName;
 	DWORD m_nQuestPhase;
+	DWORD m_nLastMatchTime;
+	DWORD m_nLastMatchTime_MatchID64;
 	DWORD m_nTotalPausedTicks;
 	DWORD m_nPauseStartTick;
 	DWORD m_bGamePaused;
@@ -13042,6 +13561,7 @@ inline struct CCSBotOffsets {
 	DWORD m_bendNoisePositionValid;
 	DWORD m_lookAroundStateTimestamp;
 	DWORD m_lookAheadAngle;
+	DWORD m_lookUpAngle;
 	DWORD m_forwardAngle;
 	DWORD m_inhibitLookAroundTimestamp;
 	DWORD m_lookAtSpot;
@@ -13323,11 +13843,11 @@ inline struct CKnifeOffsets {
 } CKnife;
 
 inline struct CLogicPlayerProxyOffsets {
-	DWORD m_hPlayer;
 	DWORD m_PlayerHasAmmo;
 	DWORD m_PlayerHasNoAmmo;
 	DWORD m_PlayerDied;
 	DWORD m_RequestedPlayerHealth;
+	DWORD m_hPlayer;
 } CLogicPlayerProxy;
 
 inline struct CTriggerSoundscapeOffsets {
@@ -13402,6 +13922,7 @@ inline struct CBreakablePropOffsets {
 	DWORD m_bHasBreakPiecesOrCommands;
 	DWORD m_explodeDamage;
 	DWORD m_explodeRadius;
+	DWORD m_nExplosionType;
 	DWORD m_explosionDelay;
 	DWORD m_explosionBuildupSound;
 	DWORD m_explosionCustomEffect;
@@ -13447,17 +13968,11 @@ inline struct CFuncNavBlockerOffsets {
 } CFuncNavBlocker;
 
 inline struct CMoverPathNodeOffsets {
-	DWORD m_vInTangentLocal;
-	DWORD m_vOutTangentLocal;
-	DWORD m_szParentPathUniqueID;
-	DWORD m_szPathNodeParameter;
 	DWORD m_OnStartFromOrInSegment;
 	DWORD m_OnStoppedAtOrInSegment;
 	DWORD m_OnPassThrough;
 	DWORD m_OnPassThroughForward;
 	DWORD m_OnPassThroughReverse;
-	DWORD m_hMover;
-	DWORD m_xWSPrevParent;
 } CMoverPathNode;
 
 inline struct CFuncBrushOffsets {
@@ -14066,6 +14581,8 @@ inline struct CTriggerLookOffsets {
 
 inline struct CPulseCell_Outflow_PlayVCDOffsets {
 	DWORD m_hChoreoScene;
+	DWORD m_OnPaused;
+	DWORD m_OnResumed;
 } CPulseCell_Outflow_PlayVCD;
 
 inline struct CPhysTorqueOffsets {
@@ -14203,7 +14720,6 @@ inline struct CPlatTriggerOffsets {
 
 inline struct CSceneEntityOffsets {
 	DWORD m_iszSceneFile;
-	DWORD m_iszResumeSceneFile;
 	DWORD m_iszTarget1;
 	DWORD m_iszTarget2;
 	DWORD m_iszTarget3;
@@ -14235,8 +14751,6 @@ inline struct CSceneEntityOffsets {
 	DWORD m_flAutomationDelay;
 	DWORD m_flAutomationTime;
 	DWORD m_nSpeechPriority;
-	DWORD m_hWaitingForThisResumeScene;
-	DWORD m_bWaitingForResumeScene;
 	DWORD m_bPausedViaInput;
 	DWORD m_bPauseAtNextInterrupt;
 	DWORD m_bWaitingForActor;
@@ -14246,14 +14760,12 @@ inline struct CSceneEntityOffsets {
 	DWORD m_bSceneFinished;
 	DWORD m_hActorList;
 	DWORD m_hRemoveActorList;
-	DWORD m_nSceneFlushCounter;
 	DWORD m_nSceneStringIndex;
 	DWORD m_OnStart;
 	DWORD m_OnCompletion;
 	DWORD m_OnCanceled;
 	DWORD m_OnPaused;
 	DWORD m_OnResumed;
-	DWORD m_OnTrigger;
 	DWORD m_hInterruptScene;
 	DWORD m_nInterruptCount;
 	DWORD m_bSceneMissing;
@@ -14564,6 +15076,10 @@ inline struct CPhysForceOffsets {
 	DWORD m_integrator;
 } CPhysForce;
 
+inline struct CScenePayloadVDataOffsets {
+	DWORD m_sSceneFile;
+} CScenePayloadVData;
+
 inline struct CKeepUprightOffsets {
 	DWORD m_worldGoalAxis;
 	DWORD m_localTestAxis;
@@ -14639,7 +15155,6 @@ inline struct CPhysLengthOffsets {
 	DWORD m_addLength;
 	DWORD m_minLength;
 	DWORD m_totalLength;
-	DWORD m_bEnableCollision;
 } CPhysLength;
 
 inline struct CTeamOffsets {
@@ -15107,6 +15622,14 @@ inline struct CGunTargetOffsets {
 	DWORD m_OnDeath;
 } CGunTarget;
 
+inline struct CSoundEventConeEntityOffsets {
+	DWORD m_flEmitterAngle;
+	DWORD m_flSweetSpotAngle;
+	DWORD m_flAttenMin;
+	DWORD m_flAttenMax;
+	DWORD m_iszParameterName;
+} CSoundEventConeEntity;
+
 inline struct CDecoyProjectileOffsets {
 	DWORD m_nDecoyShotTick;
 	DWORD m_shotsRemaining;
@@ -15115,10 +15638,23 @@ inline struct CDecoyProjectileOffsets {
 } CDecoyProjectile;
 
 inline struct CSoundOpvarSetPathCornerEntityOffsets {
+	DWORD m_bUseParentedPath;
 	DWORD m_flDistMinSqr;
 	DWORD m_flDistMaxSqr;
 	DWORD m_iszPathCornerEntityName;
 } CSoundOpvarSetPathCornerEntity;
+
+inline struct CPathMoverEntitySpawnerOffsets {
+	DWORD m_szSpawnTemplates;
+	DWORD m_nSpawnIndex;
+	DWORD m_hPathMover;
+	DWORD m_flSpawnFrequencySeconds;
+	DWORD m_flSpawnFrequencyDistToNearestMover;
+	DWORD m_mapSpawnedMoverTemplates;
+	DWORD m_nMaxActive;
+	DWORD m_flLastSpawnTime;
+	DWORD m_bEnabled;
+} CPathMoverEntitySpawner;
 
 inline struct CCSWeaponBaseGunOffsets {
 	DWORD m_zoomLevel;
@@ -15153,22 +15689,6 @@ inline struct CMathCounterOffsets {
 	DWORD m_OnChangedFromMin;
 	DWORD m_OnChangedFromMax;
 } CMathCounter;
-
-inline struct CNavLinkAreaEntityOffsets {
-	DWORD m_flWidth;
-	DWORD m_vLocatorOffset;
-	DWORD m_qLocatorAnglesOffset;
-	DWORD m_strMovementForward;
-	DWORD m_strMovementReverse;
-	DWORD m_bEnabled;
-	DWORD m_bAllowCrossMovableConnections;
-	DWORD m_strFilterName;
-	DWORD m_hFilter;
-	DWORD m_OnNavLinkStart;
-	DWORD m_OnNavLinkFinish;
-	DWORD m_bIsTerminus;
-	DWORD m_nSplits;
-} CNavLinkAreaEntity;
 
 inline struct CAttributeContainerOffsets {
 	DWORD m_Item;
@@ -15365,6 +15885,7 @@ inline struct CPhysHingeOffsets {
 	DWORD m_flMotorDampingRatio;
 	DWORD m_flAngleSpeed;
 	DWORD m_flAngleSpeedThreshold;
+	DWORD m_flLimitsDebugVisRotation;
 	DWORD m_OnStartMoving;
 	DWORD m_OnStopMoving;
 } CPhysHinge;
@@ -15468,12 +15989,12 @@ inline struct CCSGameRulesOffsets {
 	DWORD m_bIsDroppingItems;
 	DWORD m_bIsQuestEligible;
 	DWORD m_bIsHltvActive;
+	DWORD m_bBombPlanted;
 	DWORD m_arrProhibitedItemIndices;
 	DWORD m_arrTournamentActiveCasterAccounts;
 	DWORD m_numBestOfMaps;
 	DWORD m_nHalloweenMaskListSeed;
 	DWORD m_bBombDropped;
-	DWORD m_bBombPlanted;
 	DWORD m_iRoundWinStatus;
 	DWORD m_eRoundWinReason;
 	DWORD m_bTCantBuy;
@@ -15681,6 +16202,7 @@ inline struct CCSWeaponBaseOffsets {
 	DWORD m_bIsHauledBack;
 	DWORD m_bSilencerOn;
 	DWORD m_flTimeSilencerSwitchComplete;
+	DWORD m_flWeaponActionPlaybackRate;
 	DWORD m_iOriginalTeamNumber;
 	DWORD m_iMostRecentTeamNumber;
 	DWORD m_bDroppedNearBuyZone;
@@ -15783,9 +16305,6 @@ inline struct CBaseModelEntityOffsets {
 	DWORD m_nDestructiblePartInitialStateDestructed3_PartIndex;
 	DWORD m_nDestructiblePartInitialStateDestructed4_PartIndex;
 	DWORD m_pDestructiblePartsSystemComponent;
-	DWORD m_LastHitGroup;
-	DWORD m_sLastDamageSourceName;
-	DWORD m_vLastDamagePosition;
 	DWORD m_flDissolveStartTime;
 	DWORD m_OnIgnite;
 	DWORD m_nRenderMode;
@@ -15803,12 +16322,6 @@ inline struct CBaseModelEntityOffsets {
 	DWORD m_flFadeScale;
 	DWORD m_flShadowStrength;
 	DWORD m_nObjectCulling;
-	DWORD m_nAddDecal;
-	DWORD m_vDecalPosition;
-	DWORD m_vDecalForwardAxis;
-	DWORD m_nDecalMode;
-	DWORD m_nRequiredDecalMode;
-	DWORD m_ConfigEntitiesToPropagateMaterialDecalsTo;
 	DWORD m_vecViewOffset;
 	DWORD m_bvDisabledHitGroups;
 } CBaseModelEntity;
@@ -15892,14 +16405,14 @@ inline struct CPlantedC4Offsets {
 	DWORD m_bCannotBeDefused;
 	DWORD m_entitySpottedState;
 	DWORD m_nSpotRules;
-	DWORD m_bTrainingPlacedByPlayer;
 	DWORD m_bHasExploded;
+	DWORD m_bBombDefused;
+	DWORD m_bTrainingPlacedByPlayer;
 	DWORD m_flTimerLength;
 	DWORD m_bBeingDefused;
 	DWORD m_fLastDefuseTime;
 	DWORD m_flDefuseLength;
 	DWORD m_flDefuseCountDown;
-	DWORD m_bBombDefused;
 	DWORD m_hBombDefuser;
 	DWORD m_iProgressBarTime;
 	DWORD m_bVoiceAlertFired;
@@ -16372,9 +16885,9 @@ inline struct CRotDoorOffsets {
 } CRotDoor;
 
 inline struct CPathMoverOffsets {
-	DWORD m_vecPathNodes;
 	DWORD m_vecMovers;
-	DWORD m_xInitialPathWorldToLocal;
+	DWORD m_hMoverSpawner;
+	DWORD m_iszMoverSpawnerName;
 } CPathMover;
 
 inline struct CFuncVPhysicsClipOffsets {
@@ -16449,11 +16962,13 @@ inline struct CSoundOpvarSetPointBaseOffsets {
 	DWORD m_hSource;
 	DWORD m_iszSourceEntityName;
 	DWORD m_vLastPosition;
+	DWORD m_flRefreshTime;
 	DWORD m_iszStackName;
 	DWORD m_iszOperatorName;
 	DWORD m_iszOpvarName;
 	DWORD m_iOpvarIndex;
 	DWORD m_bUseAutoCompare;
+	DWORD m_bFastRefresh;
 } CSoundOpvarSetPointBase;
 
 inline struct CPathKeyFrameOffsets {
@@ -16686,6 +17201,7 @@ inline struct CBarnLightOffsets {
 	DWORD m_bForceShadowsEnabled;
 	DWORD m_nBounceLight;
 	DWORD m_flBounceScale;
+	DWORD m_bDynamicBounce;
 	DWORD m_flMinRoughness;
 	DWORD m_vAlternateColor;
 	DWORD m_fAlternateColorBrightness;
@@ -16827,7 +17343,6 @@ inline struct CFuncMoverOffsets {
 	DWORD m_iszPathNodeEnd;
 	DWORD m_eMoveType;
 	DWORD m_bIsReversing;
-	DWORD m_vTarget;
 	DWORD m_flStartSpeed;
 	DWORD m_flPathLocation;
 	DWORD m_flT;
@@ -16838,11 +17353,17 @@ inline struct CFuncMoverOffsets {
 	DWORD m_flTimeToReachMaxSpeed;
 	DWORD m_flDistanceToReachMaxSpeed;
 	DWORD m_flTimeToReachZeroSpeed;
+	DWORD m_flComputedDistanceToReachMaxSpeed;
+	DWORD m_flComputedDistanceToReachZeroSpeed;
+	DWORD m_flStartCurveScale;
+	DWORD m_flStopCurveScale;
 	DWORD m_flDistanceToReachZeroSpeed;
 	DWORD m_flTimeMovementStart;
 	DWORD m_flTimeMovementStop;
 	DWORD m_hStopAtNode;
 	DWORD m_flPathLocationToBeginStop;
+	DWORD m_flPathLocationStart;
+	DWORD m_flBeginStopT;
 	DWORD m_iszStartForwardSound;
 	DWORD m_iszLoopForwardSound;
 	DWORD m_iszStopForwardSound;
@@ -16853,6 +17374,7 @@ inline struct CFuncMoverOffsets {
 	DWORD m_OnMovementEnd;
 	DWORD m_bStartAtClosestPoint;
 	DWORD m_bStartAtEnd;
+	DWORD m_bStartFollowingClosestMover;
 	DWORD m_eOrientationUpdate;
 	DWORD m_flTimeStartOrientationChange;
 	DWORD m_flTimeToBlendToNewOrientation;
@@ -16888,6 +17410,16 @@ inline struct CFuncMoverOffsets {
 	DWORD m_bNextNodeReturnsCurrent;
 	DWORD m_bStartedMoving;
 	DWORD m_eFollowEntityDirection;
+	DWORD m_hFollowMover;
+	DWORD m_iszFollowMoverEntityName;
+	DWORD m_flFollowMoverDistance;
+	DWORD m_flFollowMoverCalculatedDistance;
+	DWORD m_flFollowMoverSpringStrength;
+	DWORD m_bFollowConstraintsInitialized;
+	DWORD m_eFollowConstraint;
+	DWORD m_flFollowMoverSpeed;
+	DWORD m_flFollowMoverVelocity;
+	DWORD m_nTickMovementRan;
 } CFuncMover;
 
 inline struct CPhysicsPropOffsets {
@@ -16921,6 +17453,9 @@ inline struct CPhysicsPropOffsets {
 	DWORD m_glowColor;
 	DWORD m_bShouldAutoConvertBackFromDebris;
 	DWORD m_bMuteImpactEffects;
+	DWORD m_bUpdateNavWhenMoving;
+	DWORD m_bForceNavObstacleCut;
+	DWORD m_bAllowObstacleConvexHullMerging;
 	DWORD m_bAcceptDamageFromHeldObjects;
 	DWORD m_bEnableUseOutput;
 	DWORD m_CrateType;
@@ -16955,7 +17490,6 @@ inline struct CMolotovProjectileOffsets {
 	DWORD m_bIsIncGrenade;
 	DWORD m_bDetonated;
 	DWORD m_stillTimer;
-	DWORD m_bHasBouncedOffPlayer;
 } CMolotovProjectile;
 
 inline struct CColorCorrectionOffsets {
@@ -17013,6 +17547,7 @@ inline struct CBreakableOffsets {
 	DWORD m_iszPropData;
 	DWORD m_impactEnergyScale;
 	DWORD m_nOverrideBlockLOS;
+	DWORD m_OnStartDeath;
 	DWORD m_OnBreak;
 	DWORD m_OnHealthChanged;
 	DWORD m_PerformanceMode;
@@ -17100,6 +17635,12 @@ inline struct CFuncRotatorOffsets {
 	DWORD m_bReturningToPreviousOrientation;
 	DWORD m_vecRotatorQueue;
 	DWORD m_vecRotatorQueueHistory;
+	DWORD m_eSolidType;
+	DWORD m_hSpeedFromMover;
+	DWORD m_iszSpeedFromMover;
+	DWORD m_flSpeedScale;
+	DWORD m_flMinYawRotation;
+	DWORD m_flMaxYawRotation;
 } CFuncRotator;
 
 inline struct CSoundEventEntityOffsets {
@@ -17312,6 +17853,7 @@ inline struct CTriggerLerpObjectOffsets {
 	DWORD m_iszLerpTargetAttachment;
 	DWORD m_hLerpTargetAttachment;
 	DWORD m_flLerpDuration;
+	DWORD m_bAttachedEntityWasParented;
 	DWORD m_bLerpRestoreMoveType;
 	DWORD m_bSingleLerpObject;
 	DWORD m_vecLerpingObjects;
@@ -17339,11 +17881,975 @@ inline struct CPointHurtOffsets {
 	DWORD m_pActivator;
 } CPointHurt;
 
+inline struct CRangeFloatOffsets {
+	DWORD m_pValue;
+} CRangeFloat;
+
+inline struct CDestructiblePartOffsets {
+	DWORD m_DebugName;
+	DWORD m_nHitGroup;
+	DWORD m_bDisableHitGroupWhenDestroyed;
+	DWORD m_nOtherHitgroupsToDestroyWhenFullyDestructed;
+	DWORD m_bOnlyDestroyWhenGibbing;
+	DWORD m_sBodyGroupName;
+	DWORD m_DamageLevels;
+} CDestructiblePart;
+
+inline struct RelationshipOverride_tOffsets {
+	DWORD entity;
+	DWORD classType;
+} RelationshipOverride_t;
+
+inline struct AutoRoomDoorwayPairs_tOffsets {
+	DWORD vP1;
+	DWORD vP2;
+} AutoRoomDoorwayPairs_t;
+
+inline struct CRemapFloatOffsets {
+	DWORD m_pValue;
+} CRemapFloat;
+
+inline struct CHintMessageOffsets {
+	DWORD m_hintString;
+	DWORD m_args;
+	DWORD m_duration;
+} CHintMessage;
+
+inline struct ParticleNode_tOffsets {
+	DWORD m_hEntity;
+	DWORD m_iIndex;
+	DWORD m_flStartTime;
+	DWORD m_flGrowthDuration;
+	DWORD m_vecGrowthOrigin;
+	DWORD m_flEndcapTime;
+	DWORD m_bMarkedForDelete;
+} ParticleNode_t;
+
+inline struct CDecalGroupVDataOffsets {
+	DWORD m_vecOptions;
+	DWORD m_flTotalProbability;
+} CDecalGroupVData;
+
+inline struct CPlayerControllerComponentOffsets {
+	DWORD __m_pChainEntity;
+} CPlayerControllerComponent;
+
+inline struct CResponseQueueOffsets {
+	DWORD m_ExpresserTargets;
+} CResponseQueue;
+
+inline struct CodeGenAABB_tOffsets {
+	DWORD m_vMinBounds;
+	DWORD m_vMaxBounds;
+} CodeGenAABB_t;
+
+inline struct CScriptUniformRandomStreamOffsets {
+	DWORD m_hScriptScope;
+	DWORD m_nInitialSeed;
+} CScriptUniformRandomStream;
+
+inline struct lerpdata_tOffsets {
+	DWORD m_hEnt;
+	DWORD m_MoveType;
+	DWORD m_flStartTime;
+	DWORD m_vecStartOrigin;
+	DWORD m_qStartRot;
+	DWORD m_nFXIndex;
+} lerpdata_t;
+
+inline struct SimpleConstraintSoundProfileOffsets {
+	DWORD m_flKeyPointMinSoundThreshold;
+	DWORD m_flKeyPointMaxSoundThreshold;
+	DWORD m_reversalSoundThresholdSmall;
+	DWORD m_reversalSoundThresholdMedium;
+	DWORD m_reversalSoundThresholdLarge;
+} SimpleConstraintSoundProfile;
+
+inline struct CSimpleSimTimerOffsets {
+	DWORD m_flNext;
+	DWORD m_nWorldGroupId;
+} CSimpleSimTimer;
+
+inline struct CPhysicsBodyGameMarkupDataOffsets {
+	DWORD m_PhysicsBodyMarkupByBoneName;
+} CPhysicsBodyGameMarkupData;
+
+inline struct CSkillDamageOffsets {
+	DWORD m_flDamage;
+	DWORD m_flNPCDamageScalarVsNPC;
+	DWORD m_flPhysicsForceDamage;
+} CSkillDamage;
+
+inline struct CNetworkViewOffsetVectorOffsets {
+	DWORD m_vecX;
+	DWORD m_vecY;
+	DWORD m_vecZ;
+} CNetworkViewOffsetVector;
+
+inline struct AmmoIndex_tOffsets {
+	DWORD m_Value;
+} AmmoIndex_t;
+
+inline struct CDestructiblePartsSystemDataOffsets {
+	DWORD m_PartsDataByHitGroup;
+	DWORD m_nMinMaxNumberHitGroupsToDestroyWhenGibbing;
+} CDestructiblePartsSystemData;
+
+inline struct CRopeOverlapHitOffsets {
+	DWORD m_hEntity;
+	DWORD m_vecOverlappingLinks;
+} CRopeOverlapHit;
+
+inline struct ResponseContext_tOffsets {
+	DWORD m_iszName;
+	DWORD m_iszValue;
+	DWORD m_fExpirationTime;
+} ResponseContext_t;
+
+inline struct CNavVolumeSphericalShellOffsets {
+	DWORD m_flRadiusInner;
+} CNavVolumeSphericalShell;
+
+inline struct CPlayerPawnComponentOffsets {
+	DWORD __m_pChainEntity;
+} CPlayerPawnComponent;
+
+inline struct CDecalInstanceOffsets {
+	DWORD m_sDecalGroup;
+	DWORD m_hMaterial;
+	DWORD m_sSequenceName;
+	DWORD m_hEntity;
+	DWORD m_nBoneIndex;
+	DWORD m_nTriangleIndex;
+	DWORD m_vPositionLS;
+	DWORD m_vNormalLS;
+	DWORD m_vSAxisLS;
+	DWORD m_nFlags;
+	DWORD m_Color;
+	DWORD m_flWidth;
+	DWORD m_flHeight;
+	DWORD m_flDepth;
+	DWORD m_transform;
+	DWORD m_flAnimationScale;
+	DWORD m_flAnimationStartTime;
+	DWORD m_flPlaceTime;
+	DWORD m_flFadeStartTime;
+	DWORD m_flFadeDuration;
+	DWORD m_flLightingOriginOffset;
+	DWORD m_flBoundingRadiusSqr;
+	DWORD m_nSequenceIndex;
+	DWORD m_bIsAdjacent;
+	DWORD m_bDoDecalLightmapping;
+	DWORD m_nDecalRtEncoding;
+	DWORD m_bProjectToBackfaces;
+} CDecalInstance;
+
+inline struct CGameScriptedMoveDataOffsets {
+	DWORD m_vAccumulatedRootMotion;
+	DWORD m_angAccumulatedRootMotionRotation;
+	DWORD m_vSrc;
+	DWORD m_angSrc;
+	DWORD m_angCurrent;
+	DWORD m_flLockedSpeed;
+	DWORD m_flAngRate;
+	DWORD m_flDuration;
+	DWORD m_flStartTime;
+	DWORD m_bActive;
+	DWORD m_bTeleportOnEnd;
+	DWORD m_bIgnoreRotation;
+	DWORD m_bSuccess;
+	DWORD m_nForcedCrouchState;
+	DWORD m_bIgnoreCollisions;
+	DWORD m_vDest;
+	DWORD m_angDst;
+	DWORD m_hDestEntity;
+} CGameScriptedMoveData;
+
+inline struct CSkeletonAnimationControllerOffsets {
+	DWORD m_pSkeletonInstance;
+} CSkeletonAnimationController;
+
+inline struct CPathMoverEntitySpawnOffsets {
+	DWORD hMover;
+	DWORD vecOtherEntities;
+} CPathMoverEntitySpawn;
+
+inline struct CResponseCriteriaSetOffsets {
+	DWORD m_nNumPrefixedContexts;
+	DWORD m_bOverrideOnAppend;
+} CResponseCriteriaSet;
+
+inline struct CAI_ExpresserOffsets {
+	DWORD m_flStopTalkTime;
+	DWORD m_flStopTalkTimeWithoutDelay;
+	DWORD m_flQueuedSpeechTime;
+	DWORD m_flBlockedTalkTime;
+	DWORD m_voicePitch;
+	DWORD m_flLastTimeAcceptedSpeak;
+	DWORD m_bAllowSpeakingInterrupts;
+	DWORD m_bConsiderSceneInvolvementAsSpeech;
+	DWORD m_bSceneEntityDisabled;
+	DWORD m_nLastSpokenPriority;
+	DWORD m_pOuter;
+} CAI_Expresser;
+
+inline struct CStopwatchOffsets {
+	DWORD m_flInterval;
+} CStopwatch;
+
+inline struct ResponseParamsOffsets {
+	DWORD odds;
+	DWORD flags;
+	DWORD m_pFollowup;
+} ResponseParams;
+
+inline struct ConstraintSoundInfoOffsets {
+	DWORD m_vSampler;
+	DWORD m_soundProfile;
+	DWORD m_forwardAxis;
+	DWORD m_iszTravelSoundFwd;
+	DWORD m_iszTravelSoundBack;
+	DWORD m_iszReversalSoundSmall;
+	DWORD m_iszReversalSoundMedium;
+	DWORD m_iszReversalSoundLarge;
+	DWORD m_bPlayTravelSound;
+	DWORD m_bPlayReversalSound;
+} ConstraintSoundInfo;
+
+inline struct CPhysicsBodyGameMarkupOffsets {
+	DWORD m_TargetBody;
+	DWORD m_Tag;
+} CPhysicsBodyGameMarkup;
+
+inline struct PointCameraSettings_tOffsets {
+	DWORD m_flNearBlurryDistance;
+	DWORD m_flNearCrispDistance;
+	DWORD m_flFarCrispDistance;
+	DWORD m_flFarBlurryDistance;
+} PointCameraSettings_t;
+
+inline struct CSoundEnvelopeOffsets {
+	DWORD m_current;
+	DWORD m_target;
+	DWORD m_rate;
+	DWORD m_forceupdate;
+} CSoundEnvelope;
+
+inline struct dynpitchvol_base_tOffsets {
+	DWORD preset;
+	DWORD pitchrun;
+	DWORD pitchstart;
+	DWORD spinup;
+	DWORD spindown;
+	DWORD volrun;
+	DWORD volstart;
+	DWORD fadein;
+	DWORD fadeout;
+	DWORD lfotype;
+	DWORD lforate;
+	DWORD lfomodpitch;
+	DWORD lfomodvol;
+	DWORD cspinup;
+	DWORD cspincount;
+	DWORD pitch;
+	DWORD spinupsav;
+	DWORD spindownsav;
+	DWORD pitchfrac;
+	DWORD vol;
+	DWORD fadeinsav;
+	DWORD fadeoutsav;
+	DWORD volfrac;
+	DWORD lfofrac;
+	DWORD lfomult;
+} dynpitchvol_base_t;
+
+inline struct CStopwatchBaseOffsets {
+	DWORD m_fIsRunning;
+} CStopwatchBase;
+
+inline struct SceneRequestHandle_tOffsets {
+	DWORD m_Value;
+} SceneRequestHandle_t;
+
+inline struct CNavVolumeVectorOffsets {
+	DWORD m_bHasBeenPreFiltered;
+} CNavVolumeVector;
+
+inline struct NavGravity_tOffsets {
+	DWORD m_vGravity;
+	DWORD m_bDefault;
+} NavGravity_t;
+
+inline struct PulseScriptedSequenceData_tOffsets {
+	DWORD m_nActorID;
+	DWORD m_szPreIdleSequence;
+	DWORD m_szEntrySequence;
+	DWORD m_szSequence;
+	DWORD m_szExitSequence;
+	DWORD m_nMoveTo;
+	DWORD m_nMoveToGait;
+	DWORD m_nHeldWeaponBehavior;
+	DWORD m_bLoopPreIdleSequence;
+	DWORD m_bLoopActionSequence;
+	DWORD m_bLoopPostIdleSequence;
+	DWORD m_bIgnoreLookAt;
+} PulseScriptedSequenceData_t;
+
+inline struct RotatorQueueEntry_tOffsets {
+	DWORD qTarget;
+	DWORD eSpace;
+} RotatorQueueEntry_t;
+
+inline struct ExternalAnimGraphHandle_tOffsets {
+	DWORD m_Value;
+} ExternalAnimGraphHandle_t;
+
+inline struct CPhysicsShakeOffsets {
+	DWORD m_force;
+} CPhysicsShake;
+
+inline struct VelocitySamplerOffsets {
+	DWORD m_prevSample;
+	DWORD m_fPrevSampleTime;
+	DWORD m_fIdealSampleRate;
+} VelocitySampler;
+
+inline struct CTakeDamageResultOffsets {
+	DWORD m_pOriginatingInfo;
+	DWORD m_nHealthLost;
+	DWORD m_nHealthBefore;
+	DWORD m_nDamageDealt;
+	DWORD m_flPreModifiedDamage;
+	DWORD m_nTotalledHealthLost;
+	DWORD m_nTotalledDamageDealt;
+	DWORD m_flTotalledPreModifiedDamage;
+	DWORD m_bWasDamageSuppressed;
+	DWORD m_bSuppressFlinch;
+	DWORD m_nOverrideFlinchHitGroup;
+} CTakeDamageResult;
+
+inline struct SceneEventId_tOffsets {
+	DWORD m_Value;
+} SceneEventId_t;
+
+inline struct ExternalAnimGraph_tOffsets {
+	DWORD m_hExtGraphHandle;
+	DWORD m_sExternalGraphSlotID;
+	DWORD m_hGraphDefinition;
+	DWORD m_hExternalGraphOwner;
+	DWORD m_nInactiveBehavior;
+} ExternalAnimGraph_t;
+
+inline struct CCommentarySystemOffsets {
+	DWORD m_bCommentaryConvarsChanging;
+	DWORD m_bCommentaryEnabledMidGame;
+	DWORD m_flNextTeleportTime;
+	DWORD m_iTeleportStage;
+	DWORD m_bCheatState;
+	DWORD m_bIsFirstSpawnGroupToLoad;
+	DWORD m_hCurrentNode;
+	DWORD m_hActiveCommentaryNode;
+	DWORD m_hLastCommentaryNode;
+	DWORD m_vecNodes;
+} CCommentarySystem;
+
+inline struct ResponseFollowupOffsets {
+	DWORD followup_concept;
+	DWORD followup_contexts;
+	DWORD followup_delay;
+	DWORD followup_target;
+	DWORD followup_entityiotarget;
+	DWORD followup_entityioinput;
+	DWORD followup_entityiodelay;
+	DWORD bFired;
+} ResponseFollowup;
+
+inline struct AmmoTypeInfo_tOffsets {
+	DWORD m_nMaxCarry;
+	DWORD m_nSplashSize;
+	DWORD m_nFlags;
+	DWORD m_flMass;
+	DWORD m_flSpeed;
+} AmmoTypeInfo_t;
+
+inline struct CNetworkTransmitComponentOffsets {
+	DWORD m_nTransmitStateOwnedCounter;
+} CNetworkTransmitComponent;
+
+inline struct CPathQueryUtilOffsets {
+	DWORD m_PathToEntityTransform;
+	DWORD m_vecPathSamplePositions;
+	DWORD m_vecPathSampleParameters;
+	DWORD m_vecPathSampleDistances;
+	DWORD m_bIsClosedLoop;
+} CPathQueryUtil;
+
+inline struct RagdollCreationParams_tOffsets {
+	DWORD m_vForce;
+	DWORD m_nForceBone;
+	DWORD m_bForceCurrentWorldTransform;
+	DWORD m_bUseLRURetirement;
+	DWORD m_nHealthToGrant;
+} RagdollCreationParams_t;
+
+inline struct CRangeIntOffsets {
+	DWORD m_pValue;
+} CRangeInt;
+
+inline struct CWorldCompositionChunkReferenceElement_tOffsets {
+	DWORD m_strMapToLoad;
+	DWORD m_strLandmarkName;
+} CWorldCompositionChunkReferenceElement_t;
+
+inline struct CRandStopwatchOffsets {
+	DWORD m_flMinInterval;
+	DWORD m_flMaxInterval;
+} CRandStopwatch;
+
+inline struct CMovementStatsPropertyOffsets {
+	DWORD m_nUseCounter;
+	DWORD m_emaMovementDirection;
+} CMovementStatsProperty;
+
+inline struct CGameChoreoServicesOffsets {
+	DWORD m_hOwner;
+	DWORD m_hScriptedSequence;
+	DWORD m_scriptState;
+	DWORD m_choreoState;
+	DWORD m_flTimeStartedState;
+} CGameChoreoServices;
+
+inline struct CShatterGlassShardOffsets {
+	DWORD m_hShardHandle;
+	DWORD m_vecPanelVertices;
+	DWORD m_vLocalPanelSpaceOrigin;
+	DWORD m_hModel;
+	DWORD m_hPhysicsEntity;
+	DWORD m_hParentPanel;
+	DWORD m_hParentShard;
+	DWORD m_ShatterStressType;
+	DWORD m_vecStressVelocity;
+	DWORD m_bCreatedModel;
+	DWORD m_flLongestEdge;
+	DWORD m_flShortestEdge;
+	DWORD m_flLongestAcross;
+	DWORD m_flShortestAcross;
+	DWORD m_flSumOfAllEdges;
+	DWORD m_flArea;
+	DWORD m_nOnFrameEdge;
+	DWORD m_nSubShardGeneration;
+	DWORD m_vecAverageVertPosition;
+	DWORD m_bAverageVertPositionIsValid;
+	DWORD m_vecPanelSpaceStressPositionA;
+	DWORD m_vecPanelSpaceStressPositionB;
+	DWORD m_bStressPositionAIsValid;
+	DWORD m_bStressPositionBIsValid;
+	DWORD m_bFlaggedForRemoval;
+	DWORD m_flPhysicsEntitySpawnedAtTime;
+	DWORD m_hEntityHittingMe;
+	DWORD m_vecNeighbors;
+} CShatterGlassShard;
+
+inline struct ragdollelement_tOffsets {
+	DWORD originParentSpace;
+	DWORD parentIndex;
+	DWORD m_flRadius;
+	DWORD m_nHeight;
+} ragdollelement_t;
+
+inline struct CGameScriptedMoveDef_tOffsets {
+	DWORD m_vDestOffset;
+	DWORD m_hDestEntity;
+	DWORD m_angDest;
+	DWORD m_flDuration;
+	DWORD m_flAngRate;
+	DWORD m_flMoveSpeed;
+	DWORD m_bAimDisabled;
+	DWORD m_bIgnoreRotation;
+	DWORD m_nForcedCrouchState;
+} CGameScriptedMoveDef_t;
+
+inline struct CNetworkOriginCellCoordQuantizedVectorOffsets {
+	DWORD m_cellX;
+	DWORD m_cellY;
+	DWORD m_cellZ;
+	DWORD m_nOutsideWorld;
+	DWORD m_vecX;
+	DWORD m_vecY;
+	DWORD m_vecZ;
+} CNetworkOriginCellCoordQuantizedVector;
+
+inline struct DynamicVolumeDef_tOffsets {
+	DWORD m_source;
+	DWORD m_target;
+	DWORD m_nHullIdx;
+	DWORD m_vSourceAnchorPos;
+	DWORD m_vTargetAnchorPos;
+	DWORD m_nAreaSrc;
+	DWORD m_nAreaDst;
+	DWORD m_bAttached;
+} DynamicVolumeDef_t;
+
+inline struct CNetworkOriginQuantizedVectorOffsets {
+	DWORD m_vecX;
+	DWORD m_vecY;
+	DWORD m_vecZ;
+} CNetworkOriginQuantizedVector;
+
+inline struct magnetted_objects_tOffsets {
+	DWORD hEntity;
+} magnetted_objects_t;
+
+inline struct CHintMessageQueueOffsets {
+	DWORD m_tmMessageEnd;
+	DWORD m_messages;
+	DWORD m_pPlayerController;
+} CHintMessageQueue;
+
+inline struct CSkillIntOffsets {
+	DWORD m_pValue;
+} CSkillInt;
+
+inline struct thinkfunc_tOffsets {
+	DWORD m_hFn;
+	DWORD m_nContext;
+	DWORD m_nNextThinkTick;
+	DWORD m_nLastThinkTick;
+} thinkfunc_t;
+
+inline struct CNavHullPresetVDataOffsets {
+	DWORD m_vecNavHulls;
+} CNavHullPresetVData;
+
+inline struct CSkillFloatOffsets {
+	DWORD m_pValue;
+} CSkillFloat;
+
+inline struct WaterWheelFrictionScale_tOffsets {
+	DWORD m_flFractionOfWheelSubmerged;
+	DWORD m_flFrictionScale;
+} WaterWheelFrictionScale_t;
+
+inline struct ragdollhierarchyjoint_tOffsets {
+	DWORD parentIndex;
+	DWORD childIndex;
+} ragdollhierarchyjoint_t;
+
+inline struct CSceneEventInfoOffsets {
+	DWORD m_iLayer;
+	DWORD m_iPriority;
+	DWORD m_hSequence;
+	DWORD m_flWeight;
+	DWORD m_hAnimClip;
+	DWORD m_sAnimClipSlot;
+	DWORD m_sAnimClipSlotWeight;
+	DWORD m_bHasArrived;
+	DWORD m_nType;
+	DWORD m_flNext;
+	DWORD m_bIsGesture;
+	DWORD m_bShouldRemove;
+	DWORD m_hTarget;
+	DWORD m_nSceneEventId;
+	DWORD m_bClientSide;
+	DWORD m_bStarted;
+} CSceneEventInfo;
+
+inline struct SoundeventPathCornerPairNetworked_tOffsets {
+	DWORD vP1;
+	DWORD vP2;
+	DWORD flPathLengthSqr;
+	DWORD flP1Pct;
+	DWORD flP2Pct;
+} SoundeventPathCornerPairNetworked_t;
+
+inline struct CSoundPatchOffsets {
+	DWORD m_pitch;
+	DWORD m_volume;
+	DWORD m_shutdownTime;
+	DWORD m_flLastTime;
+	DWORD m_iszSoundScriptName;
+	DWORD m_hEnt;
+	DWORD m_soundEntityIndex;
+	DWORD m_soundOrigin;
+	DWORD m_isPlaying;
+	DWORD m_Filter;
+	DWORD m_flCloseCaptionDuration;
+	DWORD m_bUpdatedSoundOrigin;
+	DWORD m_iszClassName;
+} CSoundPatch;
+
+inline struct CCS2ChickenGraphControllerOffsets {
+	DWORD m_action;
+	DWORD m_actionSubtype;
+	DWORD m_bActionReset;
+	DWORD m_idleVariation;
+	DWORD m_runVariation;
+	DWORD m_panicVariation;
+	DWORD m_squatVariation;
+	DWORD m_bInWater;
+	DWORD m_bHasActionCompletedEvent;
+	DWORD m_bWaitingForCompletedEvent;
+} CCS2ChickenGraphController;
+
+inline struct locksound_tOffsets {
+	DWORD sLockedSound;
+	DWORD sUnlockedSound;
+	DWORD flwaitSound;
+} locksound_t;
+
+inline struct DecalGroupOption_tOffsets {
+	DWORD m_hMaterial;
+	DWORD m_sSequenceName;
+	DWORD m_flProbability;
+	DWORD m_bEnableAngleBetweenNormalAndGravityRange;
+	DWORD m_flMinAngleBetweenNormalAndGravity;
+	DWORD m_flMaxAngleBetweenNormalAndGravity;
+} DecalGroupOption_t;
+
+inline struct CAnimGraphControllerManagerOffsets {
+	DWORD m_controllers;
+	DWORD m_bGraphBindingsCreated;
+} CAnimGraphControllerManager;
+
+inline struct CFiringModeFloatOffsets {
+	DWORD m_flValues;
+} CFiringModeFloat;
+
+inline struct CCopyRecipientFilterOffsets {
+	DWORD m_Flags;
+	DWORD m_Recipients;
+	DWORD m_slotPlayerExcludedDueToPrediction;
+} CCopyRecipientFilter;
+
+inline struct CSmoothFuncOffsets {
+	DWORD m_flSmoothAmplitude;
+	DWORD m_flSmoothBias;
+	DWORD m_flSmoothDuration;
+	DWORD m_flSmoothRemainingTime;
+	DWORD m_nSmoothDir;
+} CSmoothFunc;
+
+inline struct ragdoll_tOffsets {
+	DWORD list;
+	DWORD hierarchyJoints;
+	DWORD boneIndex;
+	DWORD allowStretch;
+	DWORD unused;
+} ragdoll_t;
+
+inline struct HullFlags_tOffsets {
+	DWORD m_bHull_Human;
+	DWORD m_bHull_SmallCentered;
+	DWORD m_bHull_WideHuman;
+	DWORD m_bHull_Tiny;
+	DWORD m_bHull_Medium;
+	DWORD m_bHull_TinyCentered;
+	DWORD m_bHull_Large;
+	DWORD m_bHull_LargeCentered;
+	DWORD m_bHull_MediumTall;
+	DWORD m_bHull_Small;
+} HullFlags_t;
+
+inline struct RotatorHistoryEntry_tOffsets {
+	DWORD qInvChange;
+	DWORD flTimeRotationStart;
+} RotatorHistoryEntry_t;
+
+inline struct GameAmmoTypeInfo_tOffsets {
+	DWORD m_nBuySize;
+	DWORD m_nCost;
+} GameAmmoTypeInfo_t;
+
+inline struct CMotorControllerOffsets {
+	DWORD m_speed;
+	DWORD m_maxTorque;
+	DWORD m_axis;
+	DWORD m_inertiaFactor;
+} CMotorController;
+
+inline struct CSimTimerOffsets {
+	DWORD m_flInterval;
+} CSimTimer;
+
+inline struct CBaseIssueOffsets {
+	DWORD m_szTypeString;
+	DWORD m_szDetailsString;
+	DWORD m_iNumYesVotes;
+	DWORD m_iNumNoVotes;
+	DWORD m_iNumPotentialVotes;
+	DWORD m_pVoteController;
+} CBaseIssue;
+
+inline struct SummaryTakeDamageInfo_tOffsets {
+	DWORD nSummarisedCount;
+	DWORD info;
+	DWORD result;
+	DWORD hTarget;
+} SummaryTakeDamageInfo_t;
+
+inline struct CSceneRequestOffsets {
+	DWORD m_szPayloadTypeName;
+	DWORD m_uHandle;
+	DWORD m_state;
+} CSceneRequest;
+
+inline struct DestructiblePartDestructionRequest_tOffsets {
+	DWORD m_nDestroyFlags;
+	DWORD m_nDamageType;
+	DWORD m_flPartDamage;
+	DWORD m_flPartDamageRadius;
+	DWORD m_vWsPartDamageOrigin;
+	DWORD m_vWsPartDamageForce;
+} DestructiblePartDestructionRequest_t;
+
+inline struct DestructibleHitGroupToDestroy_tOffsets {
+	DWORD m_nHitGroup;
+	DWORD m_nMaxDamageLevel;
+} DestructibleHitGroupToDestroy_t;
+
+inline struct CRR_ResponseOffsets {
+	DWORD m_Type;
+	DWORD m_szResponseName;
+	DWORD m_szMatchingRule;
+	DWORD m_Params;
+	DWORD m_fMatchScore;
+	DWORD m_bAnyMatchingRulesInCooldown;
+	DWORD m_szSpeakerContext;
+	DWORD m_szWorldContext;
+	DWORD m_Followup;
+	DWORD m_recipientFilter;
+} CRR_Response;
+
+inline struct CNmAimCSNode__CDefinitionOffsets {
+	DWORD m_nVerticalAngleNodeIdx;
+	DWORD m_nHorizontalAngleNodeIdx;
+	DWORD m_nWeaponCategoryNodeIdx;
+	DWORD m_nWeaponTypeNodeIdx;
+	DWORD m_nIsWeaponActionActiveNodeIdx;
+	DWORD m_nWeaponDropNodeIdx;
+	DWORD m_nEnabledNodeIdx;
+	DWORD m_flBlendTimeSeconds;
+	DWORD m_flReduceRangeTimeSeconds;
+} CNmAimCSNode__CDefinition;
+
+inline struct CConstantForceControllerOffsets {
+	DWORD m_linear;
+	DWORD m_angular;
+	DWORD m_linearSave;
+	DWORD m_angularSave;
+} CConstantForceController;
+
+inline struct WaterWheelDrag_tOffsets {
+	DWORD m_flFractionOfWheelSubmerged;
+	DWORD m_flWheelDrag;
+} WaterWheelDrag_t;
+
+inline struct CTakeDamageInfoOffsets {
+	DWORD m_vecDamageForce;
+	DWORD m_vecDamagePosition;
+	DWORD m_vecReportedPosition;
+	DWORD m_vecDamageDirection;
+	DWORD m_hInflictor;
+	DWORD m_hAttacker;
+	DWORD m_hAbility;
+	DWORD m_flDamage;
+	DWORD m_flTotalledDamage;
+	DWORD m_bitsDamageType;
+	DWORD m_iDamageCustom;
+	DWORD m_iAmmoType;
+	DWORD m_flOriginalDamage;
+	DWORD m_bShouldBleed;
+	DWORD m_bShouldSpark;
+	DWORD m_nDamageFlags;
+	DWORD m_iHitGroupId;
+	DWORD m_nNumObjectsPenetrated;
+	DWORD m_flFriendlyFireDamageReductionRatio;
+	DWORD m_bStoppedBullet;
+	DWORD m_nDestructibleHitGroupsToForceDestroy;
+	DWORD m_bInTakeDamageFlow;
+} CTakeDamageInfo;
+
+inline struct CRandSimTimerOffsets {
+	DWORD m_flMinInterval;
+	DWORD m_flMaxInterval;
+} CRandSimTimer;
+
+inline struct CRelativeLocationOffsets {
+	DWORD m_Type;
+	DWORD m_vRelativeOffset;
+	DWORD m_vWorldSpacePos;
+	DWORD m_hEntity;
+} CRelativeLocation;
+
+inline struct ExtentOffsets {
+	DWORD lo;
+	DWORD hi;
+} Extent;
+
+inline struct sndopvarlatchdata_tOffsets {
+	DWORD m_iszStack;
+	DWORD m_iszOperator;
+	DWORD m_iszOpvar;
+	DWORD m_flVal;
+	DWORD m_vPos;
+} sndopvarlatchdata_t;
+
+inline struct CMultiplayer_ExpresserOffsets {
+	DWORD m_bAllowMultipleScenes;
+} CMultiplayer_Expresser;
+
+inline struct ParticleIndex_tOffsets {
+	DWORD m_Value;
+} ParticleIndex_t;
+
+inline struct CTakeDamageSummaryScopeGuardOffsets {
+	DWORD m_vecSummaries;
+} CTakeDamageSummaryScopeGuard;
+
+inline struct CIronSightControllerOffsets {
+	DWORD m_bIronSightAvailable;
+	DWORD m_flIronSightAmount;
+	DWORD m_flIronSightAmountGained;
+	DWORD m_flIronSightAmountBiased;
+} CIronSightController;
+
+inline struct CInButtonStateOffsets {
+	DWORD m_pButtonStates;
+} CInButtonState;
+
+inline struct CNavHullVDataOffsets {
+	DWORD m_bAgentEnabled;
+	DWORD m_agentRadius;
+	DWORD m_agentHeight;
+	DWORD m_agentShortHeightEnabled;
+	DWORD m_agentShortHeight;
+	DWORD m_agentCrawlEnabled;
+	DWORD m_agentCrawlHeight;
+	DWORD m_agentMaxClimb;
+	DWORD m_agentMaxSlope;
+	DWORD m_agentMaxJumpDownDist;
+	DWORD m_agentMaxJumpHorizDistBase;
+	DWORD m_agentMaxJumpUpDist;
+	DWORD m_agentBorderErosion;
+	DWORD m_flowMapGenerationEnabled;
+	DWORD m_flowMapNodeMaxRadius;
+} CNavHullVData;
+
+inline struct CNmSnapWeaponNode__CDefinitionOffsets {
+	DWORD m_nEnabledNodeIdx;
+	DWORD m_nLockLeftHandNodeIdx;
+	DWORD m_flBlendTimeSeconds;
+} CNmSnapWeaponNode__CDefinition;
+
+inline struct SoundOpvarTraceResult_tOffsets {
+	DWORD vPos;
+	DWORD bDidHit;
+	DWORD flDistSqrToCenter;
+} SoundOpvarTraceResult_t;
+
+inline struct CFiringModeIntOffsets {
+	DWORD m_nValues;
+} CFiringModeInt;
+
+inline struct CSAdditionalPerRoundStats_tOffsets {
+	DWORD m_numChickensKilled;
+	DWORD m_killsWhileBlind;
+	DWORD m_bombCarrierkills;
+	DWORD m_flBurnDamageInflicted;
+	DWORD m_flBlastDamageInflicted;
+	DWORD m_iDinks;
+	DWORD m_bFreshStartThisRound;
+	DWORD m_bBombPlantedAndAlive;
+	DWORD m_nDefuseStarts;
+	DWORD m_nHostagePickUps;
+	DWORD m_numTeammatesFlashed;
+	DWORD m_strAnnotationsWorkshopId;
+} CSAdditionalPerRoundStats_t;
+
+inline struct ModelConfigHandle_tOffsets {
+	DWORD m_Value;
+} ModelConfigHandle_t;
+
+inline struct CBreakableStageHelperOffsets {
+	DWORD m_nCurrentStage;
+	DWORD m_nStageCount;
+} CBreakableStageHelper;
+
+inline struct CNavVolumeBreadthFirstSearchOffsets {
+	DWORD m_vStartPos;
+	DWORD m_flSearchDist;
+} CNavVolumeBreadthFirstSearch;
+
+inline struct CSAdditionalMatchStats_tOffsets {
+	DWORD m_numRoundsSurvivedStreak;
+	DWORD m_maxNumRoundsSurvivedStreak;
+	DWORD m_numRoundsSurvivedTotal;
+	DWORD m_iRoundsWonWithoutPurchase;
+	DWORD m_iRoundsWonWithoutPurchaseTotal;
+	DWORD m_numFirstKills;
+	DWORD m_numClutchKills;
+	DWORD m_numPistolKills;
+	DWORD m_numSniperKills;
+	DWORD m_iNumSuicides;
+	DWORD m_iNumTeamKills;
+	DWORD m_flTeamDamage;
+} CSAdditionalMatchStats_t;
+
+inline struct hudtextparms_tOffsets {
+	DWORD color1;
+	DWORD color2;
+	DWORD effect;
+	DWORD channel;
+	DWORD x;
+	DWORD y;
+} hudtextparms_t;
+
+inline struct CAnimGraphControllerBaseOffsets {
+	DWORD m_hExternalGraph;
+} CAnimGraphControllerBase;
+
+inline struct CNetworkVelocityVectorOffsets {
+	DWORD m_vecX;
+	DWORD m_vecY;
+	DWORD m_vecZ;
+} CNetworkVelocityVector;
+
+inline struct CDestructiblePart_DamageLevelOffsets {
+	DWORD m_sName;
+	DWORD m_sBreakablePieceName;
+	DWORD m_nBodyGroupValue;
+	DWORD m_nHealth;
+	DWORD m_flCriticalDamagePercent;
+	DWORD m_nDamagePassthroughType;
+	DWORD m_nDestructionDeathBehavior;
+	DWORD m_sCustomDeathHandshake;
+	DWORD m_bShouldDestroyOnDeath;
+	DWORD m_flDeathDestroyTime;
+} CDestructiblePart_DamageLevel;
+
+inline struct CNavVolumeSphereOffsets {
+	DWORD m_vCenter;
+	DWORD m_flRadius;
+} CNavVolumeSphere;
+
+inline struct Relationship_tOffsets {
+	DWORD disposition;
+	DWORD priority;
+} Relationship_t;
+
+inline struct CVMixInputBaseOffsets {
+	DWORD m_name;
+} CVMixInputBase;
+
 inline struct CVoiceContainerBlenderOffsets {
 	DWORD m_firstSound;
 	DWORD m_secondSound;
 	DWORD m_flBlendFactor;
 } CVoiceContainerBlender;
+
+inline struct CVMixPitchShiftProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixPitchShiftProcessorDesc;
 
 inline struct VMixFreeverbDesc_tOffsets {
 	DWORD m_flRoomSize;
@@ -17419,27 +18925,10 @@ inline struct CSoundContainerReferenceOffsets {
 	DWORD m_pSound;
 } CSoundContainerReference;
 
-inline struct VMixBoxverb2Desc_tOffsets {
-	DWORD m_flSizeMax;
-	DWORD m_flSizeMin;
-	DWORD m_flComplexity;
-	DWORD m_flDiffusion;
-	DWORD m_flModDepth;
-	DWORD m_flModRate;
-	DWORD m_bParallel;
-	DWORD m_filterType;
-	DWORD m_flWidth;
-	DWORD m_flHeight;
-	DWORD m_flDepth;
-	DWORD m_flFeedbackScale;
-	DWORD m_flFeedbackWidth;
-	DWORD m_flFeedbackHeight;
-	DWORD m_flFeedbackDepth;
-	DWORD m_flOutputGain;
-	DWORD m_flTaps;
-} VMixBoxverb2Desc_t;
-
 inline struct VMixSubgraphSwitchDesc_tOffsets {
+	DWORD m_name;
+	DWORD m_effectName;
+	DWORD m_subgraphs;
 	DWORD m_interpolationMode;
 	DWORD m_bOnlyTailsOnFadeOut;
 	DWORD m_flInterpolationTime;
@@ -17462,6 +18951,33 @@ inline struct CSosGroupActionSoundeventMinMaxValuesSchemaOffsets {
 	DWORD m_strMinValueName;
 	DWORD m_strMaxValueName;
 } CSosGroupActionSoundeventMinMaxValuesSchema;
+
+inline struct CVMixEnvelopeProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixEnvelopeProcessorDesc;
+
+inline struct CVMixCommandOffsets {
+	DWORD m_nCommand;
+	DWORD m_nParameterNameHash;
+	DWORD m_nOutputSubmix;
+	DWORD m_nInputSubmix0;
+	DWORD m_nInputSubmix1;
+	DWORD m_nProcessor;
+	DWORD m_nInputValue0;
+	DWORD m_nInputValue1;
+} CVMixCommand;
+
+inline struct CVMixControlInputOffsets {
+	DWORD m_flDefaultValue;
+} CVMixControlInput;
+
+inline struct CVMixBoxverbProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixBoxverbProcessorDesc;
+
+inline struct CVMixDynamicsCompressorProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixDynamicsCompressorProcessorDesc;
 
 inline struct VMixPannerDesc_tOffsets {
 	DWORD m_type;
@@ -17496,6 +19012,14 @@ inline struct VMixModDelayDesc_tOffsets {
 	DWORD m_flModDepth;
 	DWORD m_bApplyAntialiasing;
 } VMixModDelayDesc_t;
+
+inline struct CVMixNameInputMeterOffsets {
+	DWORD m_nValueIndex;
+} CVMixNameInputMeter;
+
+inline struct CVMixDynamics3BandProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixDynamics3BandProcessorDesc;
 
 inline struct VMixBoxverbDesc_tOffsets {
 	DWORD m_flSizeMax;
@@ -17549,6 +19073,10 @@ inline struct VMixDynamics3BandDesc_tOffsets {
 	DWORD m_bandDesc;
 } VMixDynamics3BandDesc_t;
 
+inline struct CVMixEQ8ProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixEQ8ProcessorDesc;
+
 inline struct CDSPMixgroupModifierOffsets {
 	DWORD m_mixgroup;
 	DWORD m_flModifier;
@@ -17601,6 +19129,14 @@ inline struct CVoiceContainerBaseOffsets {
 	DWORD m_pEnvelopeAnalyzer;
 } CVoiceContainerBase;
 
+inline struct CVMixDiffusorProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixDiffusorProcessorDesc;
+
+inline struct CVMixUtilityProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixUtilityProcessorDesc;
+
 inline struct CVoiceContainerGranulatorOffsets {
 	DWORD m_flGrainLength;
 	DWORD m_flGrainCrossfadeAmount;
@@ -17609,6 +19145,10 @@ inline struct CVoiceContainerGranulatorOffsets {
 	DWORD m_bShouldWraparound;
 	DWORD m_sourceAudio;
 } CVoiceContainerGranulator;
+
+inline struct CVMixPresetDSPProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixPresetDSPProcessorDesc;
 
 inline struct VMixDelayDesc_tOffsets {
 	DWORD m_feedbackFilter;
@@ -17624,11 +19164,44 @@ inline struct VMixEQ8Desc_tOffsets {
 	DWORD m_stages;
 } VMixEQ8Desc_t;
 
+inline struct CVMixDynamicsProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixDynamicsProcessorDesc;
+
+inline struct CVMixGraphDescDataOffsets {
+	DWORD m_name;
+	DWORD m_nGraphOutputChannels;
+	DWORD m_bIsMainGraph;
+} CVMixGraphDescData;
+
+inline struct CVoiceContainerLoopXFadeOffsets {
+	DWORD m_sound;
+	DWORD m_flLoopEnd;
+	DWORD m_flLoopStart;
+	DWORD m_flFadeOut;
+	DWORD m_flFadeIn;
+	DWORD m_bPlayHead;
+	DWORD m_bPlayTail;
+	DWORD m_bEqualPow;
+} CVoiceContainerLoopXFade;
+
+inline struct VMixPresetDSPDesc_tOffsets {
+	DWORD m_effectName;
+} VMixPresetDSPDesc_t;
+
 inline struct CAudioPhonemeTagOffsets {
 	DWORD m_flStartTime;
 	DWORD m_flEndTime;
 	DWORD m_nPhonemeCode;
 } CAudioPhonemeTag;
+
+inline struct CVMixControlInputArrayOffsets {
+	DWORD m_nArrayIndex;
+} CVMixControlInputArray;
+
+inline struct CVMixNameInputOffsets {
+	DWORD m_defaultValue;
+} CVMixNameInput;
 
 inline struct CSosGroupActionSoundeventCountSchemaOffsets {
 	DWORD m_bExcludeStoppedSounds;
@@ -17641,6 +19214,12 @@ inline struct CVoiceContainerEnvelopeAnalyzerOffsets {
 	DWORD m_flThreshold;
 } CVoiceContainerEnvelopeAnalyzer;
 
+inline struct CVMixBaseProcessorDescOffsets {
+	DWORD m_name;
+	DWORD m_nChannels;
+	DWORD m_flxfade;
+} CVMixBaseProcessorDesc;
+
 inline struct CSoundEventMetaDataOffsets {
 	DWORD m_soundEventVMix;
 } CSoundEventMetaData;
@@ -17652,10 +19231,38 @@ inline struct VMixPitchShiftDesc_tOffsets {
 	DWORD m_nProcType;
 } VMixPitchShiftDesc_t;
 
+inline struct CVMixControlOutputOffsets {
+	DWORD m_flDefaultValue;
+} CVMixControlOutput;
+
+inline struct CVMixModDelayProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixModDelayProcessorDesc;
+
+inline struct CVMixShaperProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixShaperProcessorDesc;
+
+inline struct CVMixAutomaticControlInputOffsets {
+	DWORD m_name;
+	DWORD m_nControlInputIndex;
+	DWORD m_bIsTrackSend;
+	DWORD m_bIsStackVar;
+} CVMixAutomaticControlInput;
+
 inline struct CAudioEmphasisSampleOffsets {
 	DWORD m_flTime;
 	DWORD m_flValue;
 } CAudioEmphasisSample;
+
+inline struct CVMixOscProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixOscProcessorDesc;
+
+inline struct CVMixCurveHeaderOffsets {
+	DWORD m_nControlPointCount;
+	DWORD m_nControlPointStart;
+} CVMixCurveHeader;
 
 inline struct CVoiceContainerSetOffsets {
 	DWORD m_soundsToPlay;
@@ -17685,6 +19292,18 @@ inline struct SosEditItemInfo_tOffsets {
 	DWORD itemPos;
 } SosEditItemInfo_t;
 
+inline struct CVMixFlangerProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixFlangerProcessorDesc;
+
+inline struct CVMixEffectChainProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixEffectChainProcessorDesc;
+
+inline struct CVMixFreeverbProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixFreeverbProcessorDesc;
+
 inline struct VMixPlateverbDesc_tOffsets {
 	DWORD m_flPrefilter;
 	DWORD m_flInputDiffusion1;
@@ -17695,11 +19314,34 @@ inline struct VMixPlateverbDesc_tOffsets {
 	DWORD m_flFeedbackDiffusion2;
 } VMixPlateverbDesc_t;
 
+inline struct CVMixConvolutionProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixConvolutionProcessorDesc;
+
 inline struct CSoundContainerReferenceArrayOffsets {
 	DWORD m_bUseReference;
 	DWORD m_sounds;
 	DWORD m_pSounds;
 } CSoundContainerReferenceArray;
+
+inline struct CVMixFilterProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixFilterProcessorDesc;
+
+inline struct CVMixAdditionalOutputOffsets {
+	DWORD m_name;
+} CVMixAdditionalOutput;
+
+inline struct CVoiceContainerTapePlayerOffsets {
+	DWORD m_bShouldWraparound;
+	DWORD m_sourceAudio;
+	DWORD m_flTapeSpeedAttackTime;
+	DWORD m_flTapeSpeedReleaseTime;
+} CVoiceContainerTapePlayer;
+
+inline struct CVMixSubgraphSwitchProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixSubgraphSwitchProcessorDesc;
 
 inline struct VMixDiffusorDesc_tOffsets {
 	DWORD m_flSize;
@@ -17707,6 +19349,10 @@ inline struct VMixDiffusorDesc_tOffsets {
 	DWORD m_flFeedback;
 	DWORD m_flOutputGain;
 } VMixDiffusorDesc_t;
+
+inline struct CVMixPannerProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixPannerProcessorDesc;
 
 inline struct VMixDynamicsCompressorDesc_tOffsets {
 	DWORD m_fldbOutputGain;
@@ -17752,6 +19398,15 @@ inline struct CVoiceContainerParameterBlenderOffsets {
 	DWORD m_curve4;
 } CVoiceContainerParameterBlender;
 
+inline struct CVMixAudioMeterOffsets {
+	DWORD m_name;
+	DWORD m_displayName;
+} CVMixAudioMeter;
+
+inline struct CVMixVocoderProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixVocoderProcessorDesc;
+
 inline struct CSosGroupActionLimitSchemaOffsets {
 	DWORD m_nMaxCount;
 	DWORD m_nStopType;
@@ -17794,8 +19449,23 @@ inline struct VMixDynamicsBand_tOffsets {
 } VMixDynamicsBand_t;
 
 inline struct VMixEffectChainDesc_tOffsets {
-	DWORD m_flCrossfadeTime;
+	DWORD m_effectName;
 } VMixEffectChainDesc_t;
+
+inline struct CVMixPlateReverbProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixPlateReverbProcessorDesc;
+
+inline struct CVoiceContainerMultiBlenderOffsets {
+	DWORD m_soundsToPlay;
+	DWORD m_flBlendFactor;
+	DWORD m_flCrossover;
+} CVoiceContainerMultiBlender;
+
+inline struct CVMixVsndInputOffsets {
+	DWORD m_defaultValue;
+	DWORD m_nProcessor;
+} CVMixVsndInput;
 
 inline struct CVoiceContainerStaticAdditiveSynth__CGainScalePerInstanceOffsets {
 	DWORD m_flMinVolume;
@@ -17815,11 +19485,6 @@ inline struct CSosGroupActionTimeBlockLimitSchemaOffsets {
 	DWORD m_flMaxDuration;
 } CSosGroupActionTimeBlockLimitSchema;
 
-inline struct CTestBlendContainerOffsets {
-	DWORD m_firstSound;
-	DWORD m_secondSound;
-} CTestBlendContainer;
-
 inline struct CSosGroupActionMemberCountEnvelopeSchemaOffsets {
 	DWORD m_nBaseCount;
 	DWORD m_nTargetCount;
@@ -17831,9 +19496,23 @@ inline struct CSosGroupActionMemberCountEnvelopeSchemaOffsets {
 	DWORD m_bSaveToGroup;
 } CSosGroupActionMemberCountEnvelopeSchema;
 
+inline struct CVMixDualCompressorProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixDualCompressorProcessorDesc;
+
 inline struct CVoiceContainerSwitchOffsets {
 	DWORD m_soundsToPlay;
 } CVoiceContainerSwitch;
+
+inline struct CVMixControlMeterOffsets {
+	DWORD m_nValueIndex;
+} CVMixControlMeter;
+
+inline struct CVoiceContainerEnumOffsets {
+	DWORD m_soundsToPlay;
+	DWORD m_iSelection;
+	DWORD m_flCrossfadeTime;
+} CVoiceContainerEnum;
 
 inline struct CSosGroupActionTimeLimitSchemaOffsets {
 	DWORD m_flMaxDuration;
@@ -17874,6 +19553,14 @@ inline struct CVoiceContainerDecayingSineWaveOffsets {
 	DWORD m_flDecayTime;
 } CVoiceContainerDecayingSineWave;
 
+inline struct CVMixDelayProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixDelayProcessorDesc;
+
+inline struct CVMixBoxverb2ProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixBoxverb2ProcessorDesc;
+
 inline struct VMixFilterDesc_tOffsets {
 	DWORD m_nFilterType;
 	DWORD m_nFilterSlope;
@@ -17888,6 +19575,22 @@ inline struct VMixOscDesc_tOffsets {
 	DWORD m_freq;
 	DWORD m_flPhase;
 } VMixOscDesc_t;
+
+inline struct CVMixAutoFilterProcessorDescOffsets {
+	DWORD m_desc;
+} CVMixAutoFilterProcessorDesc;
+
+inline struct VMixFlangerDesc_tOffsets {
+	DWORD m_bPhaseInvert;
+	DWORD m_flGlideTime;
+	DWORD m_flDelay;
+	DWORD m_flOutputGain;
+	DWORD m_flFeedbackGain;
+	DWORD m_flFeedforwardGain;
+	DWORD m_flModRate;
+	DWORD m_flModDepth;
+	DWORD m_bApplyAntialiasing;
+} VMixFlangerDesc_t;
 
 inline struct VMixDynamicsDesc_tOffsets {
 	DWORD m_fldbGain;
@@ -17932,6 +19635,7 @@ inline struct CSteamAudioAmbisonicsFieldOffsets {
 inline struct CSteamAudioBakedPathingDataOffsets {
 	DWORD m_nBands;
 	DWORD m_probes;
+	DWORD m_movables;
 } CSteamAudioBakedPathingData;
 
 inline struct SteamAudioReverbSettings_tOffsets {
@@ -17947,6 +19651,7 @@ inline struct CSteamAudioProbeDataOffsets {
 
 inline struct SteamAudioReverbCompressionSettings_tOffsets {
 	DWORD m_bEnableCompression;
+	DWORD m_flQuality;
 } SteamAudioReverbCompressionSettings_t;
 
 inline struct CSteamAudioBakedMaterialsDataOffsets {
@@ -17974,13 +19679,7 @@ inline struct CSteamAudioBakedReverbDataOffsets {
 	DWORD m_vecClusterForProbe;
 	DWORD m_compressedData;
 	DWORD m_compressedClusteredData;
-	DWORD m_vecMovableReverbs;
-	DWORD m_vecMovableReverbInitialTransforms;
-	DWORD m_vecMovableReverbAABBs;
-	DWORD m_vecMovableReverbKeys;
-	DWORD m_vecMovableReverbKeyTokens;
-	DWORD m_vecMovableReverbTransforms;
-	DWORD m_vecMovableReverbOBBs;
+	DWORD m_movables;
 } CSteamAudioBakedReverbData;
 
 inline struct CSteamAudioProbeLineSegmentOffsets {
@@ -18004,6 +19703,7 @@ inline struct CSteamAudioBakedDimensionsDataOffsets {
 	DWORD m_vecSize;
 	DWORD m_vecOutsideField;
 	DWORD m_vecInsideSmallSizeField;
+	DWORD m_movables;
 } CSteamAudioBakedDimensionsData;
 
 inline struct CSteamAudioProbeGridOffsets {
@@ -18079,6 +19779,7 @@ inline struct PhysFeModelDesc_tOffsets {
 	DWORD m_DynKinLinks;
 	DWORD m_AntiTunnelProbes;
 	DWORD m_AntiTunnelTargetNodes;
+	DWORD m_NodeStrayBoxes;
 	DWORD m_AxialEdges;
 	DWORD m_NodeInvMasses;
 	DWORD m_CtrlOffsets;
@@ -18133,6 +19834,7 @@ inline struct PhysFeModelDesc_tOffsets {
 	DWORD m_LockToGoal;
 	DWORD m_SkelParents;
 	DWORD m_DynNodeWindBases;
+	DWORD m_SelfCollisionLayers;
 	DWORD m_flInternalPressure;
 	DWORD m_flDefaultTimeDilation;
 	DWORD m_flWindage;
@@ -18290,13 +19992,13 @@ inline struct RnBodyDesc_tOffsets {
 	DWORD m_flInertiaScaleInv;
 	DWORD m_flLinearDamping;
 	DWORD m_flAngularDamping;
-	DWORD m_flLinearDrag;
-	DWORD m_flAngularDrag;
-	DWORD m_flLinearBuoyancyDrag;
-	DWORD m_flAngularBuoyancyDrag;
+	DWORD m_flLinearDragScale;
+	DWORD m_flAngularDragScale;
+	DWORD m_flLinearFluidDragScale;
+	DWORD m_flAngularFluidDragScale;
 	DWORD m_vLastAwakeForceAccum;
 	DWORD m_vLastAwakeTorqueAccum;
-	DWORD m_flBuoyancyFactor;
+	DWORD m_flBuoyancyScale;
 	DWORD m_flGravityScale;
 	DWORD m_flTimeScale;
 	DWORD m_nBodyType;
@@ -18309,7 +20011,6 @@ inline struct RnBodyDesc_tOffsets {
 	DWORD m_bSleeping;
 	DWORD m_bIsContinuousEnabled;
 	DWORD m_bDragEnabled;
-	DWORD m_bBuoyancyDragEnabled;
 	DWORD m_vGravity;
 	DWORD m_bSpeculativeEnabled;
 	DWORD m_bHasShadowController;
@@ -18424,6 +20125,13 @@ inline struct FeEdgeDesc_tOffsets {
 	DWORD nSide;
 	DWORD nVirtElem;
 } FeEdgeDesc_t;
+
+inline struct FeNodeStrayBox_tOffsets {
+	DWORD vMin;
+	DWORD nFlags;
+	DWORD vMax;
+	DWORD nNode;
+} FeNodeStrayBox_t;
 
 inline struct FeNodeReverseOffset_tOffsets {
 	DWORD vOffset;
@@ -18564,6 +20272,15 @@ inline struct FeWeightedNode_tOffsets {
 	DWORD nWeight;
 } FeWeightedNode_t;
 
+inline struct CollisionDetailLayerInfo_tOffsets {
+	DWORD m_sDescription;
+	DWORD m_sFriendlyName;
+	DWORD m_bIsQueryOnly;
+	DWORD m_sParentDetailLayer;
+	DWORD m_vecSubtreeDetailLayers;
+	DWORD m_bNotPickable;
+} CollisionDetailLayerInfo_t;
+
 inline struct FeEffectDesc_tOffsets {
 	DWORD sName;
 	DWORD nNameHash;
@@ -18696,6 +20413,14 @@ inline struct RnHull_tOffsets {
 	DWORD m_pRegionSVM;
 } RnHull_t;
 
+inline struct FeModelSelfCollisionLayer_tOffsets {
+	DWORD m_Name;
+	DWORD m_Nodes;
+	DWORD m_flParentReaction;
+	DWORD m_nFlags;
+	DWORD m_nEndIdx;
+} FeModelSelfCollisionLayer_t;
+
 inline struct FeAntiTunnelGroupBuild_tOffsets {
 	DWORD m_nVertexMapHash;
 	DWORD m_nCollisionMask;
@@ -18794,6 +20519,11 @@ inline struct FeSphereRigid_tOffsets {
 	DWORD nFlags;
 } FeSphereRigid_t;
 
+inline struct CollisionDetailLayerInfo_t__Name_tOffsets {
+	DWORD m_nNameToken;
+	DWORD m_sNameString;
+} CollisionDetailLayerInfo_t__Name_t;
+
 inline struct FeBuildTaperedCapsuleRigid_tOffsets {
 	DWORD m_nPriority;
 	DWORD m_nVertexMapHash;
@@ -18864,6 +20594,15 @@ inline struct FeHingeLimitBuild_tOffsets {
 	DWORD flLimitCCW;
 } FeHingeLimitBuild_t;
 
+inline struct RTProxyInstanceInfo_tOffsets {
+	DWORD m_nFlags;
+	DWORD m_albedoFormat;
+	DWORD m_nBLASCount;
+	DWORD m_nBLASIndex;
+	DWORD m_nVertexAlbedoByteOffset;
+	DWORD m_mWorldFromLocal;
+} RTProxyInstanceInfo_t;
+
 inline struct AggregateVertexAlbedoStreamOnDiskData_tOffsets {
 	DWORD m_BufferData;
 } AggregateVertexAlbedoStreamOnDiskData_t;
@@ -18932,6 +20671,18 @@ inline struct AggregateInstanceStreamOnDiskData_tOffsets {
 	DWORD m_BufferData;
 } AggregateInstanceStreamOnDiskData_t;
 
+inline struct RTProxyBLAS_tOffsets {
+	DWORD m_nFirstIndex;
+	DWORD m_nIndexCount;
+	DWORD m_nVBByteOffset;
+	DWORD m_nBaseVertex;
+	DWORD m_nVertexCount;
+	DWORD m_albedoFormat;
+	DWORD m_boundLs;
+	DWORD m_vVertexOriginLs;
+	DWORD m_vVertexExtentLs;
+} RTProxyBLAS_t;
+
 inline struct ClutterSceneObject_tOffsets {
 	DWORD m_Bounds;
 	DWORD m_flags;
@@ -18966,6 +20717,7 @@ inline struct WorldNode_tOffsets {
 	DWORD m_visClusterMembership;
 	DWORD m_aggregateSceneObjects;
 	DWORD m_clutterSceneObjects;
+	DWORD m_rtProxies;
 	DWORD m_extraVertexStreamOverrides;
 	DWORD m_materialOverrides;
 	DWORD m_extraVertexStreams;
@@ -19053,6 +20805,15 @@ inline struct MaterialOverride_tOffsets {
 	DWORD m_pMaterial;
 	DWORD m_vLinearTintColor;
 } MaterialOverride_t;
+
+inline struct AggregateRTProxySceneObject_tOffsets {
+	DWORD m_nLayer;
+	DWORD m_BLASes;
+	DWORD m_Instances;
+	DWORD m_VBData;
+	DWORD m_IBData;
+	DWORD m_InstanceAlbedoData;
+} AggregateRTProxySceneObject_t;
 
 inline struct EntityKeyValueData_tOffsets {
 	DWORD m_connections;

@@ -1,20 +1,18 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-23 07:46:23.662570500 UTC
+// 2026-04-15 01:06:49.726318 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
     // Class count: 9
-    // Enum count: 3
+    // Enum count: 4
     public static class ScenesystemDll {
-        // Alignment: 1
-        // Member count: 6
-        public enum DecalMode_t : byte {
-            kDecalInvalid = 0xFF,
-            kDecalBlood = 0x0,
-            kDecalCloak = 0x1,
-            kDecalCloakDamage = 0x2,
-            kDecalMax = 0x3,
-            kDecalDefault = 0x0
+        // Alignment: 4
+        // Member count: 4
+        public enum ESilhouetteType_t : uint {
+            SILHOUETTE_NONE = 0x0,
+            SILHOUETTE_LIGHT = 0x1,
+            SILHOUETTE_ENVMAP = 0x2,
+            SILHOUETTE_LPV = 0x4
         }
         // Alignment: 1
         // Member count: 4
@@ -23,6 +21,16 @@ namespace CS2Dumper.Schemas {
             kDisableShadows_All = 0x1,
             kDisableShadows_Baked = 0x2,
             kDisableShadows_Realtime = 0x3
+        }
+        // Alignment: 1
+        // Member count: 6
+        public enum DecalRtEncoding_t : byte {
+            kDecalInvalid = 0xFF,
+            kDecalMin = 0x0,
+            kDecalBlood = 0x0,
+            kDecalCloak = 0x1,
+            kDecalMax = 0x2,
+            kDecalDefault = 0x0
         }
         // Alignment: 4
         // Member count: 6

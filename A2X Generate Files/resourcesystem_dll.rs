@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-23 07:46:23.662570500 UTC
+// 2026-04-15 01:06:49.726318 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Class count: 59
+        // Class count: 58
         // Enum count: 2
         pub mod resourcesystem_dll {
             // Alignment: 1
@@ -175,13 +175,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeProceduralTestResource_t {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCChoreoSceneFileList {
             }
             // Parent: None
             // Field count: 2

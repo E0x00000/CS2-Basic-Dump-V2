@@ -1,9 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-23 07:46:23.662570500 UTC
+// 2026-04-15 01:06:49.726318 UTC
 
 #pragma once
 
 #include <cstddef>
+#include <cstdint>
 
 namespace cs2_dumper {
     namespace schemas {
@@ -74,7 +75,7 @@ namespace cs2_dumper {
             // Alignment: 1
             // Member count: 8
             enum class RenderMultisampleType_t : uint8_t {
-                RENDER_MULTISAMPLE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RENDER_MULTISAMPLE_INVALID = 0xFF,
                 RENDER_MULTISAMPLE_NONE = 0x0,
                 RENDER_MULTISAMPLE_2X = 0x1,
                 RENDER_MULTISAMPLE_4X = 0x2,
@@ -94,7 +95,7 @@ namespace cs2_dumper {
             // Alignment: 1
             // Member count: 3
             enum class RenderSlotType_t : uint8_t {
-                RENDER_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RENDER_SLOT_INVALID = 0xFF,
                 RENDER_SLOT_PER_VERTEX = 0x0,
                 RENDER_SLOT_PER_INSTANCE = 0x1
             };

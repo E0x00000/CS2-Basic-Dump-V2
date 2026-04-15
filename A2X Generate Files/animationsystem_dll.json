@@ -262,16 +262,14 @@
       },
       "CAimCameraUpdateNode": {
         "fields": {
-          "m_hParameterCameraClearanceDistance": 128,
-          "m_hParameterCameraOnly": 122,
+          "m_hParameterCameraClearanceDistance": 124,
+          "m_hParameterCameraOnly": 118,
           "m_hParameterOrientation": 114,
-          "m_hParameterPelvisOffset": 118,
+          "m_hParameterPelvisOffset": 116,
           "m_hParameterPosition": 112,
-          "m_hParameterSpineRotationWeight": 116,
-          "m_hParameterUseIK": 120,
-          "m_hParameterWeaponDepenetrationDelta": 126,
-          "m_hParameterWeaponDepenetrationDistance": 124,
-          "m_opFixedSettings": 136
+          "m_hParameterWeaponDepenetrationDelta": 122,
+          "m_hParameterWeaponDepenetrationDistance": 120,
+          "m_opFixedSettings": 128
         },
         "metadata": [
           {
@@ -1215,6 +1213,11 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "CBasePulseGraphInstance": {
+        "fields": {},
+        "metadata": [],
         "parent": null
       },
       "CBinaryUpdateNode": {
@@ -2246,7 +2249,8 @@
           "m_BoneName": 112,
           "m_DebugAnimSourceString": 104,
           "m_FootstepType": 88,
-          "m_OverrideSoundName": 96
+          "m_OverrideSoundName": 96,
+          "m_footstepJumpPhase": 120
         },
         "metadata": [
           {
@@ -2626,7 +2630,6 @@
           "m_LocalAttachmentOffsetName": 128,
           "m_MaterialGroupOnOtherModels": 152,
           "m_aAngOffset": 108,
-          "m_bAcceptParentMaterialDrivenDecals": 143,
           "m_bBoneMergeFlex": 140,
           "m_bUserSpecifiedColor": 141,
           "m_bUserSpecifiedMaterialGroup": 142,
@@ -3138,7 +3141,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNewParticleEffect": {
         "fields": {
@@ -3266,7 +3269,8 @@
       },
       "CNmBodyGroupEvent": {
         "fields": {
-          "m_groupName": 32
+          "m_groupName": 32,
+          "m_nGroupValue": 40
         },
         "metadata": [
           {
@@ -3304,12 +3308,28 @@
       },
       "CNmBoneMaskSelectorNode__CDefinition": {
         "fields": {
+          "m_bSwitchDynamically": 20,
           "m_defaultMaskNodeIdx": 16,
           "m_flBlendTimeSeconds": 144,
           "m_maskNodeIndices": 24,
           "m_parameterValueNodeIdx": 18,
-          "m_parameterValues": 64,
-          "m_switchDynamically": 20
+          "m_parameterValues": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmBoneMaskSwitchNode__CDefinition": {
+        "fields": {
+          "m_bSwitchDynamically": 28,
+          "m_flBlendTimeSeconds": 24,
+          "m_nFalseValueNodeIdx": 20,
+          "m_nSwitchValueNodeIdx": 16,
+          "m_nTrueValueNodeIdx": 18
         },
         "metadata": [
           {
@@ -3501,13 +3521,14 @@
       },
       "CNmClipNode__CDefinition": {
         "fields": {
-          "m_bAllowLooping": 29,
-          "m_bSampleRootMotion": 28,
-          "m_flSpeedMultiplier": 20,
-          "m_nDataSlotIdx": 30,
+          "m_bAllowLooping": 21,
+          "m_bSampleRootMotion": 20,
+          "m_flSpeedMultiplier": 64,
+          "m_graphEvents": 24,
+          "m_nDataSlotIdx": 22,
           "m_nPlayInReverseValueNodeIdx": 16,
           "m_nResetTimeValueNodeIdx": 18,
-          "m_nStartSyncEventOffset": 24
+          "m_nStartSyncEventOffset": 68
         },
         "metadata": [
           {
@@ -3738,8 +3759,8 @@
       "CNmEvent": {
         "fields": {
           "m_bClientOnly": 24,
-          "m_flDurationSeconds": 12,
-          "m_flStartTimeSeconds": 8,
+          "m_flDuration": 12,
+          "m_flStartTime": 8,
           "m_syncID": 16
         },
         "metadata": [
@@ -3750,8 +3771,10 @@
         ],
         "parent": null
       },
-      "CNmExternalGraphNode__CDefinition": {
-        "fields": {},
+      "CNmExternalPoseNode__CDefinition": {
+        "fields": {
+          "m_bShouldSampleRootMotion": 16
+        },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
@@ -4053,17 +4076,19 @@
       },
       "CNmGraphDefinition": {
         "fields": {
-          "m_controlParameterIDs": 48,
-          "m_externalGraphSlots": 144,
-          "m_nRootNodeIdx": 40,
-          "m_nodePaths": 280,
-          "m_persistentNodeIndices": 16,
-          "m_referencedGraphSlots": 120,
-          "m_resources": 304,
+          "m_controlParameterIDs": 56,
+          "m_externalGraphSlots": 152,
+          "m_externalPoseSlots": 176,
+          "m_nRootNodeIdx": 48,
+          "m_nodePaths": 312,
+          "m_pUserData": 16,
+          "m_persistentNodeIndices": 24,
+          "m_referencedGraphSlots": 128,
+          "m_resources": 336,
           "m_skeleton": 8,
           "m_variationID": 0,
-          "m_virtualParameterIDs": 72,
-          "m_virtualParameterNodeIndices": 96
+          "m_virtualParameterIDs": 80,
+          "m_virtualParameterNodeIndices": 104
         },
         "metadata": [
           {
@@ -4074,6 +4099,19 @@
         "parent": null
       },
       "CNmGraphDefinition__ExternalGraphSlot_t": {
+        "fields": {
+          "m_nNodeIdx": 0,
+          "m_slotID": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmGraphDefinition__ExternalPoseSlot_t": {
         "fields": {
           "m_nNodeIdx": 0,
           "m_slotID": 8
@@ -4130,6 +4168,16 @@
         "fields": {
           "m_nNodeIdx": 8
         },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmGraphVariationUserData": {
+        "fields": {},
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
@@ -4320,6 +4368,30 @@
         ],
         "parent": null
       },
+      "CNmIsExternalGraphSlotFilledNode__CDefinition": {
+        "fields": {
+          "m_nExternalGraphNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmIsExternalPoseSetNode__CDefinition": {
+        "fields": {
+          "m_nExternalPoseNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CNmIsInactiveBranchConditionNode__CDefinition": {
         "fields": {},
         "metadata": [
@@ -4448,9 +4520,10 @@
         "fields": {
           "m_bIsOffsetNode": 20,
           "m_bIsOffsetRelativeToCharacter": 21,
+          "m_bWarpTranslation": 22,
           "m_nClipReferenceNodeIdx": 16,
           "m_nTargetValueNodeIdx": 18,
-          "m_samplingMode": 22
+          "m_samplingMode": 23
         },
         "metadata": [
           {
@@ -4973,6 +5046,23 @@
         ],
         "parent": null
       },
+      "CNmTargetSelectorNode__CDefinition": {
+        "fields": {
+          "m_bIgnoreInvalidOptions": 50,
+          "m_bIsWorldSpaceTarget": 51,
+          "m_flOrientationScoreWeight": 40,
+          "m_flPositionScoreWeight": 44,
+          "m_optionNodeIndices": 16,
+          "m_parameterNodeIdx": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CNmTargetValueNode__CDefinition": {
         "fields": {},
         "metadata": [],
@@ -4993,6 +5083,7 @@
       },
       "CNmTargetWarpNode__CDefinition": {
         "fields": {
+          "m_bAlignWithTargetAtLastWarpEvent": 22,
           "m_bAllowTargetUpdate": 21,
           "m_flLerpFallbackDistanceThreshold": 32,
           "m_flMaxTangentLength": 28,
@@ -5083,6 +5174,7 @@
           "m_blendMode": 40,
           "m_effectorBoneID": 24,
           "m_flBlendTimeSeconds": 36,
+          "m_flReferencePoseTwistWeight": 44,
           "m_nEffectorTargetNodeIdx": 32,
           "m_nEnabledNodeIdx": 34
         },
@@ -5092,6 +5184,22 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "CNmTwoBoneIKTask": {
+        "fields": {
+          "m_bIsRunningFromDeserializedData": 185,
+          "m_bIsTargetInWorldSpace": 184,
+          "m_blendMode": 176,
+          "m_debugEffectorBoneID": 192,
+          "m_effectorTarget": 128,
+          "m_flBlendWeight": 180,
+          "m_flReferencePoseTwistWeight": 188,
+          "m_nEffectorBoneIdx": 88,
+          "m_nEffectorTargetBoneIdx": 92,
+          "m_targetTransform": 96
+        },
+        "metadata": [],
         "parent": null
       },
       "CNmValueNode__CDefinition": {
@@ -5353,6 +5461,16 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "CParticleBindingRealPulse": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CParticleCollectionBindingInstance": {
+        "fields": {},
+        "metadata": [],
         "parent": null
       },
       "CParticleCollectionFloatInput": {
@@ -5831,6 +5949,754 @@
         ],
         "parent": null
       },
+      "CPulseArraylib": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Base": {
+        "fields": {
+          "m_nEditorNodeID": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseFlow": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseLerp": {
+        "fields": {
+          "m_WakeResume": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseLerp__CursorState_t": {
+        "fields": {
+          "m_EndTime": 4,
+          "m_StartTime": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseRequirement": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseState": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseValue": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BaseYieldingInflow": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_BooleanSwitchState": {
+        "fields": {
+          "m_Condition": 72,
+          "m_SubGraph": 192,
+          "m_WhenFalse": 336,
+          "m_WhenTrue": 264
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorCanvasItemSpecKV3",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_CursorQueue": {
+        "fields": {
+          "m_nCursorsAllowedToRunParallel": 152
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_FireCursors": {
+        "fields": {
+          "m_OnCanceled": 176,
+          "m_OnFinished": 104,
+          "m_Outflows": 72,
+          "m_bWaitForChildOutflows": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_BaseEntrypoint": {
+        "fields": {
+          "m_EntryChunk": 72,
+          "m_RegisterMap": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_EntOutputHandler": {
+        "fields": {
+          "m_ExpectedParamType": 160,
+          "m_SourceEntity": 128,
+          "m_SourceOutput": 144
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_EventHandler": {
+        "fields": {
+          "m_EventName": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_GraphHook": {
+        "fields": {
+          "m_HookName": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_Method": {
+        "fields": {
+          "m_Args": 184,
+          "m_Description": 144,
+          "m_MethodName": 128,
+          "m_ReturnType": 160,
+          "m_bIsPublic": 152
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_ObservableVariableListener": {
+        "fields": {
+          "m_bSelfReference": 130,
+          "m_nBlackboardReference": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_Wait": {
+        "fields": {
+          "m_WakeResume": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorCanvasItemSpecKV3",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Inflow_Yield": {
+        "fields": {
+          "m_UnyieldResume": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_InlineNodeSkipSelector": {
+        "fields": {
+          "m_FailOutflow": 104,
+          "m_PassOutflow": 80,
+          "m_bAnd": 76,
+          "m_nFlowNodeID": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_IntervalTimer": {
+        "fields": {
+          "m_Completed": 72,
+          "m_OnInterval": 144
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_IntervalTimer__CursorState_t": {
+        "fields": {
+          "m_EndTime": 4,
+          "m_StartTime": 0,
+          "m_bCompleteOnNextWake": 16,
+          "m_flWaitInterval": 8,
+          "m_flWaitIntervalHigh": 12
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_IsRequirementValid": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_IsRequirementValid__Criteria_t": {
+        "fields": {
+          "m_bIsValid": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CPulseCell_LimitCount": {
+        "fields": {
+          "m_nLimitCount": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_LimitCount__Criteria_t": {
+        "fields": {
+          "m_bLimitCountPasses": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CPulseCell_LimitCount__InstanceState_t": {
+        "fields": {
+          "m_nCurrentCount": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Outflow_CycleOrdered": {
+        "fields": {
+          "m_Outputs": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Outflow_CycleOrdered__InstanceState_t": {
+        "fields": {
+          "m_nNextIndex": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Outflow_CycleRandom": {
+        "fields": {
+          "m_Outputs": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Outflow_CycleShuffled": {
+        "fields": {
+          "m_Outputs": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Outflow_CycleShuffled__InstanceState_t": {
+        "fields": {
+          "m_Shuffle": 0,
+          "m_nNextShuffle": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_PickBestOutflowSelector": {
+        "fields": {
+          "m_OutflowList": 80,
+          "m_nCheckType": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorCanvasItemSpecKV3",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Step_CallExternalMethod": {
+        "fields": {
+          "m_ExpectedArgs": 104,
+          "m_GameBlackboard": 88,
+          "m_MethodName": 72,
+          "m_OnFinished": 128,
+          "m_nAsyncCallMode": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Step_DebugLog": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Step_PublicOutput": {
+        "fields": {
+          "m_OutputIndex": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Timeline": {
+        "fields": {
+          "m_OnCanceled": 176,
+          "m_OnFinished": 104,
+          "m_TimelineEvents": 72,
+          "m_bWaitForChildOutflows": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Timeline__TimelineEvent_t": {
+        "fields": {
+          "m_EventOutflow": 8,
+          "m_flTimeFromPrevious": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Unknown": {
+        "fields": {
+          "m_UnknownKeys": 72
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CPulseCell_Value_Curve": {
+        "fields": {
+          "m_Curve": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Value_Gradient": {
+        "fields": {
+          "m_Gradient": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Value_RandomFloat": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_Value_RandomInt": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_WaitForCursorsWithTag": {
+        "fields": {
+          "m_bTagSelfWhenComplete": 152,
+          "m_nDesiredKillPriority": 156
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_WaitForCursorsWithTagBase": {
+        "fields": {
+          "m_WaitComplete": 80,
+          "m_nCursorsAllowedToWait": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorCanvasItemSpecKV3",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_WaitForCursorsWithTagBase__CursorState_t": {
+        "fields": {
+          "m_TagName": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CPulseCell_WaitForObservable": {
+        "fields": {
+          "m_Condition": 72,
+          "m_OnTrue": 192
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCursorFuncs": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseExecCursor": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CPulseGraphDef": {
+        "fields": {
+          "m_BlackboardReferences": 272,
+          "m_CallInfos": 200,
+          "m_Cells": 104,
+          "m_Chunks": 80,
+          "m_Constants": 224,
+          "m_DomainIdentifier": 8,
+          "m_DomainSubType": 24,
+          "m_DomainValues": 248,
+          "m_InvokeBindings": 176,
+          "m_OutputConnections": 296,
+          "m_ParentMapName": 48,
+          "m_ParentXmlName": 64,
+          "m_PublicOutputs": 152,
+          "m_Vars": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulseGraphExecutionHistory": {
         "fields": {
           "m_mapCellDesc": 40,
@@ -5842,6 +6708,16 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseMathlib": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
             "type": "Unknown"
           }
         ],
@@ -5861,9 +6737,51 @@
         ],
         "parent": null
       },
+      "CPulseTestScriptLib": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulse_BlackboardReference": {
+        "fields": {
+          "m_BlackboardResource": 8,
+          "m_NodeName": 32,
+          "m_hBlackboardResource": 0,
+          "m_nNodeID": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulse_CallInfo": {
+        "fields": {
+          "m_CallMethodID": 72,
+          "m_PortName": 0,
+          "m_RegisterMap": 24,
+          "m_nEditorNodeID": 16,
+          "m_nSrcChunk": 76,
+          "m_nSrcInstruction": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulse_Chunk": {
         "fields": {
-          "m_InstructionEditorIDs": 32,
+          "m_InstructionDebugInfos": 32,
           "m_Instructions": 0,
           "m_Registers": 16
         },
@@ -5900,6 +6818,46 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "CPulse_InstructionDebug": {
+        "fields": {
+          "m_SequencePointName": 8,
+          "m_nFlowNodeID": 0,
+          "m_nValueNodeID": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulse_InvokeBinding": {
+        "fields": {
+          "m_FuncName": 48,
+          "m_RegisterMap": 0,
+          "m_nCellIndex": 64,
+          "m_nSrcChunk": 68,
+          "m_nSrcInstruction": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulse_OutflowConnection": {
+        "fields": {
+          "m_OutflowRegisterMap": 24,
+          "m_SourceOutflowName": 0,
+          "m_nDestChunk": 16,
+          "m_nInstruction": 20
+        },
+        "metadata": [],
         "parent": null
       },
       "CPulse_OutputConnection": {
@@ -5945,6 +6903,11 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "CPulse_ResumePoint": {
+        "fields": {},
+        "metadata": [],
         "parent": null
       },
       "CPulse_Variable": {
@@ -6102,13 +7065,13 @@
       },
       "CRenderMesh": {
         "fields": {
-          "m_bEmbeddedMapMesh": 437,
-          "m_bUseUV2ForCharting": 436,
-          "m_constraints": 168,
-          "m_meshDeformParams": 472,
-          "m_pGroomData": 488,
+          "m_bEmbeddedMapMesh": 469,
+          "m_bUseUV2ForCharting": 468,
+          "m_constraints": 184,
+          "m_meshDeformParams": 504,
+          "m_pGroomData": 520,
           "m_sceneObjects": 16,
-          "m_skeleton": 184
+          "m_skeleton": 200
         },
         "metadata": [
           {
@@ -6147,9 +7110,27 @@
           "m_drawBounds": 40,
           "m_drawCalls": 24,
           "m_meshlets": 56,
+          "m_rtProxyDrawCalls": 72,
           "m_vMaxBounds": 12,
           "m_vMinBounds": 0,
-          "m_vTintColor": 72
+          "m_vTintColor": 88
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSceneObjectData__RTProxyDrawDescriptor_t": {
+        "fields": {
+          "m_drawDesc": 0,
+          "m_mWorldFromLocal": 264,
+          "m_nVertexAlbedoFormat": 312,
+          "m_nVertexAlbedoOffset": 314,
+          "m_nVertexAlbedoStride": 316,
+          "m_nVertexAlbedoVB": 313
         },
         "metadata": [
           {
@@ -7173,11 +8154,12 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "DynamicMeshDeformParams_t": {
         "fields": {
           "m_bComputeDynamicMeshTensionAfterAnimation": 9,
+          "m_bEnableEyeBulgeDeformation": 11,
           "m_bRecomputeSmoothNormalsAfterAnimation": 8,
           "m_bSmoothNormalsAcrossUvSeams": 10,
           "m_flTensionCompressScale": 0,
@@ -7375,6 +8357,11 @@
         ],
         "parent": null
       },
+      "IAnimationGraphInstance": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "IKBoneNameAndIndex_t": {
         "fields": {
           "m_Name": 0
@@ -7501,6 +8488,19 @@
         ],
         "parent": null
       },
+      "ModelAnimGraph2Ref_t": {
+        "fields": {
+          "m_hGraph": 8,
+          "m_sIdentifier": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "ModelBoneFlexDriverControl_t": {
         "fields": {
           "m_flMax": 24,
@@ -7562,6 +8562,7 @@
           "m_bMeshoptIndexSequence": 13,
           "m_inputLayoutFields": 24,
           "m_nBlockIndex": 0,
+          "m_nBufferUsage": 19,
           "m_nElementCount": 4,
           "m_nElementSizeInBytes": 8
         },
@@ -7671,7 +8672,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "MovementGaitId_t": {
         "fields": {
@@ -7683,7 +8684,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "NmBoneMaskSetDefinition_t": {
         "fields": {
@@ -7773,6 +8774,21 @@
         "fields": {
           "m_nEventIdx": 0,
           "m_percentageThrough": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "OutflowWithRequirements_t": {
+        "fields": {
+          "m_Connection": 0,
+          "m_DestinationFlowNodeID": 72,
+          "m_RequirementNodeIDs": 80,
+          "m_nCursorStateBlockIndex": 104
         },
         "metadata": [
           {
@@ -7891,6 +8907,7 @@
           "m_AnimatedMaterialAttributes": 688,
           "m_BodyGroupsHiddenInTools": 640,
           "m_ExtParts": 96,
+          "m_animGraph2Refs": 712,
           "m_boneFlexDrivers": 608,
           "m_lodGroupSwitchDistances": 216,
           "m_materialGroups": 360,
@@ -7910,7 +8927,8 @@
           "m_refPhysicsHitboxData": 264,
           "m_refSequenceGroups": 312,
           "m_remappingTable": 560,
-          "m_remappingTableStarts": 584
+          "m_remappingTableStarts": 584,
+          "m_vecNmSkeletonRefs": 736
         },
         "metadata": [
           {
@@ -8060,6 +9078,45 @@
         "metadata": [],
         "parent": null
       },
+      "PulseNodeDynamicOutflows_t": {
+        "fields": {
+          "m_Outflows": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PulseNodeDynamicOutflows_t__DynamicOutflow_t": {
+        "fields": {
+          "m_Connection": 8,
+          "m_OutflowID": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PulseObservableBoolExpression_t": {
+        "fields": {
+          "m_DependentObservableBlackboardReferences": 96,
+          "m_DependentObservableVars": 72,
+          "m_EvaluateConnection": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "PulseRegisterMap_t": {
         "fields": {
           "m_Inparams": 0,
@@ -8153,6 +9210,18 @@
         "metadata": [],
         "parent": null
       },
+      "PulseSelectorOutflowList_t": {
+        "fields": {
+          "m_Outflows": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "RenderHairStrandInfo_t": {
         "fields": {
           "m_nDataOffset_Segments": 36,
@@ -8213,6 +9282,16 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "SignatureOutflow_Continue": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "SignatureOutflow_Resume": {
+        "fields": {},
+        "metadata": [],
         "parent": null
       },
       "SkeletonAnimCapture_t": {
@@ -8460,14 +9539,17 @@
       },
       "VPhysXCollisionAttributes_t": {
         "fields": {
-          "m_CollisionGroup": 0,
-          "m_CollisionGroupString": 80,
+          "m_CollisionGroup": 4,
+          "m_CollisionGroupString": 104,
+          "m_DetailLayerStrings": 184,
+          "m_DetailLayers": 80,
           "m_InteractAs": 8,
-          "m_InteractAsStrings": 88,
+          "m_InteractAsStrings": 112,
           "m_InteractExclude": 56,
-          "m_InteractExcludeStrings": 136,
+          "m_InteractExcludeStrings": 160,
           "m_InteractWith": 32,
-          "m_InteractWithStrings": 112
+          "m_InteractWithStrings": 136,
+          "m_nIncludeDetailLayerCount": 0
         },
         "metadata": [
           {
@@ -9200,6 +10282,16 @@
         },
         "type": "uint32"
       },
+      "FootstepJumpPhase_t": {
+        "alignment": 1,
+        "members": {
+          "Jumping": 2,
+          "Landing": 4,
+          "NotJumping": 1,
+          "Unknown": 0
+        },
+        "type": "uint8"
+      },
       "FootstepLandedFootSoundType_t": {
         "alignment": 4,
         "members": {
@@ -9208,6 +10300,15 @@
           "FOOTSOUND_UseOverrideSound": 2
         },
         "type": "uint32"
+      },
+      "HandshakeTagState_t": {
+        "alignment": 1,
+        "members": {
+          "eActive": 1,
+          "eInactive": 0,
+          "eMomentarilyInactive": 2
+        },
+        "type": "uint8"
       },
       "HandshakeTagType_t": {
         "alignment": 4,
@@ -9346,6 +10447,19 @@
         },
         "type": "uint32"
       },
+      "ModelMeshBufferUsage_t": {
+        "alignment": 1,
+        "members": {
+          "MESH_BUFFER_USAGE_ADJACENCY": 4,
+          "MESH_BUFFER_USAGE_IB": 2,
+          "MESH_BUFFER_USAGE_MESHLET_TRIS": 8,
+          "MESH_BUFFER_USAGE_NONE": 0,
+          "MESH_BUFFER_USAGE_RT_PROXY": 16,
+          "MESH_BUFFER_USAGE_VB": 1,
+          "MESH_BUFFER_USAGE_VERTEX_ALBEDO": 32
+        },
+        "type": "uint8"
+      },
       "ModelSkeletonData_t__BoneFlags_t": {
         "alignment": 4,
         "members": {
@@ -9399,6 +10513,20 @@
           "MORPH_FLEXCONTROLLER_REMAP_EYELID": 3,
           "MORPH_FLEXCONTROLLER_REMAP_NWAY": 2,
           "MORPH_FLEXCONTROLLER_REMAP_PASSTHRU": 0
+        },
+        "type": "uint32"
+      },
+      "MovementCapability_t": {
+        "alignment": 4,
+        "members": {
+          "eCount": 7,
+          "eIdleTurn": 1,
+          "eInstantStop": 4,
+          "ePlantedTurn": 6,
+          "eShuffle": 5,
+          "eStart": 2,
+          "eStop": 3,
+          "eStrafe": 0
         },
         "type": "uint32"
       },
@@ -9495,6 +10623,7 @@
           "LeftFootDown": 0,
           "LeftFootPassing": 1,
           "LeftPhase": 4,
+          "None": 6,
           "RightFootDown": 2,
           "RightFootPassing": 3,
           "RightPhase": 5
@@ -9506,6 +10635,7 @@
         "members": {
           "LeftFootDown": 0,
           "LeftFootPassing": 3,
+          "None": 4,
           "RightFootDown": 2,
           "RightFootPassing": 1
         },
@@ -9586,6 +10716,7 @@
       "NmTargetWarpRule_t": {
         "alignment": 1,
         "members": {
+          "FixedSection": 4,
           "RotationOnly": 3,
           "WarpXY": 0,
           "WarpXYZ": 2,
@@ -9880,6 +11011,24 @@
         },
         "type": "uint32"
       },
+      "PulseBestOutflowRules_t": {
+        "alignment": 4,
+        "members": {
+          "SORT_BY_NUMBER_OF_VALID_CRITERIA": 0,
+          "SORT_BY_OUTFLOW_INDEX": 1
+        },
+        "type": "uint32"
+      },
+      "PulseCursorCancelPriority_t": {
+        "alignment": 4,
+        "members": {
+          "CancelOnSucceeded": 1,
+          "HardCancel": 3,
+          "None": 0,
+          "SoftCancel": 2
+        },
+        "type": "uint32"
+      },
       "PulseCursorExecResult_t": {
         "alignment": 4,
         "members": {
@@ -10030,6 +11179,14 @@
           "SUB_VEC4": 65
         },
         "type": "uint16"
+      },
+      "PulseMethodCallMode_t": {
+        "alignment": 4,
+        "members": {
+          "ASYNC_FIRE_AND_FORGET": 1,
+          "SYNC_WAIT_FOR_COMPLETION": 0
+        },
+        "type": "uint32"
       },
       "PulseValueType_t": {
         "alignment": 4,
@@ -10303,6 +11460,15 @@
           "DirectionAndMagnitude": 2,
           "DirectionOnly": 0,
           "MagnitudeOnly": 1
+        },
+        "type": "uint8"
+      },
+      "VertexAlbedoFormat_t": {
+        "alignment": 1,
+        "members": {
+          "VERTEX_ALBEDO_565": 2,
+          "VERTEX_ALBEDO_8888": 1,
+          "VERTEX_ALBEDO_NONE": 0
         },
         "type": "uint8"
       }

@@ -51,6 +51,23 @@
         ],
         "parent": null
       },
+      "AggregateRTProxySceneObject_t": {
+        "fields": {
+          "m_BLASes": 8,
+          "m_IBData": 72,
+          "m_InstanceAlbedoData": 88,
+          "m_Instances": 32,
+          "m_VBData": 56,
+          "m_nLayer": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "AggregateSceneObject_t": {
         "fields": {
           "m_aggregateMeshes": 16,
@@ -131,6 +148,62 @@
           }
         ],
         "parent": null
+      },
+      "CEntityComponent": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CEntityIdentity": {
+        "fields": {
+          "m_PathIndex": 64,
+          "m_designerName": 32,
+          "m_fDataObjectTypes": 60,
+          "m_flags": 48,
+          "m_name": 24,
+          "m_nameStringableIndex": 20,
+          "m_pAttributes": 72,
+          "m_pNext": 88,
+          "m_pNextByClass": 104,
+          "m_pPrev": 80,
+          "m_pPrevByClass": 96,
+          "m_worldGroupId": 56
+        },
+        "metadata": [
+          {
+            "name": "m_nameStringableIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          }
+        ],
+        "parent": null
+      },
+      "CEntityInstance": {
+        "fields": {
+          "m_CScriptComponent": 48,
+          "m_iszPrivateVScripts": 8,
+          "m_pEntity": 16
+        },
+        "metadata": [
+          {
+            "name": "m_pEntity",
+            "type": "NetworkVarNames",
+            "type_name": "CEntityIdentity*"
+          },
+          {
+            "name": "m_CScriptComponent",
+            "type": "NetworkVarNames",
+            "type_name": "CScriptComponent::Storage_t"
+          }
+        ],
+        "parent": null
+      },
+      "CScriptComponent": {
+        "fields": {
+          "m_scriptClassName": 48
+        },
+        "metadata": [],
+        "parent": "CEntityComponent"
       },
       "CVoxelVisibility": {
         "fields": {
@@ -296,6 +369,43 @@
         ],
         "parent": null
       },
+      "RTProxyBLAS_t": {
+        "fields": {
+          "m_albedoFormat": 18,
+          "m_boundLs": 20,
+          "m_nBaseVertex": 12,
+          "m_nFirstIndex": 0,
+          "m_nIndexCount": 4,
+          "m_nVBByteOffset": 8,
+          "m_nVertexCount": 16,
+          "m_vVertexExtentLs": 56,
+          "m_vVertexOriginLs": 44
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "RTProxyInstanceInfo_t": {
+        "fields": {
+          "m_albedoFormat": 1,
+          "m_mWorldFromLocal": 12,
+          "m_nBLASCount": 2,
+          "m_nBLASIndex": 4,
+          "m_nFlags": 0,
+          "m_nVertexAlbedoByteOffset": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "SceneObject_t": {
         "fields": {
           "m_flFadeEndDistance": 56,
@@ -373,19 +483,20 @@
       },
       "WorldNode_t": {
         "fields": {
-          "m_aggregateInstanceStreams": 168,
+          "m_aggregateInstanceStreams": 192,
           "m_aggregateSceneObjects": 48,
-          "m_bHasBakedGeometryFlag": 344,
+          "m_bHasBakedGeometryFlag": 368,
           "m_clutterSceneObjects": 72,
-          "m_extraVertexStreamOverrides": 96,
-          "m_extraVertexStreams": 144,
-          "m_grassFileName": 264,
-          "m_layerNames": 216,
-          "m_materialOverrides": 120,
-          "m_nodeLightingInfo": 272,
-          "m_sceneObjectLayerIndices": 240,
+          "m_extraVertexStreamOverrides": 120,
+          "m_extraVertexStreams": 168,
+          "m_grassFileName": 288,
+          "m_layerNames": 240,
+          "m_materialOverrides": 144,
+          "m_nodeLightingInfo": 296,
+          "m_rtProxies": 96,
+          "m_sceneObjectLayerIndices": 264,
           "m_sceneObjects": 0,
-          "m_vertexAlbedoStreams": 192,
+          "m_vertexAlbedoStreams": 216,
           "m_visClusterMembership": 24
         },
         "metadata": [
@@ -443,6 +554,14 @@
           "OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND": 64
         },
         "type": "uint32"
+      },
+      "RTProxyInstanceFlags_t": {
+        "alignment": 1,
+        "members": {
+          "RTPROXY_INSTANCE_FLAG_NONE": 0,
+          "RTPROXY_INSTANCE_UNIQUE_MESH": 1
+        },
+        "type": "uint8"
       }
     }
   }
